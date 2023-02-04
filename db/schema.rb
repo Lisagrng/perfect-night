@@ -10,9 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_02_194238) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_04_101824) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "address"
+    t.integer "price_cents"
+    t.date "start_at"
+    t.date "end_at"
+    t.integer "max_number_persons"
+    t.float "longitude"
+    t.float "latitude"
+    t.boolean "workshop"
+    t.integer "opening_days"
+    t.time "open_at"
+    t.time "close_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "start_at"
+    t.integer "number_of_persons"
+    t.integer "total_price"
+    t.bigint "user_id", null: false
+    t.bigint "activity_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_bookings_on_activity_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.text "content"
+    t.bigint "booking_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,8 +61,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_02_194238) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "sexe"
+    t.integer "age"
+    t.string "address"
+    t.string "phone_number"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "activities"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "reviews", "bookings"
 end
