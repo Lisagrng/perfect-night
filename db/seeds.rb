@@ -38,4 +38,22 @@ Activity.create!(name: "Patinoire Charlemagne", description: "D'une capacité pu
                 reçoit aussi des spectacles sur glace et des compétitions internationales et nationales.", address:
                 "Patinoire Charlemagne, 100 Cr Charlemagne, 69002 Lyon", max_number_persons: 4200, price_cents: "between
                 400 and 780", workshop: "false", opening_days: [4, 5, 6, 0], open_at: "14:00", close_at: "23:00")
+Activity.create!(name: "Piscine Joséphine Baker", description: "La piscine de Paris 13 Joséphine Baker dispose d’un
+                espace aquatique, d’un espace bien-être et d’un espace forme avec tous les équipements nécessaires pour
+                plaire à toute la famille. Le plus ? La vue sur la Seine lorsque vous vous baignez !", address:
+                "Quai François Mauriac, 75013 Paris", workshop: "false", max_number_persons: 350, price_cents:
+                350, opening_days: [3, 4, 5, 6], open_at: "14:00", close_at: "23:00")
+Activity.create!(name: "Last Door Escape Game", description:"Injustement emprisonnés, votre procès vient de connaître
+                l’issue que vous craigniez : vous êtes définitivement condamnés à la peine capitale. Il ne vous reste
+                maintenant plus qu’une heure avant l’injection létale. Arriverez-vous à vous en échapper ?", address:
+                "24 Rue Jules Vedrines, 42160 Andrézieux-Bouthéon", workshop: "false", max_number_persons:
+                6, price_cents: 2500, opening_days: [0, 1, 2, 3, 4, 5, 6], start_at: "9:00", close_at: "22:30")
+Activity.create!(name: "La Quiz Room", description: "Entre amis ou en famille… 2 parties (ou +) pour découvrir ou
+                redécouvrir Quiz Room et ses jeux totalement quiz !", address:
+                "81 Rue Lucien Faure - 33300 Bordeaux", workshop: "false", opening_days:
+                [0, 1, 2, 3, 4, 5, 6], start_at: "10:00", close_at: "23:30")
+Activity.create!(name: "Seven Squares", description: "Avec nos 7 activités pour tous les âges, variez les plaisirs sans
+                vous déplacer ! Venez en famille, entre amis et partagez un moment convivial. ", address:
+                "2 Rue Ferrer, 42000 Saint-Étienne", workshop: "false", max_number_persons: 200, opening_days:
+                [0, 1, 2, 3, 4, 5, 6], start_at: "10:00", close_at: "2:00")
 puts 'Finished!'
