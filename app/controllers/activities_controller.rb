@@ -3,13 +3,13 @@ class ActivitiesController < ApplicationController
 
   def index
     search
-    @markers = @activities.geocoded.map do |activity|
-      {
-        lat: activity.latitude,
-        lng: activity.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: { activity: activity })
-      }
-    end
+    # @markers = @activities.geocoded.map do |activity|
+      # {
+        # lat: activity.latitude,
+        # lng: activity.longitude,
+        # info_window_html: render_to_string(partial: "info_window", locals: { activity: activity })
+      # }
+    #end
   end
 
   def show
@@ -42,12 +42,12 @@ class ActivitiesController < ApplicationController
 
   private
 
-  def console_id
+  def activity_id
     @activity = Activity.find(params[:id])
   end
 
-  def console_params
-    params.require(:activity).permit(:name, :location, :description, :price_cents, :start_at, :max_number_person, :end_at, :workshop, :opening_days, :open_at, :close_at)
+  def activity_params
+    params.require(:activity).permit(:name, :description, :price_cents, :start_at, :max_number_person, :end_at, :workshop, :opening_days, :open_at, :close_at)
   end
 
   def search
