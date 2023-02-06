@@ -1,41 +1,60 @@
 class ActivitiesController < ApplicationController
+  before_action :activity_id, only: %i[show edit update destroy]
+
   def index
-    @value = 0
-    @my_bookings = Booking.where(user_id: current_user.id)
-  end
-
-  def new
-    @booking = Booking.new
-    @activity = Activity.find(params[:activity_id])
-  end
-
-  def create
-    @booking = Booking.new(booking_params)
-    @booking.user = current_user
-    @booking.console = Activity.find(params[:activity_id])
-    @booking.save
-    redirect_to booking_path(@booking)
-  end
-
-  def show
-    @booking = Activity.find(params[:id])
-    @activity = @booking.console
-    if @booking.start_at == @booking.end_at
-      @price = @activity.price_cents
-    else
-      @price = @activity.price_cents * (@booking.end_at.to_date - @booking.start_at.to_date).to_i
+    search
+    @markers = @activities.geocoded.map do |activity|
+      {
+        lat: activity.latitude,
+        lng: activity.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { activity: activity })
+      }
     end
   end
 
+  def show
+    @review = Review.new
+  end
+
+  def new
+    @activity = Activity.new
+  end
+
+  def create
+    @activity = Activity.new(activity_params)
+    @activity.user = current_user
+    @activity.save
+    redirect_to activity_path(@activity)
+  end
+
+  def edit
+  end
+
+  def update
+    @activity.update(activity_params)
+    redirect_to activity_path(@activity)
+  end
+
   def destroy
-    @booking = Booking.find(params[:id])
-    @booking.destroy
-    redirect_to bookings_path, status: :see_other
+    @activity.destroy
+    redirect_to activity_path, status: :see_other
   end
 
   private
 
-  def booking_params
-    params.require(:booking).permit(:start_at, :end_at, :price_cents)
+  def console_id
+    @activity = Activity.find(params[:id])
+  end
+
+  def console_params
+    params.require(:activity).permit(:name, :location, :description, :price_cents, :start_at, :max_number_person, :end_at, :workshop, :opening_days, :open_at, :close_at)
+  end
+
+  def search
+    if params[:query].present?
+      @activities = Activity.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @acivities = Activity.all
+    end
   end
 end
