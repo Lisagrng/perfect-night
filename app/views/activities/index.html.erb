@@ -56,8 +56,13 @@
   </a>
 </div>
   <% end %>
-
-  <div class="button-show">
-    <%= link_to "Voir plus d'évènements", activity_path(activity) %>
+  <div>
+    <% @activities.each do |activity|%>
+      <%= link_to "see activity", activity_path(activity)%>
+    <%end%>
   </div>
+
+  <%# <div class="button-show">
+    <%= link_to "Voir plus d'évènements", activity_path(activity) %>
+  <%# </div> %>
 </div>
