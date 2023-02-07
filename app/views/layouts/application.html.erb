@@ -13,24 +13,5 @@
   <body><%= render "shared/navbar" %>
   <%= render "shared/flashes" %>
 
-    <%= yield %>
-
-    <div class="footer-phone">
-      <div class="footer-icons">
-        <%= link_to root_path do %>
-        <i class="fas fa-house"></i>
-        <% end %>
-        <%= link_to "#" do %>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <% end %>
-        <%= link_to "#" do %>
-        <i class="fas fa-ticket"></i>
-        <% end %>
-        <% if current_user %>
-        <%= link_to "#" do %>
-        <i class="far fa-user"></i>
-        <% end %>
-        <% end %>
-      </div>
   </body>
 </html>
