@@ -1,0 +1,19 @@
+<br>
+<h1 class="title">All my bookings</h1>
+<div class="container">
+  <div class="cards">
+    <% @my_bookings.each do |booking| %>
+      <div class="card">
+        <h3><%= @value += 1 %> - <%= booking.activity.name %></h3>
+        <ul>
+          <li><%= booking.start_at %> start</li>
+          <li><%= booking.end_at %> end</li>
+        </ul>
+        <p><%= booking.activity.description %></p>
+        <div id="button">
+          <%= link_to "See this booking", booking_path(booking) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
