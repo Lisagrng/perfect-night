@@ -9,11 +9,11 @@ class ActivitiesController < ApplicationController
   def show
     @review = Review.new
     @marker =
-      {
+      [{
         lat: @activity.latitude,
         lng: @activity.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: { activity: @activity })
-      }
+      }]
   end
 
   def new
