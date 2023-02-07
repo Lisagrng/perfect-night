@@ -1,23 +1,4 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 28px;
-}
-
-.navbar-brand {
-  color: purple;
-  font-size: 13px;
-  ruby-align: right;
-}
-
-.footer-phone {
+.navbar-phone {
   display: none;
   z-index: 1000;
   padding-top: 15px;
@@ -39,11 +20,8 @@
       display: flex;
       text-align: center;
     }
-    .btn-plus-icon:hover {
-      background: #D83E3E;
-      color: white;
-    }
-    .footer-icons {
+    
+    .navbar-icons {
       display: flex;
       align-items: center;
       margin: auto;
@@ -59,7 +37,7 @@
   .footer {
     display: none;
   }
-  .footer-phone {
+  .navbar-phone {
     display: flex;
   }
   .full-height {
@@ -71,7 +49,7 @@
   .footer {
     display: none;
   }
-  .footer-phone {
+  .navbar-phone {
     display: flex;
   }
 }
