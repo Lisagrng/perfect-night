@@ -43,8 +43,6 @@
       </button>
     </div>
   </div>
-</div>
-  <% end %>
   <div>
     <% @activities.each do |activity|%>
       <%= link_to "see activity", activity_path(activity)%>
@@ -55,3 +53,4 @@
     <%= link_to "Voir plus d'évènements", activity_path(activity) %>
   <%# </div> %>
 </div>
+<% end %>
