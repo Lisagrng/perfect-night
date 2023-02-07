@@ -5,34 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+    
   </head>
 
-  <body><%= render "shared/navbar" %>
+  <body>
+  <%= render "shared/navbar" %>
   <%= render "shared/flashes" %>
 
-    <%= yield %>
+  <%= yield %>
 
-    <div class="footer-phone">
-      <div class="footer-icons">
-        <%= link_to root_path do %>
-        <i class="fas fa-house"></i>
-        <% end %>
-        <%= link_to "#" do %>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <% end %>
-        <%= link_to "#" do %>
-        <i class="fas fa-ticket"></i>
-        <% end %>
-        <% if current_user %>
-        <%= link_to "#" do %>
-        <i class="far fa-user"></i>
-        <% end %>
-        <% end %>
-      </div>
   </body>
 </html>
