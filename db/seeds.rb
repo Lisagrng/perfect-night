@@ -88,6 +88,7 @@ activity = Activity.new(name: "Last Door Escape Game", description: "Injustement
   "24 Rue Jules Vedrines, 42160 Andrézieux-Bouthéon", workshop: "false", max_number_persons:
   6, price_cents: 2500, opening_days: [0, 1, 2, 3, 4, 5, 6], start_at: "9:00", close_at: "22:30")
 activity.photo.attach(io: file, filename: "Escape.png", content_type: "image/png")
+
 activity.user = user
 activity.save!
 
@@ -106,6 +107,7 @@ activity = Activity.new(name: "Seven Squares", description: "Avec nos 7 activit�
   "2 Rue Ferrer, 42000 Saint-Étienne", workshop: "false", max_number_persons: 200, opening_days:
   [0, 1, 2, 3, 4, 5, 6], start_at: "10:00", close_at: "2:00")
 activity.photo.attach(io: file, filename: "Seven.png", content_type: "image/png")
+
 activity.user = user
 activity.save!
 

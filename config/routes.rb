@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'reviews/new'
   devise_for :users
-  root to: "activities#index"
+  root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :activities do
     resources :bookings, only: %i[new create]

@@ -42,7 +42,6 @@ class ActivitiesController < ApplicationController
 
   private
 
-
   def activity_id
     @activity = Activity.find(params[:id])
   end
