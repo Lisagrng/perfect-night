@@ -1,0 +1,30 @@
+<!-- A FAIRE : Choix du nombre de possibilités dans la roulette -->
+  <form>
+    Nombre de cases :
+  <input id="nombre" type="number" name="quantity" min="2" value="6">
+  </form>
+
+  <!-- Dessin de la roulette. Le camembert en arrière plan apparaitra dans ce canvas. -->
+  <canvas id="roulette" width="600" height="600"></canvas>
+
+  <!-- Affichage de la flèche. Pour la remplacer, il suffit de changer sa source 'src'. -->
+  <img id="fleche" src="https://fr.pngtree.com/freepng/arrow-shape-black-simple-doodle_8186738.html" alt="Fleche manquante, en chercher une autre" height="50" width="400">
+
+  <!-- Paragraphe qui indique sur quelle case la flèche s'arrête -->
+  <p>La flèche est en case</p>
+
+
+<!--
+Impératifs:
+ - Améliorer l'animation.
+ - Retour à la position initial en un clic OU redémarrer l'animation depuis la nouvelle position (creer un classe fleche_retour_en_zero)
+-->
+
+<!--
+Améliorations possibles:
+	- Rajouter des images ou des messages dans chaque part de la roulette
+	- Faire apparaitre un message (ou fenetre) du genre : "Vous avez gagné 10 points" ou "Case boisson: tu bois !" dès que la flèche s'arrête.
+	- Lancer l'animation en faisant bouger la flèche plutôt qu'en cliquant sur un bouton.
+ 	- Faire un découpage inégal de la roulette pour représenter des événements rare (ex: 1% de chance de gagner 1000 points)
+	- Mentir sur le découpage de la roulette. C'est à dire découper le cercle en parties égales (ou inégales d'ailleurs) mais un événement aura plus de chance de se produire qu'un autre.
+-->
