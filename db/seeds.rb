@@ -67,11 +67,7 @@ activity = Activity.new(name: "Patinoire Charlemagne", description: "D’une cap
   reçoit aussi des spectacles sur glace et des compétitions internationales et nationales.", address:
   "Patinoire Charlemagne, 100 Cr Charlemagne, 69002 Lyon", max_number_persons: 4200, price_cents: "between
   400 and 780", workshop: "false", opening_days: [4, 5, 6, 0], open_at: "14:00", close_at: "23:00")
-<<<<<<< HEAD
 activity.photo.attach(io: file, filename: "patinoire.png", content_type: "image/png")
-=======
-activity.photo.attach(io: file, filename: "Patinoire.png", content_type: "image/png")
->>>>>>> 7f67b67a45e592826cf7c4aeae4c723f9bf9d66a
 activity.user = user
 activity.save!
 
@@ -91,12 +87,7 @@ activity = Activity.new(name: "Last Door Escape Game", description: "Injustement
   maintenant plus qu’une heure avant l’injection létale. Arriverez-vous à vous en échapper ?", address:
   "24 Rue Jules Vedrines, 42160 Andrézieux-Bouthéon", workshop: "false", max_number_persons:
   6, price_cents: 2500, opening_days: [0, 1, 2, 3, 4, 5, 6], start_at: "9:00", close_at: "22:30")
-<<<<<<< HEAD
 activity.photo.attach(io: file, filename: "escape.png", content_type: "image/png")
-=======
-activity.photo.attach(io: file, filename: "Escape.png", content_type: "image/png")
-
->>>>>>> 7f67b67a45e592826cf7c4aeae4c723f9bf9d66a
 activity.user = user
 activity.save!
 
@@ -105,11 +96,7 @@ activity = Activity.new(name: "La Quiz Room", description: "Entre amis ou en fam
   redécouvrir Quiz Room et ses jeux totalement quiz !", address:
   "81 Rue Lucien Faure - 33300 Bordeaux", workshop: "false", opening_days:
   [0, 1, 2, 3, 4, 5, 6], start_at: "10:00", close_at: "23:30")
-<<<<<<< HEAD
 activity.photo.attach(io: file, filename: "quiz.png", content_type: "image/png")
-=======
-activity.photo.attach(io: file, filename: "Quiz.png", content_type: "image/png")
->>>>>>> 7f67b67a45e592826cf7c4aeae4c723f9bf9d66a
 activity.user = user
 activity.save!
 
