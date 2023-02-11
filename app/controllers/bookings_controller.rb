@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Activity.find(params[:id])
-    @activity = @booking.console
+    @activity = @booking.activity
     if @booking.start_at == @booking.end_at
       @price = @activity.price_cents
     else
