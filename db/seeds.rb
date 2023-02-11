@@ -28,9 +28,8 @@ activity.save!
 
 file = URI.open("https://tse3.mm.bing.net/th?id=OIP.uY0bZs5xtXgSqDFOaJ6IZAHaE7&pid=Api")
 activity = Activity.new(name: "Le Louchebem", description: "Ce restaurant typique et familial, tenu par un boucher, privilégie
-                la viande et les produits du marché.", address: "3 Pl. Victor Hugo, 31000 Toulouse", start_at:
-                "monday", end_at: "saturday", max_number_persons: 130, workshop: "false", opening_days:
-                [1, 2, 3, 4, 5, 6], open_at: "15:00", close_at: "02:00")
+                la viande et les produits du marché.", address: "3 Pl. Victor Hugo, 31000 Toulouse", max_number_persons:
+                130, workshop: "false", opening_days:[1, 2, 3, 4, 5, 6], open_at: "15:00", close_at: "02:00")
 activity.photo.attach(io: file, filename: "louchebem.png", content_type: "image/png")
 activity.user = user
 activity.save!
@@ -48,7 +47,7 @@ file = URI.open("https://tse3.mm.bing.net/th?id=OIP.u-9BJFnpEX5O500lV-MsWgHaE8&p
 activity = Activity.new(name: "L’alimentation", description: "Une cuisine gourmande et conviviale a L’Alimentation : Restaurant,
   foodstore, épicerie, bar à vin, cours de cuisine à Toulouse et Labège.", address: "3 bis Rue Maurice
   Fonvieille, 31000 Toulouse", max_number_persons: 15, price_cents: 4500, workshop: "true", opening_days:
-  [3], open_at: "20:00", close_at: "22:30")
+  [3], start_at: "20:00", end_at: "22:30")
 activity.photo.attach(io: file, filename: "alimentation.png", content_type: "image/png")
 activity.user = user
 activity.save!
