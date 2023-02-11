@@ -105,12 +105,7 @@ activity = Activity.new(name: "Seven Squares", description: "Avec nos 7 activit�
   vous déplacer ! Venez en famille, entre amis et partagez un moment convivial. ", address:
   "2 Rue Ferrer, 42000 Saint-Étienne", workshop: "false", max_number_persons: 200, opening_days:
   [0, 1, 2, 3, 4, 5, 6], start_at: "10:00", close_at: "2:00")
-<<<<<<< HEAD
 activity.photo.attach(io: file, filename: "squares.png", content_type: "image/png")
-=======
-activity.photo.attach(io: file, filename: "Seven.png", content_type: "image/png")
-
->>>>>>> 7f67b67a45e592826cf7c4aeae4c723f9bf9d66a
 activity.user = user
 activity.save!
 
