@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
   end
 
   def show
+
     @booking = Booking.find(params[:id])
     @activity = @booking.activity
     if @booking.start_at == @booking.end_at

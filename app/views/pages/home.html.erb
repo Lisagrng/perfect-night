@@ -22,11 +22,11 @@
         <% @activities.each_with_index do |activity, index| %>
           <% if index == 0 %>
             <div class="carousel-item active">
-              <%= cl_image_tag activity.photo.key, class: "d-block w-100", alt: " Bar le Bab's" %>
+              <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
             </div>
           <% else %>
             <div class="carousel-item">
-              <%= cl_image_tag activity.photo.key, class: "d-block w-100", alt: "L'alimentation" %>
+              <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
             </div>
           <% end %>
         <% end %>
