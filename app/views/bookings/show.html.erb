@@ -1,5 +1,5 @@
 <br>
-<h2><%= @booking.console.name %></h2>
+<h2><%= @booking.activity.name %></h2>
 <div class="container-show-booking">
     <div class="cards-color">
       <div class="card">
@@ -16,11 +16,10 @@
   <div class="flexbox">
     <div class="button-show">
       <%= link_to "Delete", booking_path(@booking),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %>
+        data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre ?"} %>
     </div>
     <div class="button-show">
       <%= link_to 'Toutes mes réservations', bookings_path %>
     </div>
   </div>
 </div>
-
