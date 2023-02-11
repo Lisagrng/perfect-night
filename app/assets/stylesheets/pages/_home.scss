@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+.container{
+  background-image: linear-gradient(105deg, rgba(14, 13, 48, 0.503) 39%, rgba(51,56,57,1) 96%);
+}
+
+.search-bar{
+  -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
+  backdrop-filter: blur(15px) grayscale(0.5) opacity(0.8);
+}
+.caroussel-inner {
+  display: flex,
+}
+
+.caroussel-item-active{
+  width: 100%;
+  height: 300px;
+}
+
+.caroussel-item{
+  width: 100%;
+  height: 300px;
+}
