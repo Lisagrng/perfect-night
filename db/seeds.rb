@@ -48,7 +48,7 @@ file = URI.open("https://tse3.mm.bing.net/th?id=OIP.u-9BJFnpEX5O500lV-MsWgHaE8&p
 activity = Activity.new(name: "L’alimentation", description: "Une cuisine gourmande et conviviale a L’Alimentation : Restaurant,
   foodstore, épicerie, bar à vin, cours de cuisine à Toulouse et Labège.", address: "3 bis Rue Maurice
   Fonvieille, 31000 Toulouse", max_number_persons: 15, price_cents: 4500, workshop: "true", opening_days:
-  [3], start_at: "20:00", end_at: "22:30")
+  [3], open_at: "20:00", close_at: "22:30")
 activity.photo.attach(io: file, filename: "alimentation.png", content_type: "image/png")
 activity.user = user
 activity.save!
@@ -67,11 +67,7 @@ activity = Activity.new(name: "Patinoire Charlemagne", description: "D’une cap
   reçoit aussi des spectacles sur glace et des compétitions internationales et nationales.", address:
   "Patinoire Charlemagne, 100 Cr Charlemagne, 69002 Lyon", max_number_persons: 4200, price_cents: "between
   400 and 780", workshop: "false", opening_days: [4, 5, 6, 0], open_at: "14:00", close_at: "23:00")
-<<<<<<< HEAD
 activity.photo.attach(io: file, filename: "patinoire.png", content_type: "image/png")
-=======
-activity.photo.attach(io: file, filename: "Patinoire.png", content_type: "image/png")
->>>>>>> 7f67b67a45e592826cf7c4aeae4c723f9bf9d66a
 activity.user = user
 activity.save!
 
@@ -90,13 +86,8 @@ activity = Activity.new(name: "Last Door Escape Game", description: "Injustement
   l’issue que vous craigniez : vous êtes définitivement condamnés à la peine capitale. Il ne vous reste
   maintenant plus qu’une heure avant l’injection létale. Arriverez-vous à vous en échapper ?", address:
   "24 Rue Jules Vedrines, 42160 Andrézieux-Bouthéon", workshop: "false", max_number_persons:
-  6, price_cents: 2500, opening_days: [0, 1, 2, 3, 4, 5, 6], start_at: "9:00", close_at: "22:30")
-<<<<<<< HEAD
+  6, price_cents: 2500, opening_days: [0, 1, 2, 3, 4, 5, 6], open_at: "9:00", close_at: "22:30")
 activity.photo.attach(io: file, filename: "escape.png", content_type: "image/png")
-=======
-activity.photo.attach(io: file, filename: "Escape.png", content_type: "image/png")
-
->>>>>>> 7f67b67a45e592826cf7c4aeae4c723f9bf9d66a
 activity.user = user
 activity.save!
 
@@ -104,12 +95,8 @@ file = URI.open("https://tse4.mm.bing.net/th?id=OIP.KKKF5IlWi7zofPLUE-jpHAHaE8&p
 activity = Activity.new(name: "La Quiz Room", description: "Entre amis ou en famille… 2 parties (ou +) pour découvrir ou
   redécouvrir Quiz Room et ses jeux totalement quiz !", address:
   "81 Rue Lucien Faure - 33300 Bordeaux", workshop: "false", opening_days:
-  [0, 1, 2, 3, 4, 5, 6], start_at: "10:00", close_at: "23:30")
-<<<<<<< HEAD
+  [0, 1, 2, 3, 4, 5, 6], open_at: "10:00", close_at: "23:30")
 activity.photo.attach(io: file, filename: "quiz.png", content_type: "image/png")
-=======
-activity.photo.attach(io: file, filename: "Quiz.png", content_type: "image/png")
->>>>>>> 7f67b67a45e592826cf7c4aeae4c723f9bf9d66a
 activity.user = user
 activity.save!
 
@@ -117,13 +104,8 @@ file = URI.open("https://tse1.mm.bing.net/th?id=OIP.FTLIVWOg2mnnPVqsb6_5JQHaE8&p
 activity = Activity.new(name: "Seven Squares", description: "Avec nos 7 activités pour tous les âges, variez les plaisirs sans
   vous déplacer ! Venez en famille, entre amis et partagez un moment convivial. ", address:
   "2 Rue Ferrer, 42000 Saint-Étienne", workshop: "false", max_number_persons: 200, opening_days:
-  [0, 1, 2, 3, 4, 5, 6], start_at: "10:00", close_at: "2:00")
-<<<<<<< HEAD
+  [0, 1, 2, 3, 4, 5, 6], open_at: "10:00", close_at: "2:00")
 activity.photo.attach(io: file, filename: "squares.png", content_type: "image/png")
-=======
-activity.photo.attach(io: file, filename: "Seven.png", content_type: "image/png")
-
->>>>>>> 7f67b67a45e592826cf7c4aeae4c723f9bf9d66a
 activity.user = user
 activity.save!
 

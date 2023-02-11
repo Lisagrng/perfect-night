@@ -1,0 +1,36 @@
+.card {
+  width: 400px;
+  height: 300px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230, 230, 230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230, 230, 230);
+  margin: 15px;
+  p {
+    opacity: .5;
+  }
+  a {
+    opacity: 1;
+    color: purple;
+    text-decoration: none;
+    align-self: flex-end;
+  }
+  img {
+    width: auto;
+    height: 134px;
+    vertical-align: center;
+  }
+}
+
+.cards {
+  display: flex;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.cards-color {
+  background-color: #F4F4F4;
+  display: flex;
+  flex-wrap: wrap;
+}
