@@ -1,0 +1,25 @@
+<br>
+<h2><%= @booking.activity.name %></h2>
+<div class="container-show-booking">
+    <div class="cards-color">
+      <div class="card">
+        <p><strong>Début de l'activité à : </strong><%=@booking.start_date%></p>
+      </div>
+      <div class="card">
+        <p><strong>Fin de l'activité à : </strong><%= @booking.end_date %></p>
+      </div>
+      <div class="card">
+        <p><strong>Prix : </strong><%= @price %> $</p>
+      </div>
+    </div>
+
+  <div class="flexbox">
+    <div class="button-show">
+      <%= link_to "Delete", booking_path(@booking),
+        data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre ?"} %>
+    </div>
+    <div class="button-show">
+      <%= link_to 'Toutes mes réservations', bookings_path %>
+    </div>
+  </div>
+</div>
