@@ -1,6 +1,10 @@
+
+<%= image_tag("logo.png")%>
 <div class= "container">
+  <div class= "image_show">
+    <%= cl_image_tag @activity.photo.key%>
+  </div>
   <h2> <%= @activity.name %></h2>
-  <%#= cl_image_tag @activity.photo.key, height: 100 %>
   <div class="show-description">
   <i class="fa-solid fa-location-dot"></i><p><%= @activity.address %></p></i>
   <i class="fa-regular fa-calendar"><p><%= @activity.open_at.strftime("%H:%M")%> - <%=@activity.close_at.strftime("%H:%M")%></p></i>
