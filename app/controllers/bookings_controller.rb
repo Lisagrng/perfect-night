@@ -12,14 +12,14 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.console = Activity.find(params[:activity_id])
-    @booking.save
+    @booking.activity_id = params[:activity_id]
+    @booking.save!
     redirect_to booking_path(@booking)
   end
 
   def show
-    @booking = Activity.find(params[:id])
-    @activity = @booking.console
+    @booking = Booking.find(params[:id])
+    @activity = @booking.activity
     if @booking.start_at == @booking.end_at
       @price = @activity.price_cents
     else

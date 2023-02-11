@@ -42,7 +42,6 @@ class ActivitiesController < ApplicationController
 
   private
 
-
   def activity_id
     @activity = Activity.find(params[:id])
   end
@@ -55,7 +54,7 @@ class ActivitiesController < ApplicationController
     if params[:query].present?
       @activities = Activity.where("name ILIKE ?", "%#{params[:query]}%")
     else
-      @acivities = Activity.all
+      @activities = Activity.all
     end
   end
 end
