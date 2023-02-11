@@ -45,6 +45,7 @@ activity.save!
 
 file = URI.open("https://tse3.mm.bing.net/th?id=OIP.u-9BJFnpEX5O500lV-MsWgHaE8&pid=Api")
 activity = Activity.new(name: "L’alimentation", description: "Une cuisine gourmande et conviviale a L’Alimentation : Restaurant,
+
                 foodstore, épicerie, bar à vin, cours de cuisine à Toulouse et Labège.", address: "3 bis Rue Maurice
                 Fonvieille, 31000 Toulouse", max_number_persons: 15, price_cents: 4500, workshop: "true", opening_days:
                 [3], start_at: "20:00", end_at: "22:30")
