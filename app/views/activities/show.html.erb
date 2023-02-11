@@ -1,17 +1,23 @@
+<div class= "logo">
+  <%= image_tag("logo.png")%>
+</div>
 
-<%= image_tag("logo.png")%>
 <div class= "container">
-  <div class= "image_show">
+  <div class= "image-show">
     <%= cl_image_tag @activity.photo.key%>
   </div>
   <h2> <%= @activity.name %></h2>
   <div class="show-description">
-  <i class="fa-solid fa-location-dot"></i><p><%= @activity.address %></p></i>
-  <i class="fa-regular fa-calendar"><p><%= @activity.open_at.strftime("%H:%M")%> - <%=@activity.close_at.strftime("%H:%M")%></p></i>
-  <%=link_to "I want this activity tonight!", new_activity_booking_path(@activity)%>
-  <h3>Description</h3>
-  <%= @activity.description%>
+    <div class="show-address">
+      <i class="fa-solid fa-location-dot"></i><p><%= @activity.address %></p></i>
+    </div>
+    <div class="show-time">
+      <i class="fa-regular fa-calendar"><p><%= @activity.open_at.strftime("%H:%M")%> - <%=@activity.close_at.strftime("%H:%M")%></p></i>
+    </div>
+    <h3>Description</h3>
+    <p><%= @activity.description%></p>
   </div>
+    <%=link_to "I want this activity tonight!", new_activity_booking_path(@activity), class:"link"%>
   <div style="width: 100%; height: 600px;"
     data-controller="map"
     data-map-markers-value="<%= @marker.to_json %>"
