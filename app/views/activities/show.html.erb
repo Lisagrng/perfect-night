@@ -1,5 +1,15 @@
-<h2> <%= @activity.name %></h2>
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @marker.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<div class= "container">
+  <h2> <%= @activity.name %></h2>
+  <%= cl_image_tag @activity.photo.key, height: 100 %>
+  <div class="show-description">
+  <i class="fa-solid fa-location-dot"></i><p><%= @activity.address %></p></i>
+  <i class="fa-regular fa-calendar"><p><%= @activity.open_at.strftime("%H:%M")%> - <%=@activity.close_at.strftime("%H:%M")%></p></i>
+  <h3>Description</h3>
+  <%= @activity.description%>
+  </div>
+  <div style="width: 100%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @marker.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>

@@ -1,8 +1,14 @@
 // Specific CSS for your home-page
-.container{
-  background-image: linear-gradient(105deg, rgba(14, 13, 48, 0.503) 39%, rgba(51,56,57,1) 96%);
-}
 
+  // background-image: linear-gradient(105deg, rgba(14, 13, 48, 0.503) 39%, rgba(51,56,57,1) 96%);
+  // background-image: url("https://img.freepik.com/vecteurs-libre/particules-incandescentes-fond-noir_95724-108.jpg?size=626&ext=jpg");
+
+
+h1{
+  color: black;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
 .search-bar{
   -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
   backdrop-filter: blur(15px) grayscale(0.5) opacity(0.8);
@@ -11,12 +17,6 @@
   display: flex,
 }
 
-.caroussel-item-active{
-  width: 100%;
-  height: 300px;
-}
-
-.caroussel-item{
-  width: 100%;
-  height: 300px;
+.caroussel-item img{
+  display:block;
 }
