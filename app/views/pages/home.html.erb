@@ -1,21 +1,24 @@
 <% if user_signed_in? %>
   <div class="container">
   <h1>Perfect Night</h1>
+  <br>
     <div class="search-bar">
     <br>
-      <%= form_with url: activities_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Recherche"
-        %>
-        <%= submit_tag "Search", class: "btn-purple" %>
-      <% end %>
+      <div class="search-box">
+        <input type="text" name="" class="search-txt" placeholder="" />
+        <a class="search-btn" href="activities">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
     <br>
 
     <h1 class="title"> Evènements populaires </h1>
     <br>
+    <div class="description">
+      <h2> Laisse toi Guider ! </h2>
+        <p> Visite nos différentes propositions d'activitées pour ta <strong>soirée parfaite</strong> ou laisse toi guider ! </p>
+    </div>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
       <div class="carousel-inner">
@@ -23,10 +26,18 @@
           <% if index == 0 %>
             <div class="carousel-item active">
               <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
+              <div class="carousel-caption d-block">
+                <h5><%= activity.name %></h5>
+                <p><%= activity.description %></p>
+              </div>
             </div>
           <% else %>
             <div class="carousel-item">
               <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
+              <div class="carousel-caption d-block">
+                <h5><%= activity.name %></h5>
+                <p><%= activity.description %></p>
+              </div>
             </div>
           <% end %>
         <% end %>
@@ -48,6 +59,7 @@
   </div>
 </div>
 <% end %>
+
 
   <%# <div class="button-show">
     <%= link_to "Voir plus d'évènements", activity_path(activity) %>
