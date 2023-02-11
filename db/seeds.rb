@@ -28,9 +28,8 @@ activity.save!
 
 file = URI.open("https://tse3.mm.bing.net/th?id=OIP.uY0bZs5xtXgSqDFOaJ6IZAHaE7&pid=Api")
 activity = Activity.new(name: "Le Louchebem", description: "Ce restaurant typique et familial, tenu par un boucher, privilégie
-                la viande et les produits du marché.", address: "3 Pl. Victor Hugo, 31000 Toulouse", start_at:
-                "monday", end_at: "saturday", max_number_persons: 130, workshop: "false", opening_days:
-                [1, 2, 3, 4, 5, 6], open_at: "15:00", close_at: "02:00")
+                la viande et les produits du marché.", address: "3 Pl. Victor Hugo, 31000 Toulouse", max_number_persons:
+                130, workshop: "false", opening_days:[1, 2, 3, 4, 5, 6], open_at: "15:00", close_at: "02:00")
 activity.photo.attach(io: file, filename: "louchebem.png", content_type: "image/png")
 activity.user = user
 activity.save!
