@@ -1,0 +1,14 @@
+<h1>Perfect Night</h1>
+    <div class="search-bar">
+    <br>
+      <%= form_with url: activities_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Recherche"
+        %>
+        <%= submit_tag "Search", class: "btn-purple" %>
+      <% end %>
+    </div>
+    <br>
+
