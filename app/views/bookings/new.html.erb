@@ -1,7 +1,31 @@
-<br><br><div style="margin:0 auto"  class="container-new-booking col-6 ">
-<%= simple_form_for [@console, @booking] do |f|%>
-<strong><%= f.input :start_date, as: :string, input_html: { data: { controller: 'flatpickr' } }%>
-<%= f.input :end_date, as: :string, input_html: { data: { controller: 'flatpickr' } } %></strong>
-<%= f.button :submit, class:"button-show" %>
-<% end %>
-</div>
+<%#= simple_form_for [@activity, @booking] do |f|%>
+<%#= f.input :start_at, as: :string, input_html: { data: { controller: 'flatpickr' } }%>
+<%#= f.input :total_price, as: :integer %>
+<%#= f.input :end_at, as: :string, input_html: { data: { controller: 'flatpickr' } } %>
+<%#= f.button :submit, class:"button-show" %>
+<%# end %>
+
+
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Votre réservation</h1>
+    <p class="lead">Voici le résumé de votre réservation 🏄🏼‍♀️</p>
+    <p>Plus qu'une vérif' pour la valider 💜</p>
+  </div>
+  <div class="card mb-4 box-shadow"></div>
+  <div class="container">
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal"><%= @activity.name %></h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title"><%= @activity.price_cents %> € / pers.<small class="text-muted"></small></h1>
+          <%= simple_form_for @booking, url: activity_bookings_path(@activity)  do |f| %>
+            <%= f.input :number_of_persons %>
+            <%#= f.button :submit, class:"button-show" %>
+            <button type="submit" class="btn-show">Je valide</button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
