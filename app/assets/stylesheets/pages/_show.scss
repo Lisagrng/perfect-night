@@ -3,10 +3,22 @@ h2 {
   font-family: 'Kanit', sans-serif;
 }
 
+.container-show {
+  h2 {
+    margin-top: 20px;
+  }
+}
+
+span {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+}
+
 p {
   color: white;
   font-family: 'Kanit', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .p-card {
@@ -22,15 +34,14 @@ h3 {
   font-family: 'Kanit', sans-serif;
 }
 
-.show-time {
-  display: flex;
-  display: space-between;
-}
 
 .show-address {
   display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
+<<<<<<< HEAD
 .title-booking{
   font-weight: 200;
 }
@@ -41,6 +52,13 @@ h3 {
   // background-image: url("https://files.slack.com/files-pri/T02NE0241-F04P26RTVDM/image.png");
 }
 
+=======
+.show-time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+>>>>>>> bdbbe1381c365258609f49aa6bc4a282c9855ef7
 .link {
   font-family: 'Kanit', sans-serif;
   font-weight: 300;
@@ -60,7 +78,14 @@ h3 {
 .fa-solid {
   color: lightgrey;
 }
+.fa-solid::before {
+  margin-right: 12px;
+}
 
 .fa-calendar {
   color: lightgrey;
+}
+
+.fa-calendar::before {
+  margin-right: 12px;
 }

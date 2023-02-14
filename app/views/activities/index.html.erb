@@ -1,27 +1,37 @@
-<% if user_signed_in? %><>
+<% if user_signed_in? %>
   <div class="container">
+    <div class= "logo">
+      <%= image_tag("logo.png")%>
+    </div>
     <div class="cards">
     <% @activities.each do |activity| %>
       <div class="card">
-        <%= cl_image_tag activity.photo.key, crop: :fill, class: "d-block w-100", alt: activity.name %>
-        <h4><%= link_to activity.name, activity_path(activity) %></h4>
+        <%= cl_image_tag activity.photo.key, crop: :fill, alt: activity.name %>
+        <%= link_to activity.name, activity_path(activity) %>
 
         <% if activity.opening_days.count == 1 %>
           <span>
-          Ouvert juste le <%= Activity.display_days(activity.opening_days[0]) %>
+          <%= Activity.display_days(activity.opening_days[0]) %>
           </span>
+          <%#= DateTime.parse(activity.start_at).strftime("%H:%M") %> - <%#= DateTime.parse(activity.end_at).strftime("%H:%M") %>
         <% else %>
           <span>
-          Ouvert du <%= Activity.display_days(activity.opening_days[0]) %>
-          au <%= Activity.display_days(activity.opening_days[-1]) %>
+          <!-- Jour d'ouverture et fermeture -->
+          <%= Activity.display_days(activity.opening_days[0]) %>
+          <%= Activity.display_days(activity.opening_days[-1]) %>
+          <span class="card-color-grey">|</span>
+          <!-- Heure converti -->
+          <%= activity.open_at.strftime("%H:%M") %>
+          <span class="card-color-grey">-</span>
+          <%= activity.close_at.strftime("%H:%M")  %>
+
+          <!-- Prix converti -->
+          <% if activity.price_cents == 0 %>
+            <span class="card-color-white">Gratuit</span>
+          <% else %>
+            <span class="card-color-white"><%= activity.price_cents %></span>
+          <% end %>
           </span>
-        <% end %>
-
-
-        <% if activity.workshop == true %>
-          <p><%= activity.start_at %> - <%= activity.end_at %></p>
-        <% else %>
-          <p><%#= activity.open_at.strftime("%H:%M") %> - <%#= activity.close_at.strftime("%H:%M")  %></p>
         <% end %>
       </div>
     <% end %>

@@ -1,4 +1,7 @@
-<div class="navbar-phone">
+<% if current_page?(controller: 'activities', action: 'show') %>
+  <div class="navbar-phone navbar-show" style="display:inline-block">JE VEUX CETTE ACTIVITÉ CE SOIR</div>
+<% else %>
+  <div class="navbar-phone">
       <div class="navbar-icons">
         <%= link_to root_path do %>
         <i class="fas fa-home"></i>
@@ -12,4 +15,5 @@
         <%= link_to "#" do %>
         <i class="fa-solid fa-user"></i>
         <% end %>
+<% end %>
 </div>
