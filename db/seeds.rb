@@ -63,9 +63,9 @@ activity.save!
 
 file = URI.open("https://tse2.mm.bing.net/th?id=OIP.a2_HkKuJXfnMeRtdcnhC5QHaE8&pid=Api")
 activity = Activity.new(name: "Patinoire Charlemagne", description: "D’une capacité publique de 4 200 personnes, la patinoire
-                reçoit aussi des spectacles sur glace et des compétitions internationales et nationales.", address:
-                "Patinoire Charlemagne, 100 Cr Charlemagne, 69002 Lyon", max_number_persons: 4200, price_cents: "between
-                400 and 780", workshop: "false", opening_days: [4, 5, 6, 0], open_at: "14:00", close_at: "23:00")
+  reçoit aussi des spectacles sur glace et des compétitions internationales et nationales.", address:
+  "Patinoire Charlemagne, 100 Cr Charlemagne, 69002 Lyon", max_number_persons: 4200, price_cents: "between
+  400 and 780", workshop: "false", opening_days: [4, 5, 6, 0], open_at: "14:00", close_at: "23:00")
 activity.photo.attach(io: file, filename: "patinoire.png", content_type: "image/png")
 activity.user = user
 activity.save!
@@ -82,10 +82,10 @@ activity.save!
 
 file = URI.open("https://tse1.mm.bing.net/th?id=OIP.LyS3OmwWLQ2O5jYDikaRDwHaFj&pid=Api")
 activity = Activity.new(name: "Last Door Escape Game", description: "Injustement emprisonnés, votre procès vient de connaître
-                l’issue que vous craigniez : vous êtes définitivement condamnés à la peine capitale. Il ne vous reste
-                maintenant plus qu’une heure avant l’injection létale. Arriverez-vous à vous en échapper ?", address:
-                "24 Rue Jules Vedrines, 42160 Andrézieux-Bouthéon", workshop: "false", max_number_persons:
-                6, price_cents: 2500, opening_days: [0, 1, 2, 3, 4, 5, 6], open_at: "9:00", close_at: "22:30")
+  l’issue que vous craigniez : vous êtes définitivement condamnés à la peine capitale. Il ne vous reste
+  maintenant plus qu’une heure avant l’injection létale. Arriverez-vous à vous en échapper ?", address:
+  "24 Rue Jules Vedrines, 42160 Andrézieux-Bouthéon", workshop: "false", max_number_persons:
+  6, price_cents: 2500, opening_days: [0, 1, 2, 3, 4, 5, 6], open_at: "9:00", close_at: "22:30")
 activity.photo.attach(io: file, filename: "escape.png", content_type: "image/png")
 activity.user = user
 activity.save!

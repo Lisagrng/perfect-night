@@ -21,7 +21,7 @@
         <% if activity.workshop == true %>
           <p><%= activity.start_at %> - <%= activity.end_at %></p>
         <% else %>
-          <p><%= activity.open_at.strftime("%H:%M") %> - <%= activity.close_at.strftime("%H:%M")  %></p>
+          <p><%#= activity.open_at.strftime("%H:%M") %> - <%#= activity.close_at.strftime("%H:%M")  %></p>
         <% end %>
       </div>
     <% end %>

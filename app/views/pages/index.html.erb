@@ -1,14 +1,20 @@
-<h1>Perfect Night</h1>
-    <div class="search-bar">
-    <br>
-      <%= form_with url: activities_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Recherche"
-        %>
-        <%= submit_tag "Search", class: "btn-purple" %>
-      <% end %>
-    </div>
-    <br>
+<%= form_tag(activities_path, method: :get) do %>
+  <div>
+    <%= label_tag :max_number_persons %>
+    <%= select_tag :max_number_persons, options_for_select([["1 personne", 1], ["2 personnes", 2], ["3 personnes", 3]]) %>
+  </div>
+  <div>
+    <%= label_tag :location %>
+    <%= text_field_tag :location %>
+  </div>
+  <div>
+    <%= submit_tag "Filtrer" %>
+  </div>
+<% end %>
 
+<% @activities.each do |activity| %>
+  <div>
+    <h2><%= activity.max_number_persons %></h2>
+    <p><%= activity.location %></p>
+  </div>
+<% end %>

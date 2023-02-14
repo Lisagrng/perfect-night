@@ -1,8 +1,7 @@
-<div class= "logo">
-  <%= image_tag("logo.png")%>
-</div>
-
 <div class= "container">
+  <div class= "logo">
+    <%= image_tag("logo.png")%>
+  </div>
   <div class= "image-show">
     <%= cl_image_tag @activity.photo.key%>
   </div>
@@ -12,15 +11,22 @@
       <i class="fa-solid fa-location-dot"></i><p><%= @activity.address %></p></i>
     </div>
     <div class="show-time">
-      <i class="fa-regular fa-calendar"><p><%= @activity.open_at.strftime("%H:%M")%> - <%=@activity.close_at.strftime("%H:%M")%></p></i>
+      <% if @activity.workshop == "false" %>
+        <i class="fa-regular fa-calendar"><p><%= @activity.open_at %> - <%=@activity.close_at %></p></i>
+      <% else %>
+        <i class="fa-regular fa-calendar"><p><%= @activity.start_at %> - <%=@activity.end_at %></p></i>
+      <% end %>
     </div>
     <h3>Description</h3>
     <p><%= @activity.description%></p>
   </div>
-    <%=link_to "I want this activity tonight!", new_activity_booking_path(@activity), class:"link"%>
+    <%=link_to "Je veux cette activité ce soir!", new_activity_booking_path(@activity), class:"link"%>
   <div style="width: 100%; height: 600px;"
     data-controller="map"
     data-map-markers-value="<%= @marker.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
+
+<%# strftime(%H:%M)
+strftime(%H:%M) %>
