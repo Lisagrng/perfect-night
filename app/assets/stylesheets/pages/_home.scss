@@ -3,9 +3,10 @@
   // background-image: cover;
   // background-image: linear-gradient(105deg, rgba(14, 13, 48, 0.503) 39%, rgba(51,56,57,1) 96%);
 .container{
-  background: radial-gradient(circle at top, rgb(160, 160, 160) 10%, rgb(61, 61, 61) 80%), #000;
+  background: radial-gradient(circle at left, rgb(201, 201, 201) 10%, rgb(72, 72, 72) 70%), #000;
+  // background-image: linear-gradient(to right, #dedede, #ff8000, #121318);
   // background-clip: content-box;
-  // background-image: url("https://files.slack.com/files-pri/T02NE0241-F04P26RTVDM/image.png");
+  // background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQAOCdv_JKAHqtgtrWur5UxsakC0_Zu5aI-mxYHu1sePkl1aR7-");
 }
 .body{
   margin: 0 20px;
@@ -15,13 +16,13 @@ h1{
   text-align: center;
   font-size: 50px;
   color: #ffffffa1;
-  text-shadow: 0 0 10px #ffffffe0, 0 0 20px #ffffffe0, 0 0 30px #ffffffe0, 0 0 40px #A81DF7, 0 0 70px #A81DF7, 0 0 80px #A81DF7, 0 0 100px #A81DF7, 0 0 150px #A81DF7;
+  text-shadow: 0 0 10px #ffffffe0, 0 0 20px #ffffffe0, 0 0 30px #ffffffe0, 0 0 40px #5D3891, 0 0 70px #5D3891, 0 0 80px #5D3891, 0 0 100px #5D3891, 0 0 150px #5D3891;
   // animation: neon 1s ease-in-out infinite alternate;
 }
 
 @keyframes neon {
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #009aff, 0 0 35px #009aff, 0 0 40px #009aff, 0 0 50px #009aff, 0 0 75px #009aff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #5D3891, 0 0 35px #5D3891, 0 0 40px #5D3891, 0 0 50px #5D3891, 0 0 75px #5D3891;
   }
 }
 
@@ -37,63 +38,6 @@ h1{
   color: white;
 }
 
-.search-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #A81DF7;
-  height: 40px;
-  border-radius: 40px;
-  padding: 10px;
-}
-
-@media(hover: hover) and (pointer: fine) {
-  .search-box:hover > .search-txt {
-    width: 240px;
-    padding: 0 6px;
-  }
-  .search-box:hover > .search-btn {
-    background: white;
-    color: black;
-  }
-}
-  .search-btn {
-    color: #eeeeee;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #2f3640;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  .search-btn > i {
-    font-size: 20px;
-  }
-  .search-txt {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    color: white;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
-    font-weight: bold;
-  }
-
-  .search-bar{
-    -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
-    backdrop-filter: blur(15px) grayscale(0.5) opacity(0.8);
-}
 .caroussel-inner {
   display: flex,
 }
@@ -101,3 +45,4 @@ h1{
 .caroussel-item img{
   display:block;
 }
+

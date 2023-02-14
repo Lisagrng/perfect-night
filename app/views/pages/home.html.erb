@@ -8,14 +8,11 @@
     <br>
     <h1>Perfect Night</h1>
     <br>
-      <div class="search-bar">
       <br>
-        <div class="search-box">
-          <input type="text" name="" class="search-txt" placeholder="" />
-          <a class="search-btn" href="activities">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </a>
-        </div>
+      <div class="text-center">
+        <button class="button-home">
+            <%= link_to "Choisir mon activité", index_filtre_path %>
+        </button>
       </div>
       <br>
 
@@ -23,7 +20,7 @@
       <br>
       <div class="description">
         <h2> Laisse toi Guider ! </h2>
-          <p> Visite nos différentes propositions d'activitées pour ta <strong>soirée parfaite</strong> ou laisse toi guider ! </p>
+          <p> Visite nos différentes propositions d'activitées pour ta <span style="color: orange;"><strong>soirée parfaite</strong></span> ou laisse toi guider ! </p>
       </div>
 
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -33,30 +30,14 @@
               <div class="carousel-item active">
                 <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
                 <div class="carousel-caption d-block">
-                  <div class="card-deck mb-3 text-center">
-                    <div class="card mb-4 box-shadow">
-                      <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">
-                          <span style="color: black;"><%= activity.name %></span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
+                    <span style="color: purple;"><strong><%= activity.name %></span></strong>
                 </div>
               </div>
             <% else %>
               <div class="carousel-item">
                 <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
                 <div class="carousel-caption d-block">
-                  <div class="card-deck mb-3 text-center">
-                    <div class="card mb-4 box-shadow">
-                      <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">
-                          <span style="color: black;"><%= activity.name %></span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
+                  <span style="color: purple;"><strong><%= activity.name %></span></strong>
                 </div>
               </div>
             <% end %>
@@ -80,8 +61,3 @@
   </div>
 </div>
 <% end %>
-
-
-  <%# <div class="button-show">
-    <%= link_to "Voir plus d'évènements", activity_path(activity) %>
-  <%# </div> %>

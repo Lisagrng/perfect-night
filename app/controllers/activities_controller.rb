@@ -40,6 +40,11 @@ class ActivitiesController < ApplicationController
     redirect_to activity_path, status: :see_other
   end
 
+  def index_filtre
+    @activities = Activity.all
+    filtre
+  end
+
   private
 
   def activity_id
@@ -56,5 +61,17 @@ class ActivitiesController < ApplicationController
     else
       @activities = Activity.all
     end
+  end
+end
+
+def filtre
+  if params[:max_number_persons].present?
+    @activities = @activities.where(max_number_persons: params[:max_number_persons])
+  end
+  if params[:ville].present?
+    @activities = @activities.where("location like ?", "%#{params[:ville]}%")
+  end
+  if params[:categorie].present?
+    @activities = @activities.where("categorie like ?", "%#{params[:categorie]}%")
   end
 end
