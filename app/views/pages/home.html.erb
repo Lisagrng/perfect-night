@@ -1,61 +1,78 @@
 <% if user_signed_in? %>
   <div class="container">
-  <h1>Perfect Night</h1>
-  <br>
-    <div class="search-bar">
+  <div class="body">
     <br>
-      <div class="search-box">
-        <input type="text" name="" class="search-txt" placeholder="" />
-        <a class="search-btn" href="activities">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </a>
+    <h1>Perfect Night</h1>
+    <br>
+      <div class="search-bar">
+      <br>
+        <div class="search-box">
+          <input type="text" name="" class="search-txt" placeholder="" />
+          <a class="search-btn" href="activities">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
-    </div>
-    <br>
+      <br>
 
-    <h1 class="title"> Evènements populaires </h1>
-    <br>
-    <div class="description">
-      <h2> Laisse toi Guider ! </h2>
-        <p> Visite nos différentes propositions d'activitées pour ta <strong>soirée parfaite</strong> ou laisse toi guider ! </p>
-    </div>
+      <h2 class="title"> Evènements populaires </h2>
+      <br>
+      <div class="description">
+        <h2> Laisse toi Guider ! </h2>
+          <p> Visite nos différentes propositions d'activitées pour ta <strong>soirée parfaite</strong> ou laisse toi guider ! </p>
+      </div>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-      <div class="carousel-inner">
-        <% @activities.each_with_index do |activity, index| %>
-          <% if index == 0 %>
-            <div class="carousel-item active">
-              <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
-              <div class="carousel-caption d-block">
-                <h5><%= activity.name %></h5>
-                <p><%= activity.description %></p>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <% @activities.each_with_index do |activity, index| %>
+            <% if index == 0 %>
+              <div class="carousel-item active">
+                <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
+                <div class="carousel-caption d-block">
+                  <div class="card-deck mb-3 text-center">
+                    <div class="card mb-4 box-shadow">
+                      <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">
+                          <span style="color: black;"><%= activity.name %></span>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          <% else %>
-            <div class="carousel-item">
-              <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
-              <div class="carousel-caption d-block">
-                <h5><%= activity.name %></h5>
-                <p><%= activity.description %></p>
+            <% else %>
+              <div class="carousel-item">
+                <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
+                <div class="carousel-caption d-block">
+                  <div class="card-deck mb-3 text-center">
+                    <div class="card mb-4 box-shadow">
+                      <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">
+                          <span style="color: black;"><%= activity.name %></span>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
+        </div>
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <div>
+      <% @activities.each do |activity|%>
+        <%= link_to "Voir plus d'évènements", activity_path(activity)%>
+      <%end%>
     </div>
-  <div>
-    <% @activities.each do |activity|%>
-      <%= link_to "Voir plus d'évènements", activity_path(activity)%>
-    <%end%>
   </div>
 </div>
 <% end %>
