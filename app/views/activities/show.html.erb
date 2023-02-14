@@ -8,13 +8,14 @@
   <h2> <%= @activity.name %></h2>
   <div class="show-description">
     <div class="show-address">
-      <i class="fa-solid fa-location-dot"></i><p><%= @activity.address %></p></i>
+      <i class="fa-solid fa-location-dot"></i><span><%= @activity.address %></span></i>
     </div>
     <div class="show-time">
-      <% if @activity.workshop == "false" %>
-        <i class="fa-regular fa-calendar"><p><%= @activity.open_at %> - <%=@activity.close_at %></p></i>
+
+      <% if @activity.workshop? %>
+        <i class="fa-regular fa-calendar"><span><%= DateTime.parse(@activity.start_at).strftime("%H:%M") %> - <%=DateTime.parse(@activity.end_at).strftime("%H:%M") %></span></i>
       <% else %>
-        <i class="fa-regular fa-calendar"><p><%= @activity.start_at %> - <%=@activity.end_at %></p></i>
+        <i class="fa-regular fa-calendar"><span> <%= DateTime.parse(@activity.open_at).strftime("%H:%M") %> - <%=DateTime.parse(@activity.close_at).strftime("%H:%M") %></span></i>
       <% end %>
     </div>
     <h3>Description</h3>
@@ -27,6 +28,3 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-
-<%# strftime(%H:%M)
-strftime(%H:%M) %>
