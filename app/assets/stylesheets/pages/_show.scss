@@ -1,0 +1,48 @@
+h2 {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+}
+
+p {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 100;
+}
+
+h3 {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+}
+
+.show-time {
+  display: flex;
+  display: space-between;
+}
+
+.show-address {
+  display: flex;
+}
+
+.link {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffffa1;
+  text-shadow: 0 0 10px #ffffffe0, 0 0 20px #ffffffe0, 0 0 30px #ffffffe0, 0 0 40px #A81DF7, 0 0 70px #A81DF7, 0 0 80px #A81DF7, 0 0 100px #A81DF7, 0 0 150px #A81DF7;
+}
+
+
+// @keyframes neon {
+//   to {
+//     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #009aff, 0 0 35px #009aff, 0 0 40px #009aff, 0 0 50px #009aff, 0 0 75px #009aff;
+//   }
+// }
+
+.fa-solid {
+  color: lightgrey;
+}
+
+.fa-calendar {
+  color: lightgrey;
+}
