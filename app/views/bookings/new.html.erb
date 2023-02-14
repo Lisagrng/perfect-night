@@ -19,12 +19,13 @@
           <h4 class="my-0 font-weight-normal"><%= @activity.name %></h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title"><%= @activity.price_cents / 100 %> € / pers.<small class="text-muted"></small></h1>
-          <%= simple_form_for @booking, url: activity_bookings_path(@activity)  do |f| %>
-            <%= f.input :number_of_persons %>
+          <p class="card-title pricing-card-title"><%= @activity.price_cents / 100 %> € / pers.</p>
+
+          <%#= simple_form_for @booking, url: activity_bookings_path(@activity)  do |f| %>
+            <%#= f.input :number_of_persons %>
             <%#= f.button :submit, class:"button-show" %>
             <button type="submit" class="btn-show">Je valide</button>
-          <% end %>
+          <%# end %>
         </div>
       </div>
     </div>
