@@ -1,4 +1,4 @@
-<div class= "container">
+<div class= "container container-show">
   <div class= "logo">
     <%= image_tag("logo.png")%>
   </div>
@@ -11,17 +11,15 @@
       <i class="fa-solid fa-location-dot"></i><span><%= @activity.address %></span></i>
     </div>
     <div class="show-time">
-
       <% if @activity.workshop? %>
         <i class="fa-regular fa-calendar"><span><%= DateTime.parse(@activity.start_at).strftime("%H:%M") %> - <%=DateTime.parse(@activity.end_at).strftime("%H:%M") %></span></i>
       <% else %>
-        <i class="fa-regular fa-calendar"><span> <%= DateTime.parse(@activity.open_at).strftime("%H:%M") %> - <%=DateTime.parse(@activity.close_at).strftime("%H:%M") %></span></i>
+        <i class="fa-regular fa-calendar"><span><%= DateTime.parse(@activity.open_at).strftime("%H:%M") %> - <%=DateTime.parse(@activity.close_at).strftime("%H:%M") %></span></i>
       <% end %>
     </div>
     <h3>Description</h3>
     <p><%= @activity.description%></p>
   </div>
-    <%=link_to "Je veux cette activité ce soir!", new_activity_booking_path(@activity), class:"link"%>
   <div style="width: 100%; height: 600px;"
     data-controller="map"
     data-map-markers-value="<%= @marker.to_json %>"
