@@ -3,6 +3,12 @@ h2 {
   font-family: 'Kanit', sans-serif;
 }
 
+span {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 100;
+}
+
 p {
   color: white;
   font-family: 'Kanit', sans-serif;
@@ -16,11 +22,14 @@ h3 {
 
 .show-time {
   display: flex;
-  display: space-between;
+  align-items: center;
+  gap: 12px;
 }
 
 .show-address {
   display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .link {
