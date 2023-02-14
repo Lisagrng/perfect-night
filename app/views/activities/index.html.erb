@@ -1,11 +1,28 @@
-<% if user_signed_in? %>
+<% if user_signed_in? %><>
   <div class="container">
     <div class="cards">
     <% @activities.each do |activity| %>
       <div class="card">
         <%= cl_image_tag activity.photo.key, crop: :fill, class: "d-block w-100", alt: activity.name %>
-        <h4><%= link_to activity.name, activities_path(activity) %></h4>
-        <p><%= activity.open_at %> - <%= activity.close_at %></p>
+        <h4><%= link_to activity.name, activity_path(activity) %></h4>
+
+        <% if activity.opening_days.count == 1 %>
+          <span>
+          Ouvert juste le <%= Activity.display_days(activity.opening_days[0]) %>
+          </span>
+        <% else %>
+          <span>
+          Ouvert du <%= Activity.display_days(activity.opening_days[0]) %>
+          au <%= Activity.display_days(activity.opening_days[-1]) %>
+          </span>
+        <% end %>
+
+
+        <% if activity.workshop == true %>
+          <p><%= activity.start_at %> - <%= activity.end_at %></p>
+        <% else %>
+          <p><%#= activity.open_at.strftime("%H:%M") %> - <%#= activity.close_at.strftime("%H:%M")  %></p>
+        <% end %>
       </div>
     <% end %>
     </div>
