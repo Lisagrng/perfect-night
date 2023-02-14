@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :reviews, only: %i[show edit update destroy]
   # Defines the root path route ("/")
   # root "articles#index"
+  get "index_filtre", to: "activities#index_filtre"
 end
