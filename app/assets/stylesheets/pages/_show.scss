@@ -9,6 +9,14 @@ p {
   font-weight: 100;
 }
 
+.p-card {
+color: #000;
+}
+
+.h2-activity {
+  color:#F99417;
+}
+
 h3 {
   color: white;
   font-family: 'Kanit', sans-serif;
@@ -21,6 +29,16 @@ h3 {
 
 .show-address {
   display: flex;
+}
+
+.title-booking{
+  font-weight: 200;
+}
+
+.container{
+  background: radial-gradient(circle at top, rgb(201, 201, 201) 10%, rgb(61, 61, 61) 80%), #000;
+  // background-clip: content-box;
+  // background-image: url("https://files.slack.com/files-pri/T02NE0241-F04P26RTVDM/image.png");
 }
 
 .link {

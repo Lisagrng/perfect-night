@@ -14,7 +14,7 @@
       <% if @activity.workshop == "false" %>
         <i class="fa-regular fa-calendar"><p><%= @activity.open_at %> - <%=@activity.close_at %></p></i>
       <% else %>
-        git<i class="fa-regular fa-calendar"><p><%= @activity.start_at %> - <%=@activity.end_at %></p></i>
+        <i class="fa-regular fa-calendar"><p><%= @activity.start_at %> - <%=@activity.end_at %></p></i>
       <% end %>
     </div>
     <h3>Description</h3>
