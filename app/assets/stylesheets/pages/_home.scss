@@ -38,63 +38,6 @@ h1{
   color: white;
 }
 
-.search-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #A81DF7;
-  height: 60px;
-  border-radius: 40px;
-  padding: 10px;
-}
-
-@media(hover: hover) and (pointer: fine) {
-  .search-box:hover > .search-txt {
-    width: 240px;
-    padding: 0 6px;
-  }
-  .search-box:hover > .search-btn {
-    background: white;
-    color: black;
-  }
-}
-  .search-btn {
-    color: #eeeeee;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #2f3640;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  .search-btn > i {
-    font-size: 20px;
-  }
-  .search-txt {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    color: white;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
-    font-weight: bold;
-  }
-
-  .search-bar{
-    -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
-    backdrop-filter: blur(15px) grayscale(0.5) opacity(0.8);
-}
 .caroussel-inner {
   display: flex,
 }
@@ -102,3 +45,4 @@ h1{
 .caroussel-item img{
   display:block;
 }
+
