@@ -11,6 +11,16 @@
 .body{
   margin: 0 20px;
 }
+.container-bookings{
+  background: radial-gradient(circle at left, rgb(201, 201, 201) 10%, rgb(72, 72, 72) 70%), #000;
+}
+
+.body-bookings{
+  margin: auto;
+  width: auto;
+  height: 2000px;
+  background: radial-gradient(circle at left, rgb(201, 201, 201) 10%, rgb(72, 72, 72) 70%), #000;
+}
 
 h1{
   text-align: center;
@@ -45,4 +55,3 @@ h1{
 .caroussel-item img{
   display:block;
 }
-
