@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <div class="container">
+  <div class="container-index-test">
     <div class= "logo">
       <%= image_tag("logo.png")%>
     </div>
@@ -12,13 +12,23 @@
         <% if activity.opening_days.count == 1 %>
           <span>
           <%= Activity.display_days(activity.opening_days[0]) %>
+          <span class="card-color-grey">|</span>
+          <%= DateTime.parse(activity.start_at).strftime("%H:%M") %>
+          <span class="card-color-grey">-</span>
+          <%= DateTime.parse(activity.end_at).strftime("%H:%M") %>
+          <span class="card-color-white"> <%= activity.price_cents.fdiv(100) %> €</span>
           </span>
-          <%#= DateTime.parse(activity.start_at).strftime("%H:%M") %> - <%#= DateTime.parse(activity.end_at).strftime("%H:%M") %>
         <% else %>
           <span>
           <!-- Jour d'ouverture et fermeture -->
-          <%= Activity.display_days(activity.opening_days[0]) %>
-          <%= Activity.display_days(activity.opening_days[-1]) %>
+          <% if activity.opening_days == (0..6).to_a %>
+            Ouvert 7j/7
+          <% else %>
+            <span class="card-color-white">Du</span>
+            <%= Activity.display_days(activity.opening_days[0]) %>
+            <span class="card-color-white">au</span>
+            <%= Activity.display_days(activity.opening_days[-1]) %>
+          <% end %>
           <span class="card-color-grey">|</span>
           <!-- Heure converti -->
           <%= DateTime.parse(activity.open_at).strftime("%H:%M") %>
@@ -26,10 +36,12 @@
           <%= DateTime.parse(activity.close_at).strftime("%H:%M")  %>
 
           <!-- Prix converti -->
-          <% if activity.price_cents == 0 %>
+          <% if activity.price_cents.blank? %>
+            <span class="card-color-white">Réglement sur place</span>
+          <% elsif activity.price_cents.zero? %>
             <span class="card-color-white">Gratuit</span>
           <% else %>
-            <span class="card-color-white"><%= activity.price_cents %></span>
+            <span class="card-color-white"> <%= activity.price_cents.fdiv(100) %> €</span>
           <% end %>
           </span>
         <% end %>
