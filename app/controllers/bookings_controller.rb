@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.activity_id = params[:activity_id]
-    @booking.total_price = @activity.price_cents * @booking.number_of_persons
+    @booking.total_price = @activity.price_cents / 100 * @booking.number_of_persons
     @booking.save!
     redirect_to booking_path(@booking)
   end
@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     @activity = @booking.activity
-    @price = @activity.price_cents * (@booking.number_of_persons)
+    @price = @activity.price_cents / 100 * (@booking.number_of_persons)
   end
 
   def destroy
@@ -39,6 +39,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:start_at, :end_at, :number_of_persons)
+    params.require(:booking).permit(:start_at, :end_at, :number_of_persons, :open_at, :close_at)
   end
 end

@@ -1,25 +1,29 @@
-<br>
-<h2><%= @booking.activity.name %></h2>
+<div class="container-bookings">
+    <div class= "logo">
+      <%= image_tag("logo.png")%>
+    </div>
+<h2 class="title"><%= @booking.activity.name %></h2>
 <div class="container-show-booking">
     <div class="cards-color">
       <div class="card">
-        <p><strong>Début de l'activité à : </strong><%=%></p>
+        <p><span style="color: orange;"><strong>Début</strong></span> de l'activité à : </strong></p>
       </div>
       <div class="card">
-        <p><strong>Fin de l'activité à : </strong><%= %></p>
+        <p><span style="color: orange;"><strong>Fin</strong></span> de l'activité à : </strong></p>
       </div>
       <div class="card">
-        <p><strong>Prix : </strong><%= @price %> $</p>
+        <p><strong>Prix : </strong><%= @price %> €</p>
       </div>
     </div>
 
   <div class="flexbox">
-    <div class="button-show">
+    <div class="button-home">
       <%= link_to "Delete", booking_path(@booking),
         data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre ?"} %>
     </div>
-    <div class="button-show">
-      <%= link_to 'Toutes mes réservations', bookings_path %>
+    <div class="button-home">
+      <%= link_to 'Toutes mes réservations', booking_path(booking) %>
+      </div>
     </div>
   </div>
 </div>
