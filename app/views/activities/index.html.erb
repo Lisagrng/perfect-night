@@ -21,9 +21,9 @@
           <%= Activity.display_days(activity.opening_days[-1]) %>
           <span class="card-color-grey">|</span>
           <!-- Heure converti -->
-          <%= activity.open_at.strftime("%H:%M") %>
+          <%= DateTime.parse(activity.open_at).strftime("%H:%M") %>
           <span class="card-color-grey">-</span>
-          <%= activity.close_at.strftime("%H:%M")  %>
+          <%= DateTime.parse(activity.close_at).strftime("%H:%M")  %>
 
           <!-- Prix converti -->
           <% if activity.price_cents == 0 %>

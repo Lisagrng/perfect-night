@@ -14,6 +14,10 @@ class ActivitiesController < ApplicationController
         lng: @activity.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: { activity: @activity })
       }]
+    # @marker =
+    #   { lat: @activity.latitude,
+    #     lng: @activity.longitude,
+    #     marker_html: render_to_string(partial: "marker", locals: { activity: @activity }) }
   end
 
   def new
@@ -63,6 +67,7 @@ class ActivitiesController < ApplicationController
     end
   end
 end
+
 
 def filtre
   if params[:max_number_persons].present?
