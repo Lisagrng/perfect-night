@@ -1,3 +1,8 @@
-.element{
+.container-filtre{
   background: radial-gradient(circle at left, rgb(201, 201, 201) 10%, rgb(72, 72, 72) 70%), #000;
+  height: 100vh;
+}
+
+.filtre{
+  margin: 0 20px;
 }
