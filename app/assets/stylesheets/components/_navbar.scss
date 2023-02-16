@@ -33,8 +33,11 @@
 }
 
 .navbar-show {
+  a {
+    text-decoration: none;
+    color: white;
+  }
   display: inline-block;
-  color: white;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   font-size: 300;
