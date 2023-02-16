@@ -1,4 +1,4 @@
-<% if current_page?(controller: "activities", action: "show") %>
+<% if @activity && current_page?(activity_path(@activity)) %>
   <div class="navbar-phone navbar-show" style="display:inline-block">JE VEUX CETTE ACTIVITÉ CE SOIR</div> %> %>
 <% else %>
   <div class="navbar-phone">
@@ -6,7 +6,7 @@
         <%= link_to root_path do %>
         <i class="fas fa-home"></i>
         <% end %>
-        <%= link_to "#" do %>
+        <%= link_to "index_filtre" do %>
         <i class="fas fa-search"></i>
         <% end %>
         <%= link_to "#" do %>
@@ -15,5 +15,6 @@
         <%= link_to "#" do %>
         <i class="fa-solid fa-user"></i>
         <% end %>
+      </div>
   </div>
 <% end %>

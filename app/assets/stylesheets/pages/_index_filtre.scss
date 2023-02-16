@@ -5,4 +5,13 @@
 
 .filtre{
   margin: 0 20px;
+  color: #5D3891;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+}
+
+.filtre select,
+.filtre input[type="text"],
+.filtre input[type="submit"] {
+  border-radius: 10px;
 }
