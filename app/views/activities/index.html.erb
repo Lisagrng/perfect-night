@@ -11,16 +11,12 @@
 
         <% if activity.opening_days.count == 1 %>
           <span>
-<<<<<<< HEAD
-          Ouvert juste le <%= Activity.display_days(activity.opening_days[0]) %>ππ
-=======
           <%= Activity.display_days(activity.opening_days[0]) %>
           <span class="card-color-grey">|</span>
           <%= DateTime.parse(activity.start_at).strftime("%H:%M") %>
           <span class="card-color-grey">-</span>
           <%= DateTime.parse(activity.end_at).strftime("%H:%M") %>
           <span class="card-color-white"> <%= activity.price_cents.fdiv(100) %> €</span>
->>>>>>> 0f1722e827c982f0a116dfe25ff73a142186ff9a
           </span>
         <% else %>
           <span>
