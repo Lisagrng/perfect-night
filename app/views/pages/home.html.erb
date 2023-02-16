@@ -10,7 +10,7 @@
     <br>
       <br>
       <div class="text-center">
-        <button class="button-home">
+        <button class="button-home"><i class="fa-solid fa-magnifying-glass"></i>
             <%= link_to "Choisir mon activité", index_filtre_path %>
         </button>
       </div>
@@ -53,11 +53,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    <div>
-      <% @activities.each do |activity|%>
-        <%= link_to "Voir plus d'évènements", activity_path(activity)%>
-      <%end%>
-    </div>
+      <br>
   </div>
 </div>
 <% end %>
