@@ -8,9 +8,8 @@
   width: 100%;
   bottom: 0px;
 
-  background: #722db7;
+  background: #5e5e5e;
     .btn-plus-icon {
-      padding: 8px 25px;
       border-radius: 50px;
       background: #ffffff;
       transition: background 0.3s ease;
@@ -23,14 +22,22 @@
 
     .navbar-icons {
       display: flex;
-      align-items: center;
+      align-items: space-between;
       margin: auto;
     }
     i {
-      margin: 0 20px;
+      margin: 0 30px;
       color: white;
       font-size: 20px;
     }
+}
+
+.navbar-show {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-size: 300;
 }
 
 @media(max-width: 992px) {

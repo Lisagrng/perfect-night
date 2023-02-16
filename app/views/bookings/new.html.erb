@@ -5,25 +5,25 @@
 <%#= f.button :submit, class:"button-show" %>
 <%# end %>
 
-
-  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Votre réservation</h1>
-    <p class="lead">Voici le résumé de votre réservation 🏄🏼‍♀️</p>
-    <p>Plus qu'une vérif' pour la valider 💜</p>
+<div class="container-bookings">
+    <div class= "logo">
+      <%= image_tag("logo.png")%>
+    </div>
+    <h2 class="title">Ma réservation</h2>
+    <p class="text-center">Plus qu'une vérif' pour la valider 🧡</p>
   </div>
-  <div class="card mb-4 box-shadow"></div>
-  <div class="container">
-    <div class="card-deck mb-3 text-center">
-      <div class="card mb-4 box-shadow">
+  <div class="body-bookings">
+  <div class="text-center">
+      <div class="card mb-4">
         <div class="card-header">
-          <h4 class="my-0 font-weight-normal"><%= @activity.name %></h4>
+          <h2 class="h2-activity"><%= @activity.name %></h2>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title"><%= @activity.price_cents %> € / pers.<small class="text-muted"></small></h1>
+          <p class="p-card"><%= @activity.price_cents / 100 %> € / pers.</p>
+
           <%= simple_form_for @booking, url: activity_bookings_path(@activity)  do |f| %>
-            <%= f.input :number_of_persons %>
-            <%#= f.button :submit, class:"button-show" %>
-            <button type="submit" class="btn-show">Je valide</button>
+            <%= f.input :number_of_persons, placeholder: "Nombre de personnes", label:"Combien ? 👯" %>
+            <%= f.button :submit, class:"button-show", value:"Je réserve"%>
           <% end %>
         </div>
       </div>

@@ -1,4 +1,8 @@
-<div class="navbar-phone">
+<% if @activity && current_page?(activity_path(@activity))  %>
+  <div class="navbar-phone navbar-show" style="display:inline-block">
+  <%= link_to "JE VEUX CETTE ACTIVITÉ CE SOIR", new_activity_booking_path(@activity) %></div>
+<% else %>
+  <div class="navbar-phone">
       <div class="navbar-icons">
         <%= link_to root_path do %>
         <i class="fas fa-home"></i>
@@ -12,4 +16,6 @@
         <%= link_to "#" do %>
         <i class="fa-solid fa-user"></i>
         <% end %>
-</div>
+      </div>
+  </div>
+<% end %>
