@@ -18,6 +18,7 @@ h1{
   color: #ffffffa1;
   text-shadow: 0 0 10px #ffffffe0, 0 0 20px #ffffffe0, 0 0 30px #ffffffe0, 0 0 40px #5D3891, 0 0 70px #5D3891, 0 0 80px #5D3891, 0 0 100px #5D3891, 0 0 150px #5D3891;
   // animation: neon 1s ease-in-out infinite alternate;
+  font-family: 'Kanit', sans-serif;
 }
 
 @keyframes neon {
@@ -28,14 +29,17 @@ h1{
 
 .title{
   color:white;
+  font-family: 'Kanit', sans-serif;
 }
 
 .description h2{
   color: white;
+  font-family: 'Kanit', sans-serif;
 }
 
 .description p{
   color: white;
+  font-family: 'Kanit', sans-serif;
 }
 
 .caroussel-inner {
@@ -45,4 +49,3 @@ h1{
 .caroussel-item img{
   display:block;
 }
-
