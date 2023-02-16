@@ -10,7 +10,9 @@
       <%= image_tag("logo.png")%>
     </div>
     <h2 class="title">Ma réservation</h2>
-    <p class="text-center">Plus qu'une vérif' pour la valider 🧡</p>
+    <div class="body-bookings">
+          <div class="text-center">
+    <p>Plus qu'une vérif' pour la valider 🧡</p>
   </div>
   <div class="body-bookings">
   <div class="text-center">
@@ -19,11 +21,12 @@
           <h2 class="h2-activity"><%= @activity.name %></h2>
         </div>
         <div class="card-body">
-          <p class="p-card"><%= @activity.price_cents / 100 %> € / pers.</p>
-
+          <p><%= @activity.price_cents%> € / pers.</p>
           <%= simple_form_for @booking, url: activity_bookings_path(@activity)  do |f| %>
-            <%= f.input :number_of_persons, placeholder: "Nombre de personnes", label:"Combien ? 👯" %>
+          <div class="filtre">
+            <%= f.input :number_of_persons, placeholder: "Nombre de personnes", label:"Combien serez-vous ?", type:"text" %>
             <%= f.button :submit, class:"button-show", value:"Je réserve"%>
+          </div>
           <% end %>
         </div>
       </div>
