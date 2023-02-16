@@ -1,10 +1,11 @@
 .container {
   width: 100%;
   padding-bottom: 40px;
+  background: radial-gradient(circle at left, rgb(201, 201, 201) 10%, rgb(72, 72, 72) 70%), #000;
 }
 
-.container-index-test {
-  width: 100%;
-  padding-bottom: 40px;
-  background: rgb(72, 72, 72);
-}
+// .container-show {
+//   width: 100%;
+//   padding-bottom: 40px;
+//   background: radial-gradient(circle at left, rgb(201, 201, 201) 10%, rgb(72, 72, 72) 0%), #000;
+// }
