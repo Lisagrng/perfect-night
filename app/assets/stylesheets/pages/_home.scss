@@ -8,6 +8,7 @@
   // background-clip: content-box;
   // background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQAOCdv_JKAHqtgtrWur5UxsakC0_Zu5aI-mxYHu1sePkl1aR7-");
 }
+
 .body{
   margin: 0 20px;
 }
@@ -58,4 +59,8 @@ h1{
 
 .caroussel-item img{
   display:block;
+}
+
+.d-block{
+  border-radius: 5px;
 }
