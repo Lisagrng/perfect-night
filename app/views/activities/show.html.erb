@@ -38,11 +38,7 @@
     <br>
     <br>
       <div class="reviews-form">
-        <%= simple_form_for([@activity, @review]) do |f| %>
-          <%= f.input :rating %>
-          <%= f.input :content %>
-          <%= f.button :submit %>
-        <% end %>
+        <%= link_to "Ajouter un avis", new_activity_review_path(@activity) %>
       </div>
     <ul class="list-group">
       <% if @activity.reviews.blank? %>

@@ -7,11 +7,12 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.activity = @activity
+    @review.booking_id = @booking
+    @review.activity_id = @activity
     if @review.save
       redirect_to activities_path(@activity)
     else
-      render "activities/show", status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
