@@ -3,6 +3,7 @@ class ActivitiesController < ApplicationController
 
   def index
     search
+    @activities = Activity.filter_attributes
     @activities = Activity.all
   end
 
@@ -64,7 +65,6 @@ class ActivitiesController < ApplicationController
     end
   end
 end
-
 
 def filtre
   if params[:max_number_persons].present?
