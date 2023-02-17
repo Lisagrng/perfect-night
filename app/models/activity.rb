@@ -26,3 +26,18 @@ class Activity < ApplicationRecord
     end
   end
 end
+
+def self.filter_by_params(params)
+  activities = all
+  if params[:Nombre_de_personne].present?
+    activities = activities.where(max_persons: params[:Nombre_de_personne])
+  end
+  if params[:ville].present?
+    activities = activities.where("city ILIKE ?", "%#{params[:ville]}%")
+  end
+  if params[:Categorie].present?
+    activities = activities.where("category ILIKE ?", "%#{params[:Categorie]}%")
+  end
+
+  activities
+end

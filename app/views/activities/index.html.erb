@@ -5,52 +5,55 @@
     </div>
     <div class="cards">
       <% @activities.each do |activity| %>
-        <div class="card">
-          <%= cl_image_tag activity.photo.key, crop: :fill, alt: activity.name %>
-          <%= link_to activity.name, activity_path(activity) %>
-
-          <% if activity.opening_days.count == 1 %>
-            <span>
-              <!-- Jour d'ouverture-->
-              <%= Activity.display_days(activity.opening_days[0]) %>
-              <!-- Heure converti -->
-              <span class="card-color-grey">|</span>
-              <%= DateTime.parse(activity.start_at).strftime("%H:%M") %>
-              <span class="card-color-grey">-</span>
-              <%= DateTime.parse(activity.end_at).strftime("%H:%M") %>
-            </span>
-            <!-- Prix converti -->
-            <span class="card-color-white button-price">
-              <%= activity.price_cents.fdiv(100) %> €
-            </span>
-          <% else %>
-            <span>
-              <!-- Jour d'ouverture et fermeture -->
-              <% if activity.opening_days == (0..6).to_a %>
-                Ouvert 7j/7
-              <% else %>
-                <span class="card-color-white">Du</span>
+        <% if (params[:max_number_persons].blank? || activity.max_number_persons == params[:max_number_persons].to_i) &&
+              (params[:ville].blank? || activity.ville.downcase.include?(params[:ville].downcase)) &&
+              (params[:Categorie].blank? || activity.categorie.downcase.include?(params[:Categorie].downcase)) %>
+          <div class="card">
+            <%= cl_image_tag activity.photo.key, crop: :fill, alt: activity.name %>
+            <%= link_to activity.name, activity_path(activity) %>
+            <% if activity.opening_days.count == 1 %>
+              <span>
+                <!-- Jour d'ouverture-->
                 <%= Activity.display_days(activity.opening_days[0]) %>
-                <span class="card-color-white">au</span>
-                <%= Activity.display_days(activity.opening_days[-1]) %>
-              <% end %>
-              <span class="card-color-grey">|</span>
-              <!-- Heure converti -->
-              <%= DateTime.parse(activity.open_at).strftime("%H:%M") %>
-              <span class="card-color-grey">-</span>
-              <%= DateTime.parse(activity.close_at).strftime("%H:%M")  %>
-            </span>
-
-            <!-- Prix converti -->
-            <% if activity.price_cents.blank? %>
-              <span class="card-color-white button-price">Réglement sur place</span>
-            <% elsif activity.price_cents.zero? %>
-              <span class="card-color-white button-price">Gratuit</span>
+                <!-- Heure converti -->
+                <span class="card-color-grey">|</span>
+                <%= DateTime.parse(activity.start_at).strftime("%H:%M") %>
+                <span class="card-color-grey">-</span>
+                <%= DateTime.parse(activity.end_at).strftime("%H:%M") %>
+              </span>
+              <!-- Prix converti -->
+              <span class="card-color-white button-price">
+                <%= activity.price_cents.fdiv(100) %> €
+              </span>
             <% else %>
-              <span class="card-color-white button-price"> <%= activity.price_cents.fdiv(100) %> €</span>
+              <span>
+                <!-- Jour d'ouverture et fermeture -->
+                <% if activity.opening_days == (0..6).to_a %>
+                  Ouvert 7j/7
+                <% else %>
+                  <span class="card-color-white">Du</span>
+                  <%= Activity.display_days(activity.opening_days[0]) %>
+                  <span class="card-color-white">au</span>
+                  <%= Activity.display_days(activity.opening_days[-1]) %>
+                <% end %>
+                <span class="card-color-grey">|</span>
+                <!-- Heure converti -->
+                <%= DateTime.parse(activity.open_at).strftime("%H:%M") %>
+                <span class="card-color-grey">-</span>
+                <%= DateTime.parse(activity.close_at).strftime("%H:%M")  %>
+              </span>
+
+              <!-- Prix converti -->
+              <% if activity.price_cents.blank? %>
+                <span class="card-color-white button-price">Réglement sur place</span>
+              <% elsif activity.price_cents.zero? %>
+                <span class="card-color-white button-price">Gratuit</span>
+              <% else %>
+                <span class="card-color-white button-price"> <%= activity.price_cents.fdiv(100) %> €</span>
+              <% end %>
             <% end %>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
