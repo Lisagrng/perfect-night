@@ -20,7 +20,7 @@
         <div>
           <%= label_tag :Categorie %>
           <br>
-          <%= text_field_tag :Categorie %>
+          <%= select_tag :Categorie, options_for_select([[""], ["Bar"], ["Restaurant"], ["Patinoire"], ["Escape Game"], ["Piscine"], ["Quiz"], ["Bowling"], ["Parc d'activités"]]) %>
         </div>
         <br>
         <div>

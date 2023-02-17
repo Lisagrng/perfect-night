@@ -17,16 +17,16 @@ user = User.create!(name: "Hugues", age: 27, sexe: "masculin", address: "Le Clos
 puts 'Finished!'
 
 puts 'Creating activities..'
-file = URI.open("https://babsbowling.com/wp-content/uploads/2021/09/BABS-BOWLING-VILLEFRANCHE13-980x656.jpg")
+file = URI.open("https://babsbowling.com/wp-content/uploads/2021/10/babs-biere-1-980x656.jpg")
 activity = Activity.new(name: "Le BAB'S", description: "Notre immense terrasse, des DJ pour des soirées estivales toujours plus
                 festives", address: "1051 Bd Burdeau, 69400 Villefranche-sur-Saône", max_number_persons:
                 10, price_cents: 800, workshop: "false", opening_days: [1, 2, 3, 4, 5, 6], open_at: "13:00", close_at:
-                "01:00", ville: "Villefranche-sur-Saône", categorie: "Bar")
+                "01:00", ville: "Villefranche-sur-Saône", categorie: "Bowling")
 activity.photo.attach(io: file, filename: "babs.png", content_type: "image/png")
 activity.user = user
 activity.save!
 
-file = URI.open("https://tse3.mm.bing.net/th?id=OIP.uY0bZs5xtXgSqDFOaJ6IZAHaE7&pid=Api")
+file = URI.open("https://u.tfstatic.com/restaurant_photos/075/30075/169/612/284ce2a3e91979f31a2f9bed19935b71.jpg")
 activity = Activity.new(name: "Le Louchebem", description: "Ce restaurant typique et familial, tenu par un boucher,
                 privilégie la viande et les produits du marché.", address: "3 Pl. Victor Hugo, 31000 Toulouse", max_number_persons:
                 130, workshop: "false", opening_days: [1, 2, 3, 4, 5, 6], open_at: "15:00", close_at: "02:00", ville: "Toulouse", categorie: "Restaurant")
@@ -34,7 +34,7 @@ activity.photo.attach(io: file, filename: "louchebem.png", content_type: "image/
 activity.user = user
 activity.save!
 
-file = URI.open("https://tse3.mm.bing.net/th?id=OIP.hHuU9_uOThLtb_7QUS15-AHaE7&pid=Api")
+file = URI.open("https://tse1.mm.bing.net/th?id=OIP.5mQu492dizV6Y25do8MWvAHaD3&pid=Api")
 activity = Activity.new(name: "Delirium Café Toulouse", description: "Bar décontracté avec bière à la pression. Mobilier décalé
                 et plusieurs espaces où s’asseoir en extérieur.", address:
                 "54 All. Jean Jaurès, 31000 Toulouse", max_number_persons: 56, workshop: "false", opening_days:
@@ -43,7 +43,7 @@ activity.photo.attach(io: file, filename: "delirium.png", content_type: "image/p
 activity.user = user
 activity.save!
 
-file = URI.open("https://tse3.mm.bing.net/th?id=OIP.u-9BJFnpEX5O500lV-MsWgHaE8&pid=Api")
+file = URI.open("https://static.actu.fr/uploads/2020/02/photo-alimentation-message-html-960x640.jpg")
 activity = Activity.new(name: "L’alimentation", description: "Une cuisine gourmande et conviviale a L’Alimentation : Restaurant,
                 foodstore, épicerie, bar à vin, cours de cuisine à Toulouse et Labège.", address: "3 bis Rue Maurice
                 Fonvieille, 31000 Toulouse", max_number_persons: 15, price_cents: 4500, workshop: "true", opening_days:
@@ -52,7 +52,7 @@ activity.photo.attach(io: file, filename: "alimentation.png", content_type: "ima
 activity.user = user
 activity.save!
 
-file = URI.open("https://tse3.mm.bing.net/th?id=OIP.GHmii6x-Rkd0wkQ3r-dc6AHaGY&pid=Api")
+file = URI.open("https://sgc.lapetiteroquette-pizzeria.com/cdn/maqv6qv73945/gallery_picture_6.jpg")
 activity = Activity.new(name: "Au WC. Wine And Coffee", description: "Depuis 5 ans, les anciennes toilettes publiques de
                 Poitiers se sont transformées en un bar à vins et bar à tapas.", address: "4 Pl. Charles de Gaulle,
                 86000 Poitiers", max_number_persons: 80, workshop: "false", opening_days:
@@ -80,7 +80,7 @@ activity.photo.attach(io: file, filename: "Josephine.png", content_type: "image/
 activity.user = user
 activity.save!
 
-file = URI.open("https://tse1.mm.bing.net/th?id=OIP.LyS3OmwWLQ2O5jYDikaRDwHaFj&pid=Api")
+file = URI.open("https://image.jeuxvideo.com/medias-sm/142591/1425907983-9464-capture-d-ecran-pc-playstation-4-xbox-one.jpg")
 activity = Activity.new(name: "Last Door Escape Game", description: "Injustement emprisonnés, votre procès vient de connaître
   l’issue que vous craigniez : vous êtes définitivement condamnés à la peine capitale. Il ne vous reste
   maintenant plus qu’une heure avant l’injection létale. Arriverez-vous à vous en échapper ?", address:
@@ -90,7 +90,7 @@ activity.photo.attach(io: file, filename: "escape.png", content_type: "image/png
 activity.user = user
 activity.save!
 
-file = URI.open("https://tse4.mm.bing.net/th?id=OIP.KKKF5IlWi7zofPLUE-jpHAHaE8&pid=Api")
+file = URI.open("https://alloescape.fr/wp-content/uploads/2019/09/quiz-room-paris-avis.jpg")
 activity = Activity.new(name: "La Quiz Room", description: "Entre amis ou en famille… 2 parties (ou +) pour découvrir ou
                 redécouvrir Quiz Room et ses jeux totalement quiz !", address:
                 "81 Rue Lucien Faure - 33300 Bordeaux", workshop: "false", opening_days:
@@ -99,7 +99,7 @@ activity.photo.attach(io: file, filename: "quiz.png", content_type: "image/png")
 activity.user = user
 activity.save!
 
-file = URI.open("https://tse1.mm.bing.net/th?id=OIP.FTLIVWOg2mnnPVqsb6_5JQHaE8&pid=Api")
+file = URI.open("https://www.sevensquares.fr/wp-content/uploads/2021/02/20210202_102652-scaled.jpg")
 activity = Activity.new(name: "Seven Squares", description: "Avec nos 7 activités pour tous les âges, variez les plaisirs sans
                 vous déplacer ! Venez en famille, entre amis et partagez un moment convivial. ", address:
                 "2 Rue Ferrer, 42000 Saint-Étienne", workshop: "false", max_number_persons: 200, opening_days:
