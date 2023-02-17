@@ -1,11 +1,11 @@
 .container-filtre{
-  background: radial-gradient(circle at left, rgb(201, 201, 201) 10%, rgb(72, 72, 72) 70%), #000;
+  background: radial-gradient(circle at right, rgb(201, 201, 201) 20%, rgb(72, 72, 72) 50%), #000;
   height: 100vh;
 }
 
 .filtre{
   margin: 0 20px;
-  color: #5D3891;
+  color: #FF8B13;
   font-family: 'Kanit', sans-serif;
   font-weight: 500;
 }
@@ -13,5 +13,5 @@
 .filtre select,
 .filtre input[type="text"],
 .filtre input[type="submit"] {
-  border-radius: 10px;
+  border-radius: 7px;
 }
