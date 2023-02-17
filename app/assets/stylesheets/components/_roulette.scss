@@ -1,29 +1,12 @@
-// /* Esthétique des éléments en haut à gauche */
-// form{
-//   margin-top:20px;
-//   margin-bottom:50px;
-// }
-// #nombre{
-//   background-color:#E8EEF2;
-// }
-
-// /* Placement de la roulette */
-// #roulette{
-//   border: solid black;
-//   border-radius: 50%;
-//   position:absolute;
-//   margin-left:40%;
-// }
-
-// /* Placement de la fleche */
-// #fleche{
-//   position:absolute;
-//   margin-left:51%;
-//   margin-top:275px;
-//     /* Centre de rotation de la flèche. Attention, selon les navigateurs, il faut l'écrire differemment. C'est pourquoi il y a 5 fois la même ligne. */
-//   transform-origin: 32%; /* CSS3 */
-//   -moz-transform-origin: 32%; /* Firefox */
-//   -webkit-transform-origin: 32%; /* Webkit */
-//   -o-transform-origin: 32%; /* Opera */
-//   -ms-transform-origin: 32%; /* IE 9 */
-// }
+#roulette-btn{
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(230, 230, 230);
+  padding: 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  align-items: flex-end;
+  text-decoration: none;
+  color: rgb(153, 0, 255);
+  font-family: 'Kanit', sans-serif;
+}
