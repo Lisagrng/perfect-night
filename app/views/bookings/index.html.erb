@@ -6,23 +6,23 @@
     </div>
   <h2 class="title">Mes réservations</h2>
   <div class="body-bookings">
-          <div class="text-center">
-      <p> Découvrez ici toutes vos <span style="color: orange;"><strong>réservations</strong></span></p>
-          </div>
+      <p class="text-center"> Découvrez ici toutes vos <span style="color: #F99417"><strong>réservations</strong></span></p>
       <% @my_bookings.each do |booking| %>
-          <h3><%= @value += 1 %> - <%= booking.activity.name %></h3>
-          <ul>
-            <li><p><%= booking.start_at %> Début</p></li>
-            <li><p><%#= booking.end_at %> Fin</p></li>
-          </ul>
-          <p><%= booking.activity.description %></p>
-          <div class="filtre">
-          <div class="button-show">
+          <h3> ⚡️ <%#= @value += 1 %><%= booking.activity.name %></h3>
+          <%#= booking.activity.description %>
+          <%#= cl_image_tag booking.activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: booking.activity.name %>
+              <div class= "image-show">
+                <%= cl_image_tag @activity.photo.key%>
+              </div>
+            <%#= link_to booking.activity.name, booking_path(booking) %>
+        <div class="filtre">
+          <br>
+          <div class="button-home">
+            <div class="text-center">
             <%= link_to "Voir cette réservation", booking_path(booking) %>
-          </div>
+            </div>
           </div>
         </div>
       <% end %>
-    </div>
   </div>
 </div>

@@ -14,18 +14,22 @@ class BookingsController < ApplicationController
     @activity = Activity.find(params[:activity_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.activity = Activity.find(params[:activity_id])
     @booking.activity_id = params[:activity_id]
-    @booking.total_price = @activity.price_cents / 100 * @booking.number_of_persons
+    unless @price.blank?
+      @booking.total_price = (@activity.price_cents) * (@booking.number_of_persons)
+    end
     @booking.save!
     redirect_to booking_path(@booking)
-
   end
 
   def show
     @booking = Booking.find(params[:id])
     @activity = @booking.activity
-    @price = @activity.price_cents / 100 * (@booking.number_of_persons)
+    if @price.blank? == "true"
+      puts "Réglement sur place"
+    else
+      @price = @activity.price_cents.fdiv(100) * @booking.number_of_persons
+    end
   end
 
   def destroy
