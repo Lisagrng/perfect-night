@@ -7,12 +7,15 @@ class ReviewsController < ApplicationController
 
   def create
     @activity = Activity.find(params[:activity_id])
+    @booking = Booking.where(user: current_user, activity: @activity).first
     @review = Review.new(review_params)
-    @review.activity = @activity
-    if @review.save!
-      redirect_to activities_path(@activity)
+    # @review.activity = @activity
+    @review.booking = @booking
+    if @review.save
+      flash[:notice] = "Avis publié ! "
+      redirect_to activity_path(@activity)
     else
-      redirect_to activities_path(@activity), status: :unprocessable_entity
+      redirect_to activity_path(@activity), status: :unprocessable_entity
     end
   end
 
@@ -29,6 +32,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content, :rating, :booking_id)
+    params.require(:review).permit(:rating, :content, )
   end
 end
