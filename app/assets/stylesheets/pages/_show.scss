@@ -78,3 +78,15 @@ h3 {
 .fa-calendar::before {
   margin-right: 12px;
 }
+
+.show-reviews {
+  font-family: 'Kanit', sans-serif;
+  p {
+    color:  #FF8B13;
+    font-weight: 200;
+  }
+  h3 {
+    color: white;
+    font-weight: 500;
+  }
+}

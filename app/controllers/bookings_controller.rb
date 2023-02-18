@@ -14,10 +14,12 @@ class BookingsController < ApplicationController
     @activity = Activity.find(params[:activity_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+    @booking.activity = Activity.find(params[:activity_id])
     @booking.activity_id = params[:activity_id]
     @booking.total_price = @activity.price_cents / 100 * @booking.number_of_persons
     @booking.save!
     redirect_to booking_path(@booking)
+
   end
 
   def show
