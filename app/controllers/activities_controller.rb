@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  before_action :activity_id, only: %i[show edit update destroy]
+  before_action :set_activity, only: %i[show edit update destroy]
 
   def index
     search
@@ -9,6 +9,9 @@ class ActivitiesController < ApplicationController
 
   def show
     @review = Review.new
+    @booking = Booking.where(user: current_user, activity: @activity).first
+    @reviews = Review.includes(:booking).where(booking: { activity: @activity })
+    @is_reviewed = @reviews.any?
     @marker =
       [{
         lat: @activity.latitude,
@@ -49,7 +52,7 @@ class ActivitiesController < ApplicationController
 
   private
 
-  def activity_id
+  def set_activity
     @activity = Activity.find(params[:id])
   end
 

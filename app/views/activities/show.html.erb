@@ -37,20 +37,23 @@
     <h3>Reviews</h3>
     <br>
     <br>
+    <% if @booking != nil %>
       <div class="reviews-form">
-        <%# <%= link_to "Ajouter un avis", new_activity_review_path(@activity) %>
         <h1>Ajoutez votre avis!</h1>
           <%= simple_form_for [@activity, @review] do |f| %>
-            <%= f.input :rating %>
-              <%= f.input :content %>
+            <%= f.input :rating, label: "combien" %>
+              <%= f.input :content, label: "commentaire"%>
             <%= f.submit "Ajouter mon commentaire", class: "btn btn-primary" %>
           <% end %>
       </div>
+  <% end %>
+
     <ul class="list-group">
-      <% if @activity.reviews.blank? %>
-      <p>Soyez le premier à ajouter un avis pour <%= @activity.name %></p>
+      <% unless @is_reviewed %>
+        <p>Soyez le premier à ajouter un avis pour <%= @activity.name %></p>
       <% else %>
-        <% @console.reviews.each do |review| %>
+        <% @activity.bookings.each do |booking| %>
+          <% booking.reviews.each do |review| %>
             <% if review.rating == 5 %>
                 <li class="list-item">
                   <%= review.content %><span style="color: gold;">★★★★★</span>
@@ -93,6 +96,7 @@
                 </li>
             <% end %>
           <% end %>
+        <% end %>
       <% end %>
     </ul>
     <br>
