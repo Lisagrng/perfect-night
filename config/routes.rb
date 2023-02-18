@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "index_filtre", to: "activities#index_filtre"
+  get "random_activity", to: "activities#random_activity"
 end

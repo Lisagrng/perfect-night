@@ -2,9 +2,20 @@ class ActivitiesController < ApplicationController
   before_action :activity_id, only: %i[show edit update destroy]
 
   def index
-    search
-    @activities = Activity.filter_attributes
+    # search
+    # @activities = Activity.filter_attributes
     @activities = Activity.all
+    choose_random_activity
+  end
+
+
+  def choose_random_activity
+    # params[:ville] params[:category] params[:max_number_person]
+    if params[:Ville].present?
+      @random_activity = Activity.where(ville: params[:Ville]).sample
+    else
+      @random_activity = Activity.all.sample
+    end
   end
 
   def show
@@ -45,6 +56,12 @@ class ActivitiesController < ApplicationController
   def index_filtre
     @activities = Activity.all
     filtre
+  end
+
+  def random_activity
+    @activities = Activity.all
+    @activity = @activities.sample
+    redirect_to activity_path(@activity)
   end
 
   private
