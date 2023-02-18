@@ -1,0 +1,23 @@
+.footer-phone {
+  background-color: rgb(72, 72, 72);
+  padding: 15px;
+  margin-bottom: 35px;
+  gap: 16px;
+  line-height: 20px;
+  p {
+    font-size: 16px;
+    color: lightgray;
+  }
+}
+
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.title-footer {
+  h4 {
+    color: white;
+  }
+}
