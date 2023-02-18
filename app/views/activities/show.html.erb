@@ -42,8 +42,8 @@
         <h3>Ajoutez votre avis!</h3>
           <%= simple_form_for [@activity, @review] do |f| %>
             <%= f.input :rating, label: "Combien mettrais-tu à cette activité?" %>
-              <%= f.input :content, label: "Dis nous en plus!"%>
-            <small><%= f.submit "AJOUTER MON COMMENTAIRE", class: "btn-reviews" %></small>
+            <%= f.input :content, label: "Dis nous en plus!"%>
+            <small><%= f.submit "AJOUTER MON COMMENTAIRE", class: "btn-reviews"%></small>
           <% end %>
       </div>
   <% end %>
@@ -58,7 +58,7 @@
                 <div class="list-item card-review">
                   <%= review.content %><span>★★★★★</span>
                   <%= link_to "🗑",
-                    review_path(review), class: "delete-button",
+                    review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
                 </div>
@@ -66,7 +66,7 @@
                 <div class="list-item card-review">
                   <%= review.content %><span>★★★★</span>
                   <%= link_to "🗑",
-                    review_path(review), class: "delete-button",
+                    review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
                 </div>
@@ -74,7 +74,7 @@
                 <div class="list-item card-review">
                   <%= review.content %><span>★★★</span>
                   <%= link_to "🗑",
-                    review_path(review), class: "delete-button",
+                    review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
                 </div>
@@ -82,7 +82,7 @@
                 <div class="list-item card-review">
                   <%= review.content %> <span>★★</span>
                   <%= link_to "🗑",
-                    review_path(review), class: "delete-button",
+                    review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
                 </div>
@@ -90,7 +90,7 @@
                 <div class="list-item card-review">
                   <%= review.content %> <span>★</span>
                   <%= link_to "🗑",
-                    review_path(review), class: "delete-button",
+                    review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
                 </div>

@@ -23,14 +23,16 @@
   color: black;
 }
 
-.btn-review {
+.btn-reviews {
+  background: white;
   text-decoration: none;
-  width: 10px;
-  height: 10px;
-  font-weight: 200px;
-  display: flex;
-  align-items: center;
   border-radius: 5px;
-  background-color: white;
-  box-shadow: 12px 12px 2px 1px black;
+  f {
+  font-weight: 200;
+  }
+}
+
+.btn-delete-show {
+  background: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
