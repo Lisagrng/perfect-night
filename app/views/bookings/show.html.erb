@@ -7,26 +7,28 @@
     <div class="container-bookings">
       <div class="cards">
         <div class="card">
-          <p><strong>Début</strong> de l'activité à :</p>
+          <p span style="color: #F99417"><strong>Début</strong></span> de l'activité à : <%=@activity.open_at%></p>
         </div>
         <div class="card">
-          <p><strong>Fin</strong> de l'activité à :</p>
+          <p span style="color: #F99417"><strong>Fin</strong></span> de l'activité à : <%=@activity.close_at%></p>
         </div>
         <div class="card">
-          <p><strong>Prix : <%= activity.price_cents.fdiv(100) %> €
+          <p span style="color: #F99417"><strong>Prix</strong></span> : <%= @price %>
         </div>
       </div>
     </div>
 
-    <div class="flexbox">
-      <div class="button-home">
-        <%= link_to "Delete", booking_path(@booking),
-        data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre ?"} %>
-      </div>
-
+    <div class="filtre">
       <div class="button-home">
         <div class="text-center">
-          <%= link_to 'Toutes mes réservations', bookings_path(booking) %>
+        <%= link_to "Supprimer", booking_path(@booking),
+        data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre ?"} %>
+        </div>
+      </div>
+  <br>
+      <div class="button-home">
+        <div class="text-center">
+          <%= link_to 'Toutes mes réservations', booking_path(@booking) %>
         </div>
       </div>
     </div>

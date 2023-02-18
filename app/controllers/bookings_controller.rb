@@ -15,8 +15,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.activity_id = params[:activity_id]
-    unless @price.blank?
-      @booking.total_price = (@activity.price_cents) * (@booking.number_of_persons)
+    @activity.price_cents
+
+    if @activity.price_cents.nil?
+      @booking.total_price = 0
+    else
+      @booking.total_price = @activity.price_cents.fdiv(100) * @booking.number_of_persons
     end
     @booking.save!
     redirect_to booking_path(@booking)
@@ -25,10 +29,11 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     @activity = @booking.activity
-    if @price.blank? == "true"
-      puts "Réglement sur place"
+
+    if @activity.price_cents.nil?
+      @price = "Réglement sur place"
     else
-      @price = @activity.price_cents.fdiv(100) * @booking.number_of_persons
+      @price = "#{@activity.price_cents.fdiv(100) * @booking.number_of_persons} €"
     end
   end
 
