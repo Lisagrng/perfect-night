@@ -38,7 +38,13 @@
     <br>
     <br>
       <div class="reviews-form">
-        <%= link_to "Ajouter un avis", new_activity_review_path(@activity) %>
+        <%# <%= link_to "Ajouter un avis", new_activity_review_path(@activity) %>
+        <h1>Ajoutez votre avis!</h1>
+          <%= simple_form_for [@activity, @review] do |f| %>
+            <%= f.input :rating %>
+              <%= f.input :content %>
+            <%= f.submit "Ajouter mon commentaire", class: "btn btn-primary" %>
+          <% end %>
       </div>
     <ul class="list-group">
       <% if @activity.reviews.blank? %>

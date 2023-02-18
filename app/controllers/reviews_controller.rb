@@ -6,13 +6,13 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    @activity = Activity.find(params[:activity_id])
     @review = Review.new(review_params)
-    @review.booking_id = @booking
-    @review.activity_id = @activity
-    if @review.save
+    @review.activity = @activity
+    if @review.save!
       redirect_to activities_path(@activity)
     else
-      render :new, status: :unprocessable_entity
+      redirect_to activities_path(@activity), status: :unprocessable_entity
     end
   end
 
@@ -29,6 +29,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content, :rating)
+    params.require(:review).permit(:content, :rating, :booking_id)
   end
 end
