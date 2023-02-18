@@ -11,21 +11,28 @@
     </div>
     <h2 class="title">Ma réservation</h2>
     <div class="body-bookings">
-          <div class="text-center">
-    <p>Plus qu'une vérif' pour la valider 🧡</p>
-  </div>
-  <div class="body-bookings">
-  <div class="text-center">
-      <div class="card mb-4">
-        <div class="card-header">
-          <h2 class="h2-activity"><%= @activity.name %></h2>
-        </div>
-        <div class="card-body">
-          <p><%= @activity.price_cents%> € / pers.</p>
+      <p class="text-center"> Plus qu'une vérif' pour la <span style="color: #F99417"><strong>valider ⚡️ </strong></span></p>
+      <br>
+        <h3><%= @activity.name %></h3>
+          <br>
+            <div class= "image-show">
+              <%= cl_image_tag @activity.photo.key%>
+            </div>
+          <% if @activity.price_cents.blank? %>
+                <br>
+                <p class="text-center">Réglement sur place</p>
+              <% elsif @activity.price_cents.zero? %>
+                <p class="text-center">Gratuit</p>
+              <% else %>
+                <p class="text-center"><%= @activity.price_cents.fdiv(100) %> € / pers.</p>
+              <% end %>
           <%= simple_form_for @booking, url: activity_bookings_path(@activity)  do |f| %>
-          <div class="filtre">
-            <%= f.input :number_of_persons, placeholder: "Nombre de personnes", label:"Combien serez-vous ?", type:"text" %>
-            <%= f.button :submit, class:"button-show", value:"Je réserve"%>
+          <div class="filtre"><span style="color: #F0000">
+            <%= f.input :number_of_persons, placeholder: "Nombre de personnes", label:"Combien serez-vous ?", type:"text" %></span>
+              <br>
+            <div class="text-center">
+              <%= f.button :submit, class:"button-show", value:"Je réserve"%>
+            </div>
           </div>
           <% end %>
         </div>
