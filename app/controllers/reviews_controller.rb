@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to activity_path(@review.activity), status: :see_other
+    redirect_to activity_path(@review.booking.activity), status: :see_other
   end
 
   private

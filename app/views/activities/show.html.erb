@@ -33,17 +33,17 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
-  <div class="show-reviews">
-    <h3>Reviews</h3>
+  <div class="show-reviews card-reviews">
+    <h1>Reviews</h1>
     <br>
     <br>
     <% if @booking != nil %>
       <div class="reviews-form">
-        <h1>Ajoutez votre avis!</h1>
+        <h3>Ajoutez votre avis!</h3>
           <%= simple_form_for [@activity, @review] do |f| %>
-            <%= f.input :rating, label: "combien" %>
-              <%= f.input :content, label: "commentaire"%>
-            <%= f.submit "Ajouter mon commentaire", class: "btn btn-primary" %>
+            <%= f.input :rating, label: "Combien mettrais-tu à cette activité?" %>
+              <%= f.input :content, label: "Dis nous en plus!"%>
+            <small><%= f.submit "AJOUTER MON COMMENTAIRE", class: "btn-reviews" %></small>
           <% end %>
       </div>
   <% end %>
@@ -55,45 +55,45 @@
         <% @activity.bookings.each do |booking| %>
           <% booking.reviews.each do |review| %>
             <% if review.rating == 5 %>
-                <li class="list-item">
-                  <%= review.content %><span style="color: gold;">★★★★★</span>
-                  <%= link_to "Supprimer",
+                <div class="list-item card-review">
+                  <%= review.content %><span>★★★★★</span>
+                  <%= link_to "🗑",
                     review_path(review), class: "delete-button",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
-                </li>
+                </div>
               <% elsif review.rating == 4 %>
-                <li class="list-item">
-                  <%= review.content %><span style="color: gold;">★★★★</span>
-                  <%= link_to "[Supprimer]",
+                <div class="list-item card-review">
+                  <%= review.content %><span>★★★★</span>
+                  <%= link_to "🗑",
                     review_path(review), class: "delete-button",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
-                </li>
+                </div>
               <% elsif review.rating == 3 %>
-                <li class="list-item">
-                  <%= review.content %><span style="color: gold;">★★★</span>
-                  <%= link_to "[Supprimer]",
+                <div class="list-item card-review">
+                  <%= review.content %><span>★★★</span>
+                  <%= link_to "🗑",
                     review_path(review), class: "delete-button",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
-                </li>
+                </div>
               <% elsif review.rating == 2 %>
-                <li class="list-item">
-                  <%= review.content %> <span style="color: gold;">★★</span>
-                  <%= link_to "[Supprimer]",
+                <div class="list-item card-review">
+                  <%= review.content %> <span>★★</span>
+                  <%= link_to "🗑",
                     review_path(review), class: "delete-button",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
-                </li>
+                </div>
               <% else %>
-                <li class="list-item">
-                  <%= review.content %> <span style="color: gold;">★</span>
-                  <%= link_to "[Supprimer]",
+                <div class="list-item card-review">
+                  <%= review.content %> <span>★</span>
+                  <%= link_to "🗑",
                     review_path(review), class: "delete-button",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
-                </li>
+                </div>
             <% end %>
           <% end %>
         <% end %>

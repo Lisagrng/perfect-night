@@ -22,3 +22,15 @@
 .delete-button:hover {
   color: black;
 }
+
+.btn-review {
+  text-decoration: none;
+  width: 10px;
+  height: 10px;
+  font-weight: 200px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 12px 12px 2px 1px black;
+}
