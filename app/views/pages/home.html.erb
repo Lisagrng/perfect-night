@@ -1,9 +1,6 @@
 <% if user_signed_in? %>
 
   <div class="container">
-    <div class= "logo">
-      <%= image_tag("logo.png")%>
-    </div>
   <div class="body">
     <br>
     <h1>Perfect Night</h1>
@@ -30,14 +27,14 @@
               <div class="carousel-item active">
                 <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
                 <div class="carousel-caption d-block">
-                    <span style="color: purple;"><strong><%= activity.name %></span></strong>
+                    <span style="color: white;"><strong><%= activity.name %></span></strong>
                 </div>
               </div>
             <% else %>
               <div class="carousel-item">
                 <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
                 <div class="carousel-caption d-block">
-                  <span style="color: purple;"><strong><%= activity.name %></span></strong>
+                  <span style="color: white;"><strong><%= activity.name %></span></strong>
                 </div>
               </div>
             <% end %>
