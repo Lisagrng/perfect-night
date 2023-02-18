@@ -3,7 +3,7 @@
     <div class= "logo">
       <%= image_tag("logo.png")%>
     </div>
-    <div class="cards">
+  x
       <% @activities.each do |activity| %>
         <% if (params[:max_number_persons].blank? || activity.max_number_persons == params[:max_number_persons].to_i) &&
               (params[:ville].blank? || activity.ville.downcase.include?(params[:ville].downcase)) &&
