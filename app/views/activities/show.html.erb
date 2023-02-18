@@ -1,6 +1,7 @@
 <div class= "container container-show">
 
   <div class= "logo">
+    <%= link_to "<", activities_path%>
     <%= image_tag("logo.png")%>
   </div>
 
@@ -56,40 +57,40 @@
           <% booking.reviews.each do |review| %>
             <% if review.rating == 5 %>
                 <div class="list-item card-review">
-                  <%= review.content %><span>★★★★★</span>
-                  <%= link_to "🗑",
+                  <span>★★★★★</span><%= review.content %>
+                  <%= link_to "Supprimer ce commentaire",
                     review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
                 </div>
               <% elsif review.rating == 4 %>
                 <div class="list-item card-review">
-                  <%= review.content %><span>★★★★</span>
-                  <%= link_to "🗑",
+                  <span>★★★★</span><%= review.content %>
+                  <%= link_to "Supprimer ce commentaire",
                     review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
                 </div>
               <% elsif review.rating == 3 %>
                 <div class="list-item card-review">
-                  <%= review.content %><span>★★★</span>
-                  <%= link_to "🗑",
+                  <span>★★★</span><%= review.content %>
+                  <%= link_to "Supprimer ce commentaire",
                     review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
                 </div>
               <% elsif review.rating == 2 %>
                 <div class="list-item card-review">
-                  <%= review.content %> <span>★★</span>
-                  <%= link_to "🗑",
+                  <span>★★</span><%= review.content %>
+                  <%= link_to "Supprimer ce commentaire",
                     review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
                 </div>
               <% else %>
                 <div class="list-item card-review">
-                  <%= review.content %> <span>★</span>
-                  <%= link_to "🗑",
+                  <span>★</span><%= review.content %>
+                  <%= link_to "Supprimer ce commentaire",
                     review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre de vouloir supprimer ce commentaire?"}
                   %>
