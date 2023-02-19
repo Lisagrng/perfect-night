@@ -27,7 +27,7 @@
                 <p class="text-center"><%= @activity.price_cents.fdiv(100) %> € / pers.</p>
               <% end %>
           <%= simple_form_for @booking, url: activity_bookings_path(@activity)  do |f| %>
-          <div class="filtre"><span style="color: #F0000">
+          <div class="filtre-new"><span style="color: #F0000">
             <%= f.input :number_of_persons, placeholder: "Nombre de personnes", label:"Combien serez-vous ?", type:"text" %></span>
               <br>
             <div class="text-center">

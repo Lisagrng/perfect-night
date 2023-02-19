@@ -1,17 +1,92 @@
-.container-filtre{
-  background: radial-gradient(circle at right, rgb(201, 201, 201) 20%, rgb(72, 72, 72) 50%), #000;
-  height: 100vh;
-}
+// .container-filtre{
+  // background: radial-gradient(circle at right, rgb(201, 201, 201) 20%, rgb(72, 72, 72) 50%), #000;
+//   height: 100vh;
+// }
 
-.filtre{
+.filtre-new{
   margin: 0 20px;
   color: #FF8B13;
   font-family: 'Kanit', sans-serif;
   font-weight: 500;
 }
 
-.filtre select,
-.filtre input[type="text"],
-.filtre input[type="submit"] {
+// .filtre select,
+// .filtre input[type="text"],
+// .filtre input[type="submit"] {
+//   border-radius: 7px;
+// }
+
+.container-filtre {
+  background: radial-gradient(circle at right, rgb(201, 201, 201) 20%, rgb(72, 72, 72) 50%), #000;
+  padding: 20px;
+  }
+
+  .logo img {
+  max-width: 100%;
+  }
+
+  .filtre {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.2rem;
+  }
+
+  .filtre label {
+  display: block;
+  margin-bottom: 10px;
+  }
+
+  .filtre select,
+  .filtre input[type="text"],
+  .filtre input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
   border-radius: 7px;
-}
+  background-color: #F0F0F0;
+  font-size: 1.2rem;
+  font-family: 'Kanit', sans-serif;
+  }
+
+  .filtre input[type="submit"] {
+  background-color: #FF8B13;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  }
+
+  .filtre input[type="submit"]:hover {
+  background-color: #FFFFFF;
+  color: #FF8B13;
+  border: 2px solid #FF8B13;
+  }
+
+  .button {
+    display: inline-block;
+    background-color: #FF8B13;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+
+  .button:hover {
+    background-color: #E76F00;
+  }
+
+  @media screen and (max-width: 768px) {
+  .filtre {
+  max-width: 100%;
+  }
+  }
