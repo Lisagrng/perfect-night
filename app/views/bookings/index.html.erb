@@ -12,7 +12,7 @@
           <%#= booking.activity.description %>
           <%#= cl_image_tag booking.activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: booking.activity.name %>
               <div class= "image-show">
-                <%= cl_image_tag @activity.photo.key%>
+                <%= cl_image_tag booking.activity.photo.key%>
               </div>
             <%#= link_to booking.activity.name, booking_path(booking) %>
         <div class="filtre">
