@@ -10,36 +10,39 @@
 // }
 
 .container{
-  background: radial-gradient(circle at left, #E8E8E8 10%, #96939B 70%), #000;
+  // background: radial-gradient(circle at left, #E8E8E8 10%, #96939B 70%), #000;
+  background-color: black;
 }
 
 .body{
   margin: 0 20px;
 }
 .container-bookings{
-  background: radial-gradient(circle at left, #E8E8E8 10%, #96939B 70%), #000;
+  // background: radial-gradient(circle at left, #E8E8E8 10%, #96939B 70%), #000;
+  background-color: black;
 }
 
 .body-bookings{
   margin: auto;
   width: auto;
   height: 1000px;
-  background: radial-gradient(circle at left, #E8E8E8 10%, #96939B 70%), #000;
+  // background: radial-gradient(circle at left, #E8E8E8 10%, #96939B 70%), #000;
+  background-color: black;
 }
 
 h1 {
   text-align: center;
   font-size: 50px;
-  color: #564256;
-  text-shadow: 0 0 5px #ffffffe0, 0 0 10px #ffffffe0, 0 0 15px #ffffffe0, 0 0 20px #ffffff, 0 0 35px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 75px #ffffff;
+  color: white;
+  // text-shadow: 0 0 5px #ffffffe0, 0 0 10px #ffffffe0, 0 0 15px #ffffffe0, 0 0 20px #ffffff, 0 0 35px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 75px #ffffff;
   font-family: 'Kanit', sans-serif;
 }
 
-@keyframes neon {
-  to {
-    text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #ffffff, 0 0 17.5px #ffffff, 0 0 20px #ffffff, 0 0 25px #ffffff, 0 0 37.5px #ffffff;
-  }
-}
+// @keyframes neon {
+//   to {
+//     text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #ffffff, 0 0 17.5px #ffffff, 0 0 20px #ffffff, 0 0 25px #ffffff, 0 0 37.5px #ffffff;
+//   }
+// }
 
 .title{
   color:white;
