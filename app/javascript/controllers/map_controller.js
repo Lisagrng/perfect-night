@@ -11,7 +11,7 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/lisagrng/cle419r7m000q01kbjbbwg80j"
+      style: "mapbox://styles/lisagrng/cleenu0v6000301nrem0npcbv/draft"
     })
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
@@ -37,3 +37,7 @@ export default class extends Controller {
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
 }
+
+// mapbox://styles/lisagrng/cle419r7m000q01kbjbbwg80j(sombre)
+// mapbox://styles/lisagrng/cleemyo3s000101ntto5uz50o(noire)
+// mapbox://styles/lisagrng/cleen4jos000001qptv8jbtas(bleu)

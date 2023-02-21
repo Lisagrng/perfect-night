@@ -5,13 +5,12 @@
 <%#= f.button :submit, class:"button-show" %>
 <%# end %>
 
-<div class="container-bookings">
-    <div class= "logo">
-      <%= image_tag("logo.png")%>
-    </div>
+<div class="container">
+<div class="body">
+    <br>
     <h2 class="title">Ma réservation</h2>
     <div class="body-bookings">
-      <p class="text-center"> Plus qu'une vérif' pour la <span style="color: #F99417"><strong>valider ⚡️ </strong></span></p>
+      <p class="text-center"> Plus qu'une vérif' pour la <span style="color: #fcd29f"><strong>valider ⚡️ </strong></span></p>
       <br>
         <h3><%= @activity.name %></h3>
           <br>
@@ -31,7 +30,7 @@
             <%= f.input :number_of_persons, placeholder: "Nombre de personnes", label:"Combien serez-vous ?", type:"text" %></span>
               <br>
             <div class="text-center">
-              <%= f.button :submit, class:"button-show", value:"Je réserve"%>
+              <%= f.button :submit, class:"button-booking", value:"Je réserve"%>
             </div>
           </div>
           <% end %>
