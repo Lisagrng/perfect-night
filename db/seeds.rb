@@ -108,4 +108,36 @@ activity.photo.attach(io: file, filename: "squares.png", content_type: "image/pn
 activity.user = user
 activity.save!
 
+file = URI.open("https://tse3.mm.bing.net/th?id=OIP.5ZUppCI9UfgQLj8Dg12IbAHaE8&pid=Api")
+activity = Activity.new(name: "Le Bam", description: "Inspiré du concept de karaoke box né en Asie, BAM Karaoke Box donne un nouveau souffle au divertissement citadin grâce à un concept inédit et novateur.",address:
+                "69 avenue Wagram, 75017 paris", workshop: "false", max_number_persons: 22, price_cents: 1200, opening_days:
+                [0, 1, 2, 3, 4, 5, 6], open_at: "18:30", close_at: "1:30", ville: "Paris", categorie: "Karaoké")
+activity.photo.attach(io: file, filename: "karaoke.png", content_type: "image/png")
+activity.user = user
+activity.save!
+
+file = URI.open("https://tse3.mm.bing.net/th?id=OIP.0zA-nns_sTHXqN-nqKplzwHaHa&pid=Api")
+activity = Activity.new(name: "Club de tir Jeanne d'arc", description: "Le club de tir Jeanne d'arc réunit des passioonnés et pratiquants de tir à l'arme de poing",address:
+                "90 Rue Jeanne D'Arc, Paris", workshop: "false", max_number_persons: 3, price_cents: 4500, opening_days:
+                [0, 1, 2, 3, 4, 5], open_at: "10:00", close_at: "19:00", ville: "Paris", categorie: "Club de Tir")
+activity.photo.attach(io: file, filename: "tir.png", content_type: "image/png")
+activity.user = user
+activity.save!
+
+file = URI.open("https://tse3.mm.bing.net/th?id=OIP.Jf0a2OJaig4yx9E_Q3VCwwHaE8&pid=Api")
+activity = Activity.new(name: "Laser Game", description: "Affrontez vos adversaires au sein de l'un de nos 3 labyrinthes. Sensations fortes et rires garanties !",address:
+                "160 Rue Saint-Maur, 75011 Paris", workshop: "false", max_number_persons: 30, price_cents: 2900, opening_days:
+                [0, 1, 2, 3, 4], open_at: "10:00", close_at: "23:00", ville: "Paris", categorie: "Laser Game")
+activity.photo.attach(io: file, filename: "laser.png", content_type: "image/png")
+activity.user = user
+activity.save!
+
+file = URI.open("https://tse1.mm.bing.net/th?id=OIP.f96bVL0EiTqRIRqoenIT4QHaE2&pid=Api")
+activity = Activity.new(name: "Flottaison en isolation", description: "Découvrez la flottaison, l'une des expériences de relaxation les plus profondes et les plus efficaces au monde !",address:
+                "194 Rue du Général De Gaulle, 59110 La Madeleine", workshop: "false", max_number_persons: 2, price_cents: 6000, opening_days:
+                [0, 1, 2, 3, 4], open_at: "10:00", close_at: "18:00", ville: "Lille", categorie: "Massage")
+activity.photo.attach(io: file, filename: "massage.png", content_type: "image/png")
+activity.user = user
+activity.save!
+
 puts 'Finished!'

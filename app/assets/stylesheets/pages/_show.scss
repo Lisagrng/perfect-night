@@ -4,7 +4,7 @@ h2 {
 }
 
 .container-show {
-  background: radial-gradient(circle at right, rgb(201, 201, 201) 10%, rgb(72, 72, 72) 70%), #000;
+  background: radial-gradient(circle at left, #E8E8E8 10%, #96939B 70%), #000;
   h2 {
     margin-top: 20px;
   }
@@ -27,7 +27,7 @@ p {
 }
 
 .h2-activity {
-  color:#F99417;
+  color:#FC814A;
 }
 
 h3 {
@@ -47,7 +47,7 @@ h3 {
   align-items: center;
   margin-bottom: 10px;
   span {
-    color: #FF8B13;
+    color: #FC814A;
     font-weight: 300;
   }
 }
@@ -61,7 +61,7 @@ h3 {
   text-decoration: none;
   text-align: center;
   color: #ffffffa1;
-  text-shadow: 0 0 10px #ffffffe0, 0 0 20px #ffffffe0, 0 0 30px #ffffffe0, 0 0 40px #A81DF7, 0 0 70px #A81DF7, 0 0 80px #A81DF7, 0 0 100px #A81DF7, 0 0 150px #A81DF7;
+  text-shadow: 0 0 10px #ffffffe0, 0 0 20px #ffffffe0, 0 0 30px #ffffffe0, 0 0 40px #564256, 0 0 70px #564256, 0 0 80px #564256, 0 0 100px #564256, 0 0 150px #564256;
 }
 
 .fa-solid {
@@ -82,10 +82,10 @@ h3 {
 .show-reviews {
   font-family: 'Kanit', sans-serif;
   span {
-    color:  #FF8B13;
+    color:  #FC814A;
   }
   p {
-    color:  #FF8B13;
+    color:  #FC814A;
     font-weight: 200;
   }
   h3 {
