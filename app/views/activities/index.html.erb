@@ -11,7 +11,7 @@
         <% if (params[:max_number_persons].blank? || activity.max_number_persons == params[:max_number_persons].to_i) &&
               (params[:Ville].blank? || activity.ville.downcase.include?(params[:Ville].downcase)) &&
               (params[:Catégorie].blank? || activity.categorie.downcase.include?(params[:Catégorie].downcase)) %>
-          <div class="card">
+          <div class="card-activity">
             <%= cl_image_tag activity.photo.key, crop: :fill, alt: activity.name %>
             <%= link_to activity.name, activity_path(activity) %>
             <% if activity.opening_days.count == 1 %>
