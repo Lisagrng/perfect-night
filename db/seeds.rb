@@ -18,7 +18,7 @@ puts 'Finished!'
 
 puts 'Creating activities..'
 file = URI.open("https://babsbowling.com/wp-content/uploads/2021/10/babs-biere-1-980x656.jpg")
-activity = Activity.new(name: "Le BAB'S", description: "Notre immense terrasse, des DJ pour des soirées estivales toujours plus
+activity = Activity.new(name: "LE BAB'S", description: "Notre immense terrasse, des DJ pour des soirées estivales toujours plus
                 festives", address: "1051 Bd Burdeau, 69400 Villefranche-sur-Saône", max_number_persons:
                 10, price_cents: 800, workshop: "false", opening_days: [1, 2, 3, 4, 5, 6], open_at: "13:00", close_at:
                 "01:00", ville: "Villefranche-sur-Saône", categorie: "Bowling")
@@ -27,7 +27,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://u.tfstatic.com/restaurant_photos/075/30075/169/612/284ce2a3e91979f31a2f9bed19935b71.jpg")
-activity = Activity.new(name: "Le Louchebem", description: "Ce restaurant typique et familial, tenu par un boucher,
+activity = Activity.new(name: "LE LOUCHEBEM", description: "Ce restaurant typique et familial, tenu par un boucher,
                 privilégie la viande et les produits du marché.", address: "3 Pl. Victor Hugo, 31000 Toulouse", max_number_persons:
                 130, workshop: "false", opening_days: [1, 2, 3, 4, 5, 6], open_at: "15:00", close_at: "02:00", ville: "Toulouse", categorie: "Restaurant")
 activity.photo.attach(io: file, filename: "louchebem.png", content_type: "image/png")
@@ -35,7 +35,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://tse1.mm.bing.net/th?id=OIP.5mQu492dizV6Y25do8MWvAHaD3&pid=Api")
-activity = Activity.new(name: "Delirium Café Toulouse", description: "Bar décontracté avec bière à la pression. Mobilier décalé
+activity = Activity.new(name: "DELIRIUM CAFÉ TOULOUSE", description: "Bar décontracté avec bière à la pression. Mobilier décalé
                 et plusieurs espaces où s’asseoir en extérieur.", address:
                 "54 All. Jean Jaurès, 31000 Toulouse", max_number_persons: 56, workshop: "false", opening_days:
                 [0, 1, 2, 3, 4, 5, 6], open_at: "16:00", close_at: "01:00", ville: "Toulouse", categorie: "Bar")
@@ -44,7 +44,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://static.actu.fr/uploads/2020/02/photo-alimentation-message-html-960x640.jpg")
-activity = Activity.new(name: "L’alimentation", description: "Une cuisine gourmande et conviviale a L’Alimentation : Restaurant,
+activity = Activity.new(name: "L'ALIMENTATION", description: "Une cuisine gourmande et conviviale a L’Alimentation : Restaurant,
                 foodstore, épicerie, bar à vin, cours de cuisine à Toulouse et Labège.", address: "3 bis Rue Maurice
                 Fonvieille, 31000 Toulouse", max_number_persons: 15, price_cents: 4500, workshop: "true", opening_days:
                 [3], start_at: "20:00", end_at: "22:30", ville: "Toulouse", categorie: "Restaurant")
@@ -53,7 +53,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://sgc.lapetiteroquette-pizzeria.com/cdn/maqv6qv73945/gallery_picture_6.jpg")
-activity = Activity.new(name: "Au WC. Wine And Coffee", description: "Depuis 5 ans, les anciennes toilettes publiques de
+activity = Activity.new(name: "AU WC. WINE AND COFFEE", description: "Depuis 5 ans, les anciennes toilettes publiques de
                 Poitiers se sont transformées en un bar à vins et bar à tapas.", address: "4 Pl. Charles de Gaulle,
                 86000 Poitiers", max_number_persons: 80, workshop: "false", opening_days:
                 [0, 1, 2, 3, 4, 5, 6], open_at: "16:00", close_at: "02:00", ville: "Poitiers", categorie: "Bar")
@@ -62,7 +62,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://tse2.mm.bing.net/th?id=OIP.a2_HkKuJXfnMeRtdcnhC5QHaE8&pid=Api")
-activity = Activity.new(name: "Patinoire Charlemagne", description: "D’une capacité publique de 4 200 personnes, la patinoire
+activity = Activity.new(name: "PATINOIRE CHARLEMAGNE", description: "D’une capacité publique de 4 200 personnes, la patinoire
   reçoit aussi des spectacles sur glace et des compétitions internationales et nationales.", address:
   "Patinoire Charlemagne, 100 Cr Charlemagne, 69002 Lyon", max_number_persons: 4200, price_cents: "between
   400 and 780", workshop: "false", opening_days: [4, 5, 6, 0], open_at: "14:00", close_at: "23:00", ville: "Lyon", categorie: "Patinoire")
@@ -71,7 +71,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://tse1.mm.bing.net/th?id=OIP.y6WbQIPfUCisPBN8CFAShQHaFg&pid=Api")
-activity = Activity.new(name: "Piscine Joséphine Baker", description: "La piscine de Paris 13 Joséphine Baker dispose d’un
+activity = Activity.new(name: "PISCINE JOSÉPHINE BAKER", description: "La piscine de Paris 13 Joséphine Baker dispose d’un
                 espace aquatique, d’un espace bien-être et d’un espace forme avec tous les équipements nécessaires pour
                 plaire à toute la famille. Le plus ? La vue sur la Seine lorsque vous vous baignez !", address:
                 "Quai François Mauriac, 75013 Paris", workshop: "false", max_number_persons: 350, price_cents:
@@ -81,7 +81,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://image.jeuxvideo.com/medias-sm/142591/1425907983-9464-capture-d-ecran-pc-playstation-4-xbox-one.jpg")
-activity = Activity.new(name: "Last Door Escape Game", description: "Injustement emprisonnés, votre procès vient de connaître
+activity = Activity.new(name: "LAST DOOR ESCAPE GAME", description: "Injustement emprisonnés, votre procès vient de connaître
   l’issue que vous craigniez : vous êtes définitivement condamnés à la peine capitale. Il ne vous reste
   maintenant plus qu’une heure avant l’injection létale. Arriverez-vous à vous en échapper ?", address:
   "24 Rue Jules Vedrines, 42160 Andrézieux-Bouthéon", workshop: "false", max_number_persons:
@@ -91,7 +91,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://alloescape.fr/wp-content/uploads/2019/09/quiz-room-paris-avis.jpg")
-activity = Activity.new(name: "La Quiz Room", description: "Entre amis ou en famille… 2 parties (ou +) pour découvrir ou
+activity = Activity.new(name: "LA QUIZ ROOM", description: "Entre amis ou en famille… 2 parties (ou +) pour découvrir ou
                 redécouvrir Quiz Room et ses jeux totalement quiz !", address:
                 "81 Rue Lucien Faure - 33300 Bordeaux", workshop: "false", opening_days:
                 [0, 1, 2, 3, 4, 5, 6], open_at: "10:00", close_at: "23:30", ville: "Bordeaux", categorie: "Quizz")
@@ -100,7 +100,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://www.sevensquares.fr/wp-content/uploads/2021/02/20210202_102652-scaled.jpg")
-activity = Activity.new(name: "Seven Squares", description: "Avec nos 7 activités pour tous les âges, variez les plaisirs sans
+activity = Activity.new(name: "SEVEN SQUARES", description: "Avec nos 7 activités pour tous les âges, variez les plaisirs sans
                 vous déplacer ! Venez en famille, entre amis et partagez un moment convivial. ", address:
                 "2 Rue Ferrer, 42000 Saint-Étienne", workshop: "false", max_number_persons: 200, opening_days:
                 [0, 1, 2, 3, 4, 5, 6], open_at: "10:00", close_at: "2:00", ville: "Saint-Etienne", categorie: "Parc d'activités")
@@ -109,7 +109,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://tse3.mm.bing.net/th?id=OIP.5ZUppCI9UfgQLj8Dg12IbAHaE8&pid=Api")
-activity = Activity.new(name: "Le Bam", description: "Inspiré du concept de karaoke box né en Asie, BAM Karaoke Box donne un nouveau souffle au divertissement citadin grâce à un concept inédit et novateur.",address:
+activity = Activity.new(name: "LE BAM", description: "Inspiré du concept de karaoke box né en Asie, BAM Karaoke Box donne un nouveau souffle au divertissement citadin grâce à un concept inédit et novateur.",address:
                 "69 avenue Wagram, 75017 paris", workshop: "false", max_number_persons: 22, price_cents: 1200, opening_days:
                 [0, 1, 2, 3, 4, 5, 6], open_at: "18:30", close_at: "1:30", ville: "Paris", categorie: "Karaoké")
 activity.photo.attach(io: file, filename: "karaoke.png", content_type: "image/png")
@@ -117,7 +117,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://tse3.mm.bing.net/th?id=OIP.0zA-nns_sTHXqN-nqKplzwHaHa&pid=Api")
-activity = Activity.new(name: "Club de tir Jeanne d'arc", description: "Le club de tir Jeanne d'arc réunit des passioonnés et pratiquants de tir à l'arme de poing",address:
+activity = Activity.new(name: "CLUB DE TIR JEANNE D'ARC", description: "Le club de tir Jeanne d'arc réunit des passioonnés et pratiquants de tir à l'arme de poing",address:
                 "90 Rue Jeanne D'Arc, Paris", workshop: "false", max_number_persons: 3, price_cents: 4500, opening_days:
                 [0, 1, 2, 3, 4, 5], open_at: "10:00", close_at: "19:00", ville: "Paris", categorie: "Club de Tir")
 activity.photo.attach(io: file, filename: "tir.png", content_type: "image/png")
@@ -125,7 +125,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://tse3.mm.bing.net/th?id=OIP.Jf0a2OJaig4yx9E_Q3VCwwHaE8&pid=Api")
-activity = Activity.new(name: "Laser Game", description: "Affrontez vos adversaires au sein de l'un de nos 3 labyrinthes. Sensations fortes et rires garanties !",address:
+activity = Activity.new(name: "LASER GAME", description: "Affrontez vos adversaires au sein de l'un de nos 3 labyrinthes. Sensations fortes et rires garanties !",address:
                 "160 Rue Saint-Maur, 75011 Paris", workshop: "false", max_number_persons: 30, price_cents: 2900, opening_days:
                 [0, 1, 2, 3, 4], open_at: "10:00", close_at: "23:00", ville: "Paris", categorie: "Laser Game")
 activity.photo.attach(io: file, filename: "laser.png", content_type: "image/png")
@@ -133,7 +133,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://tse1.mm.bing.net/th?id=OIP.f96bVL0EiTqRIRqoenIT4QHaE2&pid=Api")
-activity = Activity.new(name: "Flottaison en isolation", description: "Découvrez la flottaison, l'une des expériences de relaxation les plus profondes et les plus efficaces au monde !",address:
+activity = Activity.new(name: "FLOTTAISON EN ISOLATION", description: "Découvrez la flottaison, l'une des expériences de relaxation les plus profondes et les plus efficaces au monde !",address:
                 "194 Rue du Général De Gaulle, 59110 La Madeleine", workshop: "false", max_number_persons: 2, price_cents: 6000, opening_days:
                 [0, 1, 2, 3, 4], open_at: "10:00", close_at: "18:00", ville: "Lille", categorie: "Massage")
 activity.photo.attach(io: file, filename: "massage.png", content_type: "image/png")
