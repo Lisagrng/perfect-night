@@ -4,22 +4,19 @@
   <div class="body">
     <br>
     <h1>PERFECT NIGHT</h1>
-    <br>
-      <br>
-      <div class="text-center">
-        <button class="button-home"><i class="fa-solid fa-magnifying-glass"></i>
-            <%= link_to "Choisir mon activité", index_filtre_path %>
-        </button>
-      </div>
-      <br>
-
-      <h2 class="title"> Evènements populaires </h2>
       <br>
       <div class="description">
         <h2> Laisse-toi guider ! </h2>
           <p> Visite nos différentes propositions d'activités pour ta <span style="color: #fdffb6;"><strong>soirée parfaite</strong></span> ou <span style="color: #fcd29f;"><strong>laisse-toi guider !</strong></span></p>
       </div>
 
+      <div class="text-center">
+        <button class="button-home"><i class="fa-solid fa-magnifying-glass"></i>
+            <%= link_to "Choisir mon activité", index_filtre_path %>
+        </button>
+      </div>
+<br>
+      <h2 class="title"> Evènements populaires </h2>
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-inner">
           <% @activities.each_with_index do |activity, index| %>
@@ -27,14 +24,14 @@
               <div class="carousel-item active">
                 <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
                 <div class="carousel-caption d-block">
-                    <span style="color: white;"><strong><%= activity.name %></span></strong>
+                    <div class="white"><strong><%= activity.name %></div></strong>
                 </div>
               </div>
             <% else %>
               <div class="carousel-item">
                 <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
                 <div class="carousel-caption d-block">
-                  <span style="color: white;"><strong><%= activity.name %></span></strong>
+                  <div class="white"><strong><%= activity.name %></div></strong>
                 </div>
               </div>
             <% end %>
@@ -51,6 +48,40 @@
         </button>
       </div>
       <br>
+
+    <h2 class="title">En découvrir d'avantage</h2>
+      <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <% @activities.each_with_index do |activity, index| %>
+            <% if index == 1 %>
+              <div class="carousel-item active">
+                <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
+                <div class="carousel-caption d-block">
+                    <div class="white"><strong><%= activity.name %></div></strong>
+                </div>
+              </div>
+            <% else %>
+              <div class="carousel-item">
+                <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
+                <div class="carousel-caption d-block">
+                  <div class="white"><strong><%= activity.name %></div></strong>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <br>
+
   </div>
 </div>
 <% end %>
