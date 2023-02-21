@@ -19,9 +19,9 @@
                 <!-- Jour d'ouverture-->
                 <%= Activity.display_days(activity.opening_days[0]) %>
                 <!-- Heure converti -->
-                <span class="card-color-grey">|</span>
+                <span class="card-color-black">|</span>
                 <%= DateTime.parse(activity.start_at).strftime("%H:%M") %>
-                <span class="card-color-grey">-</span>
+                <span class="card-color-black">-</span>
                 <%= DateTime.parse(activity.end_at).strftime("%H:%M") %>
               </span>
               <!-- Prix converti -->
