@@ -24,7 +24,6 @@
   }
   span.card-color-white {
     color: white;
-
   }
   span.button-price {
     font-size: xx-small;
@@ -52,7 +51,16 @@
   background-color: #ffe5ec;
   padding: 15px;
   border-style: none;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
   margin-bottom: 25px;
+  font-family: $headers-font;
+  .activity-description-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   img {
     width: 100px;
     height: 100px;
@@ -61,10 +69,16 @@
   }
   a {
     font-size: 5vw;
-    font-weight: 700;
     text-decoration: none;
     color: black;
-    font-family: $headers-font;
+  }
+  span.card-color-black {
+    color: black;
+  }
+  span {
+    color: #FF8B13;
+    font-size: 3vw;
+    font-weight: 500;
   }
 }
 
