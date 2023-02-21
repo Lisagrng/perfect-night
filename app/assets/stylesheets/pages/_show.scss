@@ -41,6 +41,7 @@ h3 {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  border-bottom: #838383;
 }
 
 .show-time {
@@ -81,7 +82,9 @@ h3 {
 }
 
 .show-reviews {
+  background-color: white;
   font-family: 'Kanit', sans-serif;
+  // border: solid black;
   span {
     color:  #FC814A;
   }
@@ -95,6 +98,7 @@ h3 {
     text-align: center;
   }
   h1 {
+    color: black;
     margin-top: 30px;
   }
 }
@@ -111,4 +115,8 @@ h3 {
     font-weight: 500;
     color: #838383;
   }
+}
+.marker {
+  font-size: 30px;
+  color: black;
 }
