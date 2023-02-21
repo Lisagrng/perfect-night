@@ -3,7 +3,10 @@
     <div class= "logo">
       <%= image_tag("logo.png")%>
     </div>
-  x
+      <% @random_activity  %>
+      <%= link_to "Laisse-toi guider", activity_path(@random_activity.id), class: "button" %>
+      <br>
+      <br>
       <% @activities.each do |activity| %>
         <% if (params[:max_number_persons].blank? || activity.max_number_persons == params[:max_number_persons].to_i) &&
               (params[:Ville].blank? || activity.ville.downcase.include?(params[:Ville].downcase)) &&
@@ -55,8 +58,6 @@
           </div>
         <% end %>
       <% end %>
-      <% @random_activity  %>
-      <%= link_to "Laisse-toi guider", activity_path(@random_activity.id), class: "button" %>
     </div>
   </div>
 <% end %>
