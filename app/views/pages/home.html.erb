@@ -3,7 +3,7 @@
   <div class="container">
   <div class="body">
     <br>
-    <h1>Perfect Night</h1>
+    <h1>PERFECT NIGHT</h1>
     <br>
       <br>
       <div class="text-center">
@@ -25,14 +25,14 @@
           <% @activities.each_with_index do |activity, index| %>
             <% if index == 0 %>
               <div class="carousel-item active">
-                <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
+                <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
                 <div class="carousel-caption d-block">
                     <span style="color: white;"><strong><%= activity.name %></span></strong>
                 </div>
               </div>
             <% else %>
               <div class="carousel-item">
-                <%= cl_image_tag activity.photo.key, width: 400, height: 400, crop: :fill, class: "d-block w-100", alt: activity.name %>
+                <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
                 <div class="carousel-caption d-block">
                   <span style="color: white;"><strong><%= activity.name %></span></strong>
                 </div>
