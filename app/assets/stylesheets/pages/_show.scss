@@ -1,6 +1,7 @@
 h2 {
   color: white;
-  font-family: 'Yalla Font', sans-serif;
+  font-family: 'Rubik Mono One', sans-serif;
+  text-align: center;
 }
 
 .container-show {
@@ -33,13 +34,15 @@ p {
 
 h3 {
   color: white;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: medium;
 }
 
 
 .show-address {
   display: flex;
   align-items: center;
+  margin-top: 30px;
   margin-bottom: 5px;
   border-bottom: #838383;
 }
@@ -47,7 +50,8 @@ h3 {
 .show-time {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
   span {
     color: #FC814A;
     font-weight: 300;
@@ -82,24 +86,33 @@ h3 {
 }
 
 .show-reviews {
-  background-color: white;
+  background-color: black;
   font-family: 'Kanit', sans-serif;
-  // border: solid black;
+  border: solid white;
+  margin-bottom: 50px;
+  margin-top: 30px;
   span {
-    color:  #FC814A;
+    color:  #fdffb6;
   }
   p {
-    color:  #FC814A;
+    color:  #fdffb6;
     font-weight: 200;
+    text-align: center;
+  }
+  .review-content {
+    color: white;
+    font-weight:lighter;
+    text-align: inherit;
   }
   h3 {
     color: white;
     font-weight: 500;
     text-align: center;
   }
-  h1 {
-    color: black;
+  h2 {
+    color: white;
     margin-top: 30px;
+    font-family: 'Rubik Mono One', sans-serif;
   }
 }
 
@@ -118,5 +131,21 @@ h3 {
 }
 .marker {
   font-size: 30px;
-  color: black;
+  color: #fdffb6;
+}
+
+hr {
+  color: lightgrey;
+  width: 70%;
+  margin: auto;
+}
+
+.show-description {
+  border: solid white;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px auto;
+  margin-bottom: 30px;
 }
