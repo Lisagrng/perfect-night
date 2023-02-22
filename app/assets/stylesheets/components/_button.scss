@@ -18,23 +18,27 @@
   color: #610E89;
 }
 
-.delete-button:hover {
-  color: black;
-}
 
 .btn-reviews {
-  background: white;
+  display: block;
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #FC814A;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-size: smaller;
   text-decoration: none;
-  border-radius: 5px;
-  f {
-  font-weight: 200;
-  }
+  font-weight: lighter;
+  font-family: 'Rubik Mono One', sans-serif;;
 }
 
 .btn-delete-show {
-  color: black;
+  color: #fed2e6;
   text-decoration: none;
   align-self: self-end;
+  font-size: x-small;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
