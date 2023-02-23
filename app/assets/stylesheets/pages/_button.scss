@@ -30,5 +30,22 @@
       text-decoration: none;
       color: black;
       font-family: 'Rubik Mono One', sans-serif;
+      font-size: 12px;
+    }
+}
+
+.button-action{
+  background-color: #FC814A;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  vertical-align: center;
+  align-items: flex-end;
+    a{
+      text-decoration: none;
+      color: white;
+      font-family: 'Rubik Mono One', sans-serif;
+      font-size: 12px;
     }
 }

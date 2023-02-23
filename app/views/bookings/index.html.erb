@@ -1,24 +1,31 @@
-<div class="container">
-<div class="body">
-    <br>
-  <h2 class="title">Mes réservations</h2>
-  <div class="body-bookings">
-      <p class="text-center"> Découvrez ici toutes vos <span style="color: #fcd29f"><strong>réservations</strong></span></p>
+<div class= "container container-show">
+  <div class= "logo">
+    <%= image_tag("logo.png")%>
+  </div>
+
+    <div class="body">
+      <h2>Mes réservations</h2>
+        <p class="text-center"> Découvrez ici toutes vos <span style="color: #fcd29f"><strong>réservations</strong></span></p>
       <br>
-      <% @my_bookings.each do |booking| %>
-          <h3> ⚡️ <%#= @value += 1 %><%= booking.activity.name %></h3>
-          <br>
-              <div class= "image-show">
-                <%= cl_image_tag booking.activity.photo.key%>
+        <% @my_bookings.each do |booking| %>
+            <h3> ⚡️ <%= booking.activity.name %></h3>
+            <br>
+                <div class= "image-show">
+                  <%= cl_image_tag booking.activity.photo.key%>
+                </div>
+            <br>
+            <div class="text-center">
+              <div class="button-action">
+                <%= link_to "Voir cette réservation", booking_path(booking) %>
               </div>
-            <%#= link_to booking.activity.name, booking_path(booking) %>
-          <br>
-          <div class="text-center">
-            <div class="button-booking">
-            <%= link_to "Voir cette réservation", booking_path(booking) %>
             </div>
-          </div>
-        </div>
-      <% end %>
+            <br>
+            <div class="text-center">
+              <div class="button-booking">
+                <%= link_to "Laisser un avis", activities_path(@activity) %>
+              </div>
+            </div>
+        <% end %>
+    </div>
   </div>
 </div>
