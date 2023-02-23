@@ -10,8 +10,10 @@
               (params[:Ville].blank? || activity.ville.downcase.include?(params[:Ville].downcase)) &&
               (params[:Catégorie].blank? || activity.categorie.downcase.include?(params[:Catégorie].downcase)) %>
           <div class="card-activity">
-            <div>
-              <%= cl_image_tag activity.photo.key, crop: :fill, alt: activity.name %>
+            <div class="card-border">
+              <% if activity.photo.attached? %>
+                <%= cl_image_tag activity.photo.key, crop: :fill, alt: activity.name %>
+              <% end %>
             </div>
             <div class="activity-description-card">
               <%= link_to activity.name, activity_path(activity) %>
@@ -49,11 +51,11 @@
 
                 <!-- Prix converti -->
                 <% if activity.price_cents.blank? %>
-                  <span class="card-color-black button-price">Réglement sur place</span>
+                  <span class="card-color-black">Réglement sur place</span>
                 <% elsif activity.price_cents.zero? %>
-                  <span class="card-color-black button-price">Gratuit</span>
+                  <span class="card-color-black">Gratuit</span>
                 <% else %>
-                  <span class="card-color-black button-price"> <%= activity.price_cents.fdiv(100) %> €</span>
+                  <span class="card-color-black"> <%= activity.price_cents.fdiv(100) %> €</span>
                 <% end %>
               <% end %>
             </div>
