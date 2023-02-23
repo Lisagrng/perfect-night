@@ -60,9 +60,13 @@
             <input type="radio" id="star1" name="rating" value="1" />
             <label class = "full" for="star1" title="1 star"></label>
           </fieldset> %>
+
           <%= simple_form_for [@activity, @review] do |f| %>
           <div class="rating-show">
-            <%= f.input :rating, label: "Combien mettrais-tu à cette activité?", collection: 1..5, as: :radio_buttons%>
+            <%= f.input :rating,
+                label: false,
+                collection: (1..5).to_a,
+                input_html: { data: { controller:"star-rating" } } %>
           </div>
             <%= f.input :content, label: "Dis nous en plus!"%>
             <small><%= f.submit "AJOUTER", class: "btn-reviews"%></small>
@@ -94,7 +98,7 @@
                 </div>
               <% elsif review.rating == 3 %>
                 <div class="list-item card-review">
-                  <span>★★★</span><p class="review-content"><%= review.content %></p>
+                  <i class="fas fa-star"></i><p class="review-content"><%= review.content %></p>
                   <%= link_to "Supprimer ce commentaire",
                     review_path(review), class: "btn-delete-show",
                     data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
