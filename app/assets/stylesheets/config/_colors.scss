@@ -11,3 +11,19 @@
 // #e4c1f9 - violet pastel
 // #fed2e6 - rose pastel
 // #fcd29f - orange pastel
+
+
+$orangePastel:  #fcd29f;
+$rosePastel:#fed2e6;
+$violetPastel:  #e4c1f9;
+
+$colors:
+  "orange-pastel" $orangePastel,
+  "rose-pastel" $rosePastel,
+  "violet-pastel" $violetPastel;
+
+@each $name, $color in $colors {
+  .#{$name} {
+    color: $color;
+  }
+} // .orange-pastel { color: $orangePastel }

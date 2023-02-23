@@ -11,7 +11,9 @@
               (params[:Catégorie].blank? || activity.categorie.downcase.include?(params[:Catégorie].downcase)) %>
           <div class="card-activity">
             <div>
-              <%= cl_image_tag activity.photo.key, crop: :fill, alt: activity.name %>
+              <% if activity.photo.attached? %>
+                <%= cl_image_tag activity.photo.key, crop: :fill, alt: activity.name %>
+              <% end %>
             </div>
             <div class="activity-description-card">
               <%= link_to activity.name, activity_path(activity) %>
