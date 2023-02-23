@@ -56,3 +56,24 @@
   font-family: $headers-font;
   font-weight: 500;
 }
+
+// input[type="radio-buttons"] {
+//   /* ...existing styles */
+//   display: grid;
+//   place-content: center;
+// }
+
+// input[type="radio-buttons"]::before {
+//   content: "";
+//   width: 0.65em;
+//   height: 0.65em;
+//   border-radius: 50%;
+//   transform: scale(0);
+//   transition: 120ms transform ease-in-out;
+//   box-shadow: inset 1em 1em var(--form-control-color);
+// }
+
+// input[type="radio-buttons"]:checked::before {
+//   transform: scale(1);
+//   color: #fdffb6;
+// }
