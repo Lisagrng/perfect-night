@@ -3,8 +3,10 @@
     <div class= "logo">
       <%= image_tag("logo.png")%>
     </div>
-
+<br>
   <%= simple_form_for :activity, url: activities_path, method: "GET" do |f| %>
+    <%= f.input :Nombre_de_personne %>
+    <%= f.input :ville %>
     <%= f.input :category,
           as: :radio_buttons,
             collection_wrapper_tag: 'div',
@@ -12,7 +14,7 @@
             item_wrapper_class: 'category-item',
             input_html: { class: 'category-selector' },
             collection: Activity::CATEGORIES  %>
-      <%= f.submit %>
+      <%= f.submit "Filtrer", class: "button" %>
   <% end %>
 
 
