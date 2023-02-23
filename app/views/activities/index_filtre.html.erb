@@ -4,33 +4,25 @@
       <%= image_tag("logo.png")%>
     </div>
 
-    <%= simple_form_for(activities_path, method: :get) do |f| %>
-      <%= f.input :max_number_persons, label: "Nombre de personne" %>
-      <%= f.input :ville, label: "Ville" %>
-      <%= f.input :Categorie, label: "Catégorie" %>
-      <%= f.submit "Filtrer" %>
+    <%= form_tag(activities_path, method: :get) do %>
+      <div class="filtre">
+        <div class="input-group">
+          <%= label_tag :Nombre_de_personne, "Nombre de personnes" %>
+          <%= select_tag :Nombre_de_personne, options_for_select((1..11).map { |i| ["#{i} personnes", i] }) %>
+        </div>
+        <div class="input-group">
+          <%= label_tag :Ville, "Ville" %>
+          <%= text_field_tag :Ville %>
+        </div>
+        <div class="input-group">
+          <%= label_tag :Catégorie, "Catégorie" %>
+          <%= select_tag :Catégorie, options_for_select([["", ""], ["Bar", "Bar"], ["Restaurant", "Restaurant"], ["Patinoire", "Patinoire"], ["Escape Game", "Escape Game"], ["Piscine", "Piscine"], ["Quiz", "Quiz"], ["Bowling", "Bowling"], ["Parc d'activités", "Parc d'activités"]]) %>
+        </div>
+        <div class="input-group">
+          <%= submit_tag "Filtrer", class: "button" %>
+        </div>
+      </div>
     <% end %>
-
-  <%= form_tag(activities_path, method: :get) do %>
-    <div class="filtre">
-      <div class="input-group">
-        <%= label_tag :Nombre_de_personne, "Nombre de personnes" %>
-        <%= select_tag :Nombre_de_personne, options_for_select((1..11).map { |i| ["#{i} personnes", i] }) %>
-      </div>
-      <div class="input-group">
-        <%= label_tag :Ville, "Ville" %>
-        <%= text_field_tag :Ville %>
-      </div>
-      <div class="input-group">
-        <%= label_tag :Catégorie, "Catégorie" %>
-        <%= select_tag :Catégorie, options_for_select([["", ""], ["Bar", "Bar"], ["Restaurant", "Restaurant"], ["Patinoire", "Patinoire"], ["Escape Game", "Escape Game"], ["Piscine", "Piscine"], ["Quiz", "Quiz"], ["Bowling", "Bowling"], ["Parc d'activités", "Parc d'activités"]]) %>
-      </div>
-      <div class="input-group">
-        <%= submit_tag "Filtrer", class: "button" %>
-      </div>
-    </div>
-  <% end %>
-
   </div>
   <br>
 <% end %>
