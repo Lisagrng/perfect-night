@@ -27,46 +27,51 @@
   }
 
   .filtre {
-  margin: 20px auto;
-  max-width: 600px;
-  padding: 20px;
-  background-color: #FFFFFF;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  font-family: 'Kanit', sans-serif;
-  font-size: 1.2rem;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
   }
 
-  .filtre label {
-  display: block;
-  margin-bottom: 10px;
+  .input-group {
+    margin-bottom: 20px;
   }
 
-  .filtre select,
-  .filtre input[type="text"],
-  .filtre input[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 7px;
-  background-color: #E8E8E8;
-  font-size: 1.2rem;
-  font-family: 'Kanit', sans-serif;
+  .input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
   }
 
-  .filtre input[type="submit"] {
-  background-color: #FC814A;
-  color: #FFFFFF;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  .input-group select,
+  .input-group input[type="text"],
+  .input-group input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #E8E8E8;
+    font-size: 1.2rem;
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
   }
 
-  .filtre input[type="submit"]:hover {
-  background-color: #FFFFFF;
-  color: #FC814A;
-  border: 2px solid #FC814A;
+  .input-group input[type="submit"] {
+    background-color: #FC814A;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .input-group input[type="submit"]:hover {
+    background-color: #FFFFFF;
+    color: #FC814A;
+    border: 2px solid #FC814A;
   }
 
   .button {
@@ -83,11 +88,67 @@
   }
 
   .button:hover {
-    background-color: #FC814A;
+    background-color: #FF9C5B;
+    color: #FFFFFF;
   }
 
   @media screen and (max-width: 768px) {
   .filtre {
   max-width: 100%;
   }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+
+  label {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+  }
+
+  input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+  }
+
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0069d9;
   }
