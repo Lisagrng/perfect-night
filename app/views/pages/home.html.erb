@@ -7,7 +7,7 @@
       <br>
       <div class="description">
         <h2> ⚡️ Laisse-toi guider ! ⚡️ </h2>
-          <p> Visite nos différentes propositions d'activités pour ta <span style="color: #fdffb6;"><strong>soirée parfaite</strong></span> ou <span style="color: #fcd29f;"><strong>laisse-toi guider !</strong></span></p>
+          <p> Visite nos différentes propositions d'activités pour ta <span style="color: #fed2e6;"><strong>soirée parfaite</strong></span> ou <span style="color: #fcd29f;"><strong>laisse-toi guider !</strong></span></p>
       </div>
 
       <div class="text-center">
@@ -22,14 +22,18 @@
           <% @activities.each_with_index do |activity, index| %>
             <% if index == 0 %>
               <div class="carousel-item active">
-                <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
+                <div class="image-show-home">
+                  <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
+                </div>
                 <div class="carousel-caption d-block">
                     <div class="white"><strong><%= activity.name %></div></strong>
                 </div>
               </div>
             <% else %>
               <div class="carousel-item">
+              <div class="image-show-home">
                 <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
+              </div>
                 <div class="carousel-caption d-block">
                   <div class="white"><strong><%= activity.name %></div></strong>
                 </div>
@@ -55,14 +59,18 @@
           <% @activities.each_with_index do |activity, index| %>
             <% if index == 1 %>
               <div class="carousel-item active">
-                <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
+                <div class="image-show-home">
+                  <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
+                </div>
                 <div class="carousel-caption d-block">
                     <div class="white"><strong><%= activity.name %></div></strong>
                 </div>
               </div>
             <% else %>
               <div class="carousel-item">
+              <div class="image-show-home">
                 <%= cl_image_tag activity.photo.key, width: 300, height: 200, crop: :fill, class: "d-block w-100", alt: activity.name %>
+              </div>
                 <div class="carousel-caption d-block">
                   <div class="white"><strong><%= activity.name %></div></strong>
                 </div>
