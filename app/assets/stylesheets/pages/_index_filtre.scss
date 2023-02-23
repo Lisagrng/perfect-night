@@ -98,12 +98,21 @@
   }
   }
 
+.form-label {
+  color: #F94892;
+  font-family: 'Rubik Mono One', sans-serif;
+}
 
+.col-form-label{
+  color: #F94892;
+  font-family: 'Rubik Mono One', sans-serif;
+}
 
   .category-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 12px;
   }
 
   .category-item {
@@ -122,10 +131,12 @@
     width: 100%;
     font-size: 12px;
     text-align: left;
-    padding: 10px 10px 30px 10px;
-    border: 1px solid #EAEAEA;
-    border-radius: 4px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #F94892;
+    border-radius: 12px;
     background-color: white;
+    font-family: 'Kanit', sans-serif;
+    line-height: 100%;
   }
 
   .category-selector:checked + label {
@@ -158,6 +169,87 @@
   }
 
   #activity_category_patinoire:checked + label {
+    background-color: #62DDF5;
+    border-color: #62DDF5;
+  }
+
+  #activity_category_bowling + label {
+    color: #62DDF5;
+  }
+
+  #activity_category_bowling:checked + label {
+    background-color: #62DDF5;
+    border-color: #62DDF5;
+  }
+
+  #activity_category_piscine + label {
+    color: #62DDF5;
+  }
+
+  #activity_category_piscine:checked + label {
+    background-color: #62DDF5;
+    border-color: #62DDF5;
+  }
+
+  #activity_category_escape_game + label {
+    color: #62DDF5;
+  }
+
+  #activity_category_escape_game:checked + label {
+    background-color: #62DDF5;
+    border-color: #62DDF5;
+  }
+
+  #activity_category_quizz + label {
+    color: #62DDF5;
+  }
+
+  #activity_category_quizz:checked + label {
+    background-color: #62DDF5;
+    border-color: #62DDF5;
+  }
+
+  #activity_category_parc_activites + label {
+    color: #62DDF5;
+  }
+
+  #activity_category_parc_activites:checked + label {
+    background-color: #62DDF5;
+    border-color: #62DDF5;
+  }
+
+  #activity_category_karaoke + label {
+    color: #62DDF5;
+  }
+
+  #activity_category_karaoke:checked + label {
+    background-color: #62DDF5;
+    border-color: #62DDF5;
+  }
+
+  #activity_category_club_de_tir + label {
+    color: #62DDF5;
+  }
+
+  #activity_category_club_de_tir:checked + label {
+    background-color: #62DDF5;
+    border-color: #62DDF5;
+  }
+
+  #activity_category_laser_game + label {
+    color: #62DDF5;
+  }
+
+  #activity_category_laser_game:checked + label {
+    background-color: #62DDF5;
+    border-color: #62DDF5;
+  }
+
+  #activity_category_masssage + label {
+    color: #62DDF5;
+  }
+
+  #activity_category_massage:checked + label {
     background-color: #62DDF5;
     border-color: #62DDF5;
   }
