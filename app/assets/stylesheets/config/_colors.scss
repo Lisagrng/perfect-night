@@ -12,3 +12,23 @@
 // #fed2e6 - rose pastel
 // #fcd29f - orange pastel
 // #F94892 - rose peps
+
+
+$orangePastel:  #fcd29f;
+$rosePastel:#fed2e6;
+$violetPastel: #e4c1f9;
+$jaunePastel: #fdffb6;
+$orangePrimary: #FF8B13;
+
+$colors:
+  "orange-pastel" $orangePastel,
+  "rose-pastel" $rosePastel,
+  "violet-pastel" $violetPastel,
+  "jaune-pastel" $jaunePastel,
+  "orange-primary" $orangePrimary;
+
+@each $name, $color in $colors {
+  .#{$name} {
+    color: $color;
+  }
+} // .orange-pastel { color: $orangePastel }
