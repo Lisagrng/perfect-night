@@ -25,9 +25,14 @@
       <% end %>
     </div>
 
-    <div class="show-description">
+    <div class="show-description show-card">
       <h3>Description</h3>
       <p><%= @activity.description%></p>
+    </div>
+
+    <div class="show-program show-card">
+      <h3> Au Programme</h3>
+      <p><%=  @activity.program %></p>
     </div>
   </div>
 
@@ -68,7 +73,7 @@
                 collection: (1..5).to_a,
                 input_html: { data: { controller:"star-rating" } } %>
           </div>
-            <%= f.input :content, label: "Dis nous en plus!"%>
+            <%= f.input :content, label: "Dis nous en plus!", class: "input-review-show"%>
             <small><%= f.submit "AJOUTER", class: "btn-reviews"%></small>
           <% end %>
       </div>
@@ -76,7 +81,7 @@
 
     <ul class="list-group">
       <% unless @is_reviewed %>
-        <p>Sois le premier à ajouter un avis pour <%= @activity.name %></p>
+        <p>Réserve et sois le premier à ajouter un avis pour <%= @activity.name %></p>
       <% else %>
         <% @activity.bookings.each do |booking| %>
           <% booking.reviews.each do |review| %>

@@ -140,7 +140,7 @@ hr {
   margin: auto;
 }
 
-.show-description {
+.show-card {
   border: solid white;
   background-color: black;
   color: white;
@@ -152,4 +152,13 @@ hr {
 
 .rating-show {
   display: block;
+}
+
+.input-review-show {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+}
+
+.rating-show {
+  color: #fdffb6;
 }

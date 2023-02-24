@@ -74,7 +74,8 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    params.require(:activity).permit(:name, :description, :price_cents, :start_at, :max_number_person, :end_at, :workshop, :opening_days, :open_at, :close_at)
+    params.require(:activity).permit(:name, :description, :price_cents, :start_at, :max_number_person, :end_at,
+                                    :workshop, :opening_days, :open_at, :close_at)
   end
 
   def search
