@@ -228,7 +228,6 @@ activity = Activity.new(name: "FLOTTAISON EN ISOLATION", description: "Découvre
                 la première séance et durer de 10 à 14 jours. Cette expérience hors du commun vous fera le plus grand
                 bien!")
 
-")
 activity.photo.attach(io: file, filename: "massage.png", content_type: "image/png")
 activity.user = user
 activity.save!
