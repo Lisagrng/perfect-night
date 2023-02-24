@@ -18,36 +18,63 @@ puts 'Finished!'
 
 puts 'Creating activities..'
 file = URI.open("https://babsbowling.com/wp-content/uploads/2021/10/babs-biere-1-980x656.jpg")
-activity = Activity.new(name: "LE BAB'S", description: "Notre immense terrasse, des DJ pour des soirées estivales toujours plus
-                festives", address: "1051 Bd Burdeau, 69400 Villefranche-sur-Saône", max_number_persons:
+activity = Activity.new(name: "LE BAB'S", description: "Notre immense terrasse, des DJ pour des soirées estivales
+                toujours plus festives", address: "1051 Bd Burdeau, 69400 Villefranche-sur-Saône", max_number_persons:
                 10, price_cents: 800, workshop: "false", opening_days: [1, 2, 3, 4, 5, 6], open_at: "13:00", close_at:
-                "01:00", ville: "Villefranche-sur-Saône", categorie: "Bowling")
+                "01:00", ville: "Villefranche-sur-Saône", categorie: "Bowling", program: "Venez au BAB'S et profitez de
+                nos 10 pistes de bowling avec ambiance fluo et canapé! De plus, un large choix de bières sera la pour
+                vous désaltérer - retrouvez plus de 10 bières en pression, des cocktails avec ou sans alcool, des
+                shooters et bien d'autres! Mais surtout notre Happy Hour de 17h à 20h!
+                Enfin, si vous avez un creux, nous vous retrouverons au restaurant afin de vous délecter de burgers
+                maison, Tapas, Fish&Chip's, salade, tartare de boeuf et encore bien des surprises!")
 activity.photo.attach(io: file, filename: "babs.png", content_type: "image/png")
 activity.user = user
 activity.save!
 
 file = URI.open("https://u.tfstatic.com/restaurant_photos/075/30075/169/612/284ce2a3e91979f31a2f9bed19935b71.jpg")
 activity = Activity.new(name: "LE LOUCHEBEM", description: "Ce restaurant typique et familial, tenu par un boucher,
-                privilégie la viande et les produits du marché.", address: "3 Pl. Victor Hugo, 31000 Toulouse", max_number_persons:
-                130, workshop: "false", opening_days: [1, 2, 3, 4, 5, 6], open_at: "15:00", close_at: "02:00", ville: "Toulouse", categorie: "Restaurant")
+                privilégie la viande et les produits du marché.", address: "3 Pl. Victor Hugo, 31000 Toulouse",
+                        max_number_persons: 130, workshop: "false", opening_days: [1, 2, 3, 4, 5, 6], open_at: "15:00",
+                        close_at: "02:00", ville: "Toulouse", categorie: "Restaurant", program: "Venez au Louchebem, la
+                cuisine française y est bien préparée! Ne partez pas sans avoir apprécié un parfait cuit à la perfection
+                . Un vin de maison délicieux fait parti des boissons les plus savoureuses à déguster. Après une longue
+                semaine de travail, vous pouvez goûter un café immense! Cet endroit est si bien placé qu'on peut y
+                accéder en utilisant n'importe quel transport! Un personnel gracieux montre un haut niveau d'hospitalité
+                dans ce restaurant qui sauront vous ravir!")
 activity.photo.attach(io: file, filename: "louchebem.png", content_type: "image/png")
 activity.user = user
 activity.save!
 
 file = URI.open("https://tse1.mm.bing.net/th?id=OIP.5mQu492dizV6Y25do8MWvAHaD3&pid=Api")
-activity = Activity.new(name: "DELIRIUM CAFÉ TOULOUSE", description: "Bar décontracté avec bière à la pression. Mobilier décalé
-                et plusieurs espaces où s’asseoir en extérieur.", address:
-                "54 All. Jean Jaurès, 31000 Toulouse", max_number_persons: 56, workshop: "false", opening_days:
-                [0, 1, 2, 3, 4, 5, 6], open_at: "16:00", close_at: "01:00", ville: "Toulouse", categorie: "Bar")
+activity = Activity.new(name: "DELIRIUM CAFÉ TOULOUSE", description: "Bar décontracté avec bière à la pression. Mobilier
+                décalé et plusieurs espaces où s’asseoir en extérieur.", address: "54 All. Jean Jaurès, 31000 Toulouse",
+                        max_number_persons: 56, workshop: "false", opening_days: [0, 1, 2, 3, 4, 5, 6], open_at:
+                "16:00", close_at: "01:00", ville: "Toulouse", categorie: "Bar", program: "2ème plus grand bar à bières
+                de France avec 48 tirages pressions et plus de 500 références en bouteilles. Le lieu où les bières
+                belges incontournables côtoient les bières artisanales locales pour que chaque amateur de houblon puisse
+                y trouver son bonheur! Une terrasse extérieure et un patio intérieur pour boire une pinte au soleil et
+                partager quelques tapas en plein coeur de Toulouse. Il se passe toujour quelque chose au Délirium Café
+                Toulouse : retransmission des plus grands évènements sportifs (foot, rugby…), blindtest, quiz, soirées
+                célibataires, tournoi de beer pong, tournoi de Mario kart… La fête du lundi au dimanche, toute l’année
+                !")
 activity.photo.attach(io: file, filename: "delirium.png", content_type: "image/png")
 activity.user = user
 activity.save!
 
 file = URI.open("https://static.actu.fr/uploads/2020/02/photo-alimentation-message-html-960x640.jpg")
-activity = Activity.new(name: "L'ALIMENTATION", description: "Une cuisine gourmande et conviviale a L’Alimentation : Restaurant,
-                foodstore, épicerie, bar à vin, cours de cuisine à Toulouse et Labège.", address: "3 bis Rue Maurice
-                Fonvieille, 31000 Toulouse", max_number_persons: 15, price_cents: 4500, workshop: "true", opening_days:
-                [3], start_at: "20:00", end_at: "22:30", ville: "Toulouse", categorie: "Restaurant")
+activity = Activity.new(name: "L'ALIMENTATION", description: "Une cuisine gourmande et conviviale a L’Alimentation :
+                Restaurant, foodstore, épicerie, bar à vin, cours de cuisine à Toulouse et Labège.", address: "3 bis Rue
+                Maurice Fonvieille, 31000 Toulouse", max_number_persons: 15, price_cents: 4500, workshop: "true",
+                        opening_days: [3], start_at: "20:00", end_at: "22:30", ville: "Toulouse", categorie:
+                "Restaurant", program: "Depuis l’ouverture du premier établissement en 2015, nous avons toujours eu à
+                cœur de vous faire découvrir le travail des artisans et des vignerons avec qui nous travaillons.
+                L’Alimentation c’est plus qu’un restaurant, c’est une approche différente des plaisirs de la table et de
+                la convivialité. Qu’il s’agisse de venir savourer notre cuisine dans un de nos établissements pour un
+                déjeuner avec vos collègues, prendre un verre entre amis autour d’un diner, ou pour  suivre des ateliers
+                de cuisine animés par des chefs venus de toute la France, nous vous proposons des lieux pour toutes vos
+                occasions. Et si vous avez aimé et que vous souhaitez faire découvrir notre univers à vos amis, vous
+                pourrez même venir retrouver dans notre Cave, toutes les petites merveilles que nous sommes allés
+                dénicher pour vous, auprès de nos vignerons préférés.")
 activity.photo.attach(io: file, filename: "alimentation.png", content_type: "image/png")
 activity.user = user
 activity.save!
@@ -55,17 +82,24 @@ activity.save!
 file = URI.open("https://sgc.lapetiteroquette-pizzeria.com/cdn/maqv6qv73945/gallery_picture_6.jpg")
 activity = Activity.new(name: "AU WC. WINE AND COFFEE", description: "Depuis 5 ans, les anciennes toilettes publiques de
                 Poitiers se sont transformées en un bar à vins et bar à tapas.", address: "4 Pl. Charles de Gaulle,
-                86000 Poitiers", max_number_persons: 80, workshop: "false", opening_days:
-                [0, 1, 2, 3, 4, 5, 6], open_at: "16:00", close_at: "02:00", ville: "Poitiers", categorie: "Bar")
+                86000 Poitiers", max_number_persons: 80, workshop: "false", opening_days: [0, 1, 2, 3, 4, 5, 6],
+                        open_at: "16:00", close_at: "02:00", ville: "Poitiers", categorie: "Bar", program: "A
+                l'intérieur, ou à l'extérieur, venez déguster tout un assortiment de tapas, faîtes-maison et toujours
+                préparés à la demande. Pour accompagner ce moment gustatif, les WC vous propose une carte d'une
+                quinzaine de vins, dont la spécialité maison est le Bleu Pression, plus d'une trentaine de bières, en
+                bouteille ou pression, et de nombreux cocktails. Les WC, c'est aussi des soirées thématiques tout au
+                long de la saison estivale. Un lieu insolite et atypique, totalement revisité, à découvrir sans tarder
+                !")
 activity.photo.attach(io: file, filename: "WC.png", content_type: "image/png")
 activity.user = user
 activity.save!
 
 file = URI.open("https://tse2.mm.bing.net/th?id=OIP.a2_HkKuJXfnMeRtdcnhC5QHaE8&pid=Api")
-activity = Activity.new(name: "PATINOIRE CHARLEMAGNE", description: "D’une capacité publique de 4 200 personnes, la patinoire
-  reçoit aussi des spectacles sur glace et des compétitions internationales et nationales.", address:
-  "Patinoire Charlemagne, 100 Cr Charlemagne, 69002 Lyon", max_number_persons: 4200, price_cents: "between
-  400 and 780", workshop: "false", opening_days: [4, 5, 6, 0], open_at: "14:00", close_at: "23:00", ville: "Lyon", categorie: "Patinoire")
+activity = Activity.new(name: "PATINOIRE CHARLEMAGNE", description: "D’une capacité publique de 4 200 personnes, la
+                patinoire reçoit aussi des spectacles sur glace et des compétitions internationales et nationales.", address:
+                "Patinoire Charlemagne, 100 Cr Charlemagne, 69002 Lyon", max_number_persons: 4200, price_cents: "between 400 and 780",
+                        workshop: "false", opening_days: [4, 5, 6, 0], open_at: "14:00", close_at: "23:00", ville: "Lyon", categorie:
+                "Patinoire", program:)
 activity.photo.attach(io: file, filename: "patinoire.png", content_type: "image/png")
 activity.user = user
 activity.save!
