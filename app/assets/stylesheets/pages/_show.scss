@@ -159,6 +159,8 @@ hr {
   font-family: 'Kanit', sans-serif;
 }
 
-.rating-show {
-  color: #fdffb6;
+.gl-star-rating--stars {
+  span {
+    color: #fdffb6;
+  }
 }
