@@ -1,7 +1,9 @@
 <div class= "container container-show">
 
   <div class= "logo">
-    <%= link_to 'Back', :back %>
+    <%= link_to :back do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
     <%= image_tag("logo.png")%>
   </div>
 
