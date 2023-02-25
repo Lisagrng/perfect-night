@@ -4,41 +4,24 @@
       <%= image_tag("logo.png")%>
     </div>
     <br>
-    <h2> Dites nous en plus </h2>
+    <h2> Guide nous </h2>
 <br>
   <%= simple_form_for :activity, url: activities_path, method: "GET" do |f| %>
-    <%= f.input :Nombre_de_personne %>
-    <%= f.input :ville %>
-    <%= f.input :category,
+    <%= f.input :Nombre_de_personnes,
+          required: false %>
+    <%= f.input :ville,
+          required: false %>
+    <%= f.input :categorie,
           as: :radio_buttons,
+          required: false,
             collection_wrapper_tag: 'div',
             collection_wrapper_class: 'category-wrapper',
             item_wrapper_class: 'category-item',
             input_html: { class: 'category-selector' },
             collection: Activity::CATEGORIES  %>
-      <%= f.submit "C'est parti", class: "button" %>
+      <%= f.submit "C'est parti", class: "button-filtre" %>
   <% end %>
-
-
-    <%= form_tag(activities_path, method: :get) do %>
-      <div class="filtre">
-        <div class="input-group">
-          <%= label_tag :Nombre_de_personne, "Nombre de personnes" %>
-          <%= select_tag :Nombre_de_personne, options_for_select((1..11).map { |i| ["#{i} personnes", i] }) %>
-        </div>
-        <div class="input-group">
-          <%= label_tag :Ville, "Ville" %>
-          <%= text_field_tag :Ville %>
-        </div>
-        <div class="input-group">
-          <%= label_tag :Catégorie, "Catégorie" %>
-          <%= radio_button_tag :Catégorie, options_for_select([["", ""], ["Bar", "Bar"], ["Restaurant", "Restaurant"], ["Patinoire", "Patinoire"], ["Escape Game", "Escape Game"], ["Piscine", "Piscine"], ["Quiz", "Quiz"], ["Bowling", "Bowling"], ["Parc d'activités", "Parc d'activités"]]) %>
-        </div>
-        <div class="input-group">
-          <%= submit_tag "Filtrer", class: "button" %>
-        </div>
-      </div>
-    <% end %>
+  <br>
   </div>
   <br>
 <% end %>

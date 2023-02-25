@@ -5,16 +5,21 @@ class ActivitiesController < ApplicationController
     # search
     # @activities = Activity.filter_attributes
     @activities = Activity.all
+    filtre if params[:activity].present?
     choose_random_activity
   end
 
-
   def choose_random_activity
     # params[:ville] params[:category] params[:max_number_person]
-    if params[:Ville].present?
-      @random_activity = Activity.where(ville: params[:Ville]).sample
-    else
-      @random_activity = Activity.all.sample
+    # if params[:activity].blank?
+    @random_activity = Activity.all.sample
+
+    if params[:activity][:ville].present?
+      @random_activity = Activity.where(ville: params[:activity][:ville]).sample
+    elsif params[:activity][:max_number_persons].present?
+      @random_activity = Activity.where(max_number_persons: params[:activity][:max_number_persons]).sample
+    elsif params[:activity][:categorie].present?
+      @random_activity = Activity.where(categorie: params[:activity][:categorie]).sample
     end
   end
 
@@ -58,7 +63,7 @@ class ActivitiesController < ApplicationController
 
   def index_filtre
     @activities = Activity.all
-    filtre
+    filtre if params[:activity].present?
   end
 
   def random_activity
@@ -88,13 +93,13 @@ class ActivitiesController < ApplicationController
 end
 
 def filtre
-  if params[:max_number_persons].present?
-    @activities = @activities.where(max_number_persons: params[:max_number_persons])
+  if params[:activity][:max_number_persons].present?
+    @activities = @activities.where(max_number_persons: params[:activity][:max_number_persons])
   end
-  if params[:ville].present?
-    @activities = @activities.where("location like ?", "%#{params[:ville]}%")
+  if params[:activity][:ville].present?
+    @activities = @activities.where("ville like ?", "%#{params[:activity][:ville]}%")
   end
-  if params[:categorie].present?
-    @activities = @activities.where("categorie like ?", "%#{params[:categorie]}%")
+  if params[:activity][:categorie].present?
+    @activities = @activities.where("categorie like ?", "%#{params[:activity][:categorie]}%")
   end
 end

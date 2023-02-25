@@ -4,11 +4,10 @@
       <%= image_tag("logo.png")%>
     </div>
       <% @random_activity  %>
-      <%= link_to "Laisse-toi guider", activity_path(@random_activity.id), class: "button-activity" %>
+      <%# <% if params[:activity].present? %>
+      <%= link_to "Laisse-toi guider", activity_path(@random_activity), class: "button-activity" %>
+      <%# <% end %>
       <% @activities.each do |activity| %>
-        <% if (params[:max_number_persons].blank? || activity.max_number_persons == params[:max_number_persons].to_i) &&
-              (params[:Ville].blank? || activity.ville.downcase.include?(params[:Ville].downcase)) &&
-              (params[:Catégorie].blank? || activity.categorie.downcase.include?(params[:Catégorie].downcase)) %>
           <div class="card-activity">
             <div class="card-border">
               <% if activity.photo.attached? %>
@@ -60,7 +59,6 @@
               <% end %>
             </div>
           </div>
-        <% end %>
       <% end %>
     </div>
   </div>
