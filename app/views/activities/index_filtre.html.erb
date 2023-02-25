@@ -3,6 +3,8 @@
     <div class= "logo">
       <%= image_tag("logo.png")%>
     </div>
+    <br>
+    <h2> Dites nous en plus </h2>
 <br>
   <%= simple_form_for :activity, url: activities_path, method: "GET" do |f| %>
     <%= f.input :Nombre_de_personne %>
@@ -14,7 +16,7 @@
             item_wrapper_class: 'category-item',
             input_html: { class: 'category-selector' },
             collection: Activity::CATEGORIES  %>
-      <%= f.submit "Filtrer", class: "button" %>
+      <%= f.submit "C'est parti", class: "button" %>
   <% end %>
 
 
