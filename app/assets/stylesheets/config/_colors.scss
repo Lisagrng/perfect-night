@@ -19,13 +19,15 @@ $rosePastel:#fed2e6;
 $violetPastel: #e4c1f9;
 $jaunePastel: #fdffb6;
 $orangePrimary: #FF8B13;
+$rosePeps: #F94892;
 
 $colors:
   "orange-pastel" $orangePastel,
   "rose-pastel" $rosePastel,
   "violet-pastel" $violetPastel,
   "jaune-pastel" $jaunePastel,
-  "orange-primary" $orangePrimary;
+  "orange-primary" $orangePrimary,
+  "rose-peps" $rosePeps;
 
 @each $name, $color in $colors {
   .#{$name} {
