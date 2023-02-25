@@ -1,11 +1,11 @@
-<div class= "container container-show">
-  <div class= "logo">
+<div class= "container-bookings container-show">
+  <div class="logo">
   <a href="/bookings"> <i class="fa-solid fa-arrow-left"></i></a>
     <%= image_tag("logo.png")%>
   </div>
 
+      <h2><%= @booking.activity.name %> ⚡️</h2>
   <div class="body">
-      <h2>⚡️ <%= @booking.activity.name %></h2>
         <br>
           <div class= "image-show">
             <%= cl_image_tag @activity.photo.key%>

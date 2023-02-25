@@ -15,20 +15,18 @@
 
             <% if @activity.price_cents.blank? %>
                   <br>
-                  <p class="text-center">Réglement sur place</p>
+                  <p><i class="fa-solid fa-receipt"><span>Réglement sur place</p></i></span>
                 <% elsif @activity.price_cents.zero? %>
-                  <p class="text-center">Gratuit</p>
+                  <br>
+                  <p><i class="fa-solid fa-receipt"><span>Gratuit</p></i></span>
                 <% else %>
-                  <p class="text-center"><%= @activity.price_cents.fdiv(100) %> € / pers.</p>
+                  <br>
+                  <p><i class="fa-solid fa-receipt"><span><%= @activity.price_cents.fdiv(100) %> € / pers.</p></i></span>
                 <% end %>
 
             <%= simple_form_for @booking, url: activity_bookings_path(@activity)  do |f| %>
-            <div class="filtre-new"><span style="color: #F0000">
-              <%= f.input :number_of_persons, placeholder: "Nombre de personnes", label:"Combien serez-vous ?", type:"text" %></span>
-              <div class="text-center">
-                <%= f.button :submit, class:"navbar-show", value:"Je réserve"%>
-              </div>
-            </div>
+              <%= f.input :number_of_persons, label:"Combien serez-vous ?", type:"text" %></span>
+              <small><%= f.button :submit, class:"btn-reviews", value:"Je réserve"%></small>
             <% end %>
     </div>
   </div>
