@@ -1,7 +1,12 @@
 <div class= "container container-show">
 
   <div class= "logo">
-  <a href="/activities"> <i class="fa-solid fa-arrow-left"></i></a>
+    <%# if Booking.find_by(activity: @activity, user: current_user).present? %>
+      <%#= link_to bookings_path do %>
+      <%# end %>
+    <%# else %>
+      <!--a href="/activities"> <i class="fa-solid fa-arrow-left"></i></a>-->
+    <%# end %>
     <%= image_tag("logo.png")%>
   </div>
 
@@ -42,7 +47,7 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
-  <div class="show-reviews card-reviews">
+  <div id="activity-review" class="show-reviews card-reviews">
     <h2>LES AVIS</h2>
     <br>
     <% if @booking != nil %>
