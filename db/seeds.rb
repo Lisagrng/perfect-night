@@ -14,6 +14,12 @@ User.destroy_all
 puts 'Creating user..'
 user = User.create!(name: "Hugues", age: 27, sexe: "masculin", address: "Le Clos en Dendy, 31460 Vendine", email:
             "hugues.lambda@gmail.com", password: "123456", phone_number: "0607080910")
+User.create!(name: "Joséphine", age: 21, sexe: "feminin", address: "2 route de la reine, 92100 Paris", email:
+            "joséphine.lambda@gmail.com", password: "123456", phone_number: "0607080910")
+User.create!(name: "Dylan", age: 35, sexe: "masculin", address: "8 rue des fleurs, 95870 Bezons", email:
+            "dylan.lambda@gmail.com", password: "123456", phone_number: "0607080910")
+User.create!(name: "Sarah", age: 32, sexe: "feminin", address: "Impasse pisse-chat, 42210 Bellegarde-en-Forez",
+            email: "sarah.lambda@gmail.com", password: "123456", phone_number: "0607080910")
 puts 'Finished!'
 
 puts 'Creating activities..'
