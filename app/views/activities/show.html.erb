@@ -1,12 +1,7 @@
 <div class= "container container-show">
 
   <div class= "logo">
-    <%# if Booking.find_by(activity: @activity, user: current_user).present? %>
-      <%#= link_to bookings_path do %>
-      <%# end %>
-    <%# else %>
-      <!--a href="/activities"> <i class="fa-solid fa-arrow-left"></i></a>-->
-    <%# end %>
+    <%= link_to 'Back', :back %>
     <%= image_tag("logo.png")%>
   </div>
 
