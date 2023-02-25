@@ -1,11 +1,11 @@
-<div class= "container container-show">
-  <div class= "logo">
+<div class= "container-bookings container-show">
+  <div class="logo">
   <a href="/bookings"> <i class="fa-solid fa-arrow-left"></i></a>
     <%= image_tag("logo.png")%>
   </div>
 
+      <h2><%= @booking.activity.name %> ⚡️</h2>
   <div class="body">
-      <h2>⚡️ <%= @booking.activity.name %></h2>
         <br>
           <div class= "image-show">
             <%= cl_image_tag @activity.photo.key%>
@@ -29,10 +29,14 @@
       </div>
 
         <br>
-      <div class="text-center">
-        <button class="button-booking"><%= link_to "Supprimer cette réservation", booking_path(@booking),
-        data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre ? 💤"} %></button>
-      </div>
+        <div class="text-center">
+            <button class="button-action"><%= link_to "Voir l'activité", activity_path(@activity) %></button>
+        </div>
+              <br>
+        <div class="text-center">
+            <button class="button-booking"><%= link_to "Supprimer cette réservation", booking_path(@booking),
+            data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre ? 💤"} %></button>
+        </div>
     </div>
   </div>
 </div>

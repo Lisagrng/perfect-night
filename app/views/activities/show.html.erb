@@ -5,7 +5,7 @@
     <%= image_tag("logo.png")%>
   </div>
 
-  <div class= "image-show" style= "justify-content:center">
+  <div class= "image-show">
     <%= cl_image_tag @activity.photo.key, crop: :fill%>
   </div>
 
@@ -42,12 +42,12 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
-  <div class="show-reviews card-reviews">
-    <h2>REVIEWS</h2>
+  <div id="activity-review" class="show-reviews card-reviews">
+    <h2>LES AVIS</h2>
     <br>
     <% if @booking != nil %>
       <div class="reviews-form">
-        <h3>Ajoutez votre avis!</h3>
+        <h3>Ajoute le tien!</h3>
           <%# <fieldset class="rating-new">
             <input type="radio" id="star5" name="rating" value="5" />
             <label class = "full" for="star5" title="5 stars"></label>
@@ -90,42 +90,62 @@
             <% if review.rating == 5 %>
                 <div class="list-item card-review">
                   <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><p class="review-content"><%= review.content %></p>
-                  <%= link_to "Supprimer ce commentaire",
-                    review_path(review), class: "btn-delete-show",
-                    data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
-                  %>
+                  <% if @user = current_user %>
+                    <%= link_to "Supprimer ce commentaire",
+                      review_path(review), class: "btn-delete-show",
+                      data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
+                    %>
+                  <% else %>
+                    <%= hello %>
+                  <% end %>
                 </div>
               <% elsif review.rating == 4 %>
                 <div class="list-item card-review">
                   <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><p class="review-content"><%= review.content %></p>
-                  <%= link_to "Supprimer ce commentaire",
-                    review_path(review), class: "btn-delete-show",
-                    data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
-                  %>
+                  <% if @user = current_user %>
+                    <%= link_to "Supprimer ce commentaire",
+                      review_path(review), class: "btn-delete-show",
+                      data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
+                    %>
+                  <% else %>
+                    <%= hello %>
+                  <% end %>
                 </div>
               <% elsif review.rating == 3 %>
                 <div class="list-item card-review">
                   <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><p class="review-content"><%= review.content %></p>
-                  <%= link_to "Supprimer ce commentaire",
-                    review_path(review), class: "btn-delete-show",
-                    data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
-                  %>
+                  <% if @user = current_user %>
+                    <%= link_to "Supprimer ce commentaire",
+                      review_path(review), class: "btn-delete-show",
+                      data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
+                    %>
+                  <% else %>
+                    <%= hello %>
+                  <% end %>
                 </div>
               <% elsif review.rating == 2 %>
                 <div class="list-item card-review">
                   <span><i class="fas fa-star"></i><i class="fas fa-star"></i></span><p class="review-content"><%= review.content %></p>
-                  <%= link_to "Supprimer ce commentaire",
-                    review_path(review), class: "btn-delete-show",
-                    data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
-                  %>
+                  <% if @user = current_user %>
+                      <%= link_to "Supprimer ce commentaire",
+                        review_path(review), class: "btn-delete-show",
+                        data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
+                      %>
+                    <% else %>
+                      <%= hello %>
+                    <% end %>
                 </div>
               <% else %>
                 <div class="list-item card-review">
                   <span><i class="fas fa-star"></i></span><p class="review-content"><%= review.content %></p>
-                  <%= link_to "Supprimer ce commentaire",
-                    review_path(review), class: "btn-delete-show",
-                    data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
-                  %>
+                  <% if @user = current_user %>
+                      <%= link_to "Supprimer ce commentaire",
+                        review_path(review), class: "btn-delete-show",
+                        data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
+                      %>
+                    <% else %>
+                      <%= hello %>
+                    <% end %>
                 </div>
             <% end %>
           <% end %>
