@@ -14,11 +14,11 @@ class ActivitiesController < ApplicationController
     # if params[:activity].blank?
     @random_activity = Activity.all.sample
 
-    if params[:activity][:ville].present?
+    if params[:activity] && params[:activity][:ville].present?
       @random_activity = Activity.where(ville: params[:activity][:ville]).sample
-    elsif params[:activity][:max_number_persons].present?
+    elsif params[:activity] && params[:activity][:max_number_persons].present?
       @random_activity = Activity.where(max_number_persons: params[:activity][:max_number_persons]).sample
-    elsif params[:activity][:categorie].present?
+    elsif params[:activity] && params[:activity][:categorie].present?
       @random_activity = Activity.where(categorie: params[:activity][:categorie]).sample
     end
   end
