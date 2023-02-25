@@ -25,6 +25,7 @@ class ActivitiesController < ApplicationController
 
   def show
     @review = Review.new
+    @user = current_user
     @booking = Booking.where(user: current_user, activity: @activity).first
     @reviews = Review.includes(:booking).where(booking: { activity: @activity })
     @is_reviewed = @reviews.any?

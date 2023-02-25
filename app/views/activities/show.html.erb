@@ -1,9 +1,7 @@
 <div class= "container container-show">
 
   <div class= "logo">
-    <%= link_to :back do %>
-      <i class="fas fa-arrow-left"></i>
-    <% end %>
+  <a href="/activities"> <i class="fa-solid fa-arrow-left"></i></a>
     <%= image_tag("logo.png")%>
   </div>
 
@@ -44,7 +42,7 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
-  <div id="activity-review" class="show-reviews card-reviews">
+  <div class="show-reviews card-reviews">
     <h2>LES AVIS</h2>
     <br>
     <% if @booking != nil %>
