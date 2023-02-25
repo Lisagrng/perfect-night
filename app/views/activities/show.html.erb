@@ -1,134 +1,134 @@
-<div class= “container container-show”>
-  <div class= “logo”>
+<div class= "container container-show">
+  <div class= "logo">
     <%= link_to :back do %>
-      <i class=“fas fa-arrow-left”></i>
+      <i class="fas fa-arrow-left"></i>
     <% end %>
-    <%= image_tag(“logo.png”)%>
+    <%= image_tag("logo.png")%>
   </div>
-  <div class= “image-show”>
+  <div class= "image-show">
     <%= cl_image_tag @activity.photo.key, crop: :fill%>
   </div>
   <h2> <%= @activity.name %></h2>
-  <div class=“show-show”>
-    <div class=“show-address”>
-      <i class=“fa-solid fa-location-dot”></i><span><%= @activity.address %></span></i>
+  <div class="show-show">
+    <div class="show-address">
+      <i class="fa-solid fa-location-dot"></i><span><%= @activity.address %></span></i>
     </div>
     <hr>
-    <div class=“show-time”>
+    <div class="show-time">
       <% if @activity.workshop? %>
-        <i class=“fa-regular fa-calendar”><span><%= DateTime.parse(@activity.start_at).strftime(“%H:%M”) %> - <%=DateTime.parse(@activity.end_at).strftime(“%H:%M”) %></span></i>
+        <i class="fa-regular fa-calendar"><span><%= DateTime.parse(@activity.start_at).strftime("%H:%M") %> - <%=DateTime.parse(@activity.end_at).strftime("%H:%M") %></span></i>
       <% else %>
-        <i class=“fa-regular fa-calendar”><span><%= DateTime.parse(@activity.open_at).strftime(“%H:%M”) %> - <%=DateTime.parse(@activity.close_at).strftime(“%H:%M”) %></span></i>
+        <i class="fa-regular fa-calendar"><span><%= DateTime.parse(@activity.open_at).strftime("%H:%M") %> - <%=DateTime.parse(@activity.close_at).strftime("%H:%M") %></span></i>
       <% end %>
     </div>
-    <div class=“show-description show-card”>
+    <div class="show-description show-card">
       <h3>Description</h3>
       <p><%= @activity.description%></p>
     </div>
-    <div class=“show-program show-card”>
+    <div class="show-program show-card">
       <h3> Au Programme</h3>
       <p><%=  @activity.program %></p>
     </div>
   </div>
-  <div style=“width: 100%; height: 300px; border-radius: 5px;”
-    data-controller=“map”
-    data-map-markers-value=“<%= @marker.to_json %>”
-    data-map-api-key-value=“<%= ENV[‘MAPBOX_API_KEY’] %>“>
+  <div style="width: 100%; height: 300px; border-radius: 5px;"
+    data-controller="map"
+    data-map-markers-value="<%= @marker.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-  <div id=“activity-review” class=“show-reviews card-reviews”>
+  <div id="activity-review" class="show-reviews card-reviews">
     <h2>LES AVIS</h2>
     <br>
     <% if @booking != nil %>
-      <div class=“reviews-form”>
+      <div class="reviews-form">
         <h3>Ajoute le tien!</h3>
-          <%# <fieldset class=“rating-new”>
-            <input type=“radio” id=“star5" name=“rating” value=“5" />
-            <label class = “full” for=“star5" title=“5 stars”></label>
-            <input type=“radio” id=“star4” name=“rating” value=“4” />
-            <label class = “full” for=“star4” title=“4 stars”></label>
-            <input type=“radio” id=“star3" name=“rating” value=“3" />
-            <label class = “full” for=“star3" title= “3 stars”></label>
-            <input type=“radio” id=“star2” name=“rating” value=“2” />
-            <label class = “full” for=“star2” title=“2 stars”></label>
-            <input type=“radio” id=“star1" name=“rating” value=“1" />
-            <label class = “full” for=“star1" title=“1 star”></label>
+          <%# <fieldset class="rating-new">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label class = "full" for="star5" title="5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label class = "full" for="star4" title="4 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label class = "full" for="star3" title= "3 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label class = "full" for="star2" title="2 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label class = "full" for="star1" title="1 star"></label>
           </fieldset> %>
           <%= simple_form_for [@activity, @review] do |f| %>
-          <div class=“rating-show”>
+          <div class="rating-show">
             <%= f.input :rating,
                 label: false,
                 collection: (1..5).to_a,
-                input_html: { data: { controller:“star-rating” } },
-                class: “star-rating-show” %>
+                input_html: { data: { controller:"star-rating" } },
+                class: "star-rating-show" %>
           </div>
-          <div class=“input-review-show”>
-            <%= f.input :content, label: “Dis nous en plus!“%>
+          <div class="input-review-show">
+            <%= f.input :content, label: "Dis nous en plus!"%>
           </div>
-            <small><%= f.submit “AJOUTER”, class: “btn-reviews”%></small>
+            <small><%= f.submit "AJOUTER", class: "btn-reviews"%></small>
           <% end %>
       </div>
   <% end %>
-    <ul class=“list-group”>
+    <ul class="list-group">
       <% unless @is_reviewed %>
         <p>Réserve et sois le premier à ajouter un avis pour <%= @activity.name %></p>
       <% else %>
         <% @activity.bookings.each do |booking| %>
           <% booking.reviews.each do |review| %>
             <% if review.rating == 5 %>
-                <div class=“list-item card-review”>
-                  <span><i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i></span><p class=“review-content”><%= review.content %></p>
+                <div class="list-item card-review">
+                  <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><p class="review-content"><%= review.content %></p>
                   <% if @user = current_user %>
-                    <%= link_to “Supprimer ce commentaire”,
-                      review_path(review), class: “btn-delete-show”,
-                      data: {turbo_method: :delete, turbo_confirm: “Es-tu sûr(e) de vouloir supprimer ce commentaire?“}
+                    <%= link_to "Supprimer ce commentaire",
+                      review_path(review), class: "btn-delete-show",
+                      data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
                     %>
                   <% else %>
                     <%= hello %>
                   <% end %>
                 </div>
               <% elsif review.rating == 4 %>
-                <div class=“list-item card-review”>
-                  <span><i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i></span><p class=“review-content”><%= review.content %></p>
+                <div class="list-item card-review">
+                  <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><p class="review-content"><%= review.content %></p>
                   <% if @user = current_user %>
-                    <%= link_to “Supprimer ce commentaire”,
-                      review_path(review), class: “btn-delete-show”,
-                      data: {turbo_method: :delete, turbo_confirm: “Es-tu sûr(e) de vouloir supprimer ce commentaire?“}
+                    <%= link_to "Supprimer ce commentaire",
+                      review_path(review), class: "btn-delete-show",
+                      data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
                     %>
                   <% else %>
                     <%= hello %>
                   <% end %>
                 </div>
               <% elsif review.rating == 3 %>
-                <div class=“list-item card-review”>
-                  <span><i class=“fas fa-star”></i><i class=“fas fa-star”></i><i class=“fas fa-star”></i></span><p class=“review-content”><%= review.content %></p>
+                <div class="list-item card-review">
+                  <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><p class="review-content"><%= review.content %></p>
                   <% if @user = current_user %>
-                    <%= link_to “Supprimer ce commentaire”,
-                      review_path(review), class: “btn-delete-show”,
-                      data: {turbo_method: :delete, turbo_confirm: “Es-tu sûr(e) de vouloir supprimer ce commentaire?“}
+                    <%= link_to "Supprimer ce commentaire",
+                      review_path(review), class: "btn-delete-show",
+                      data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
                     %>
                   <% else %>
                     <%= hello %>
                   <% end %>
                 </div>
               <% elsif review.rating == 2 %>
-                <div class=“list-item card-review”>
-                  <span><i class=“fas fa-star”></i><i class=“fas fa-star”></i></span><p class=“review-content”><%= review.content %></p>
+                <div class="list-item card-review">
+                  <span><i class="fas fa-star"></i><i class="fas fa-star"></i></span><p class="review-content"><%= review.content %></p>
                   <% if @user = current_user %>
-                      <%= link_to “Supprimer ce commentaire”,
-                        review_path(review), class: “btn-delete-show”,
-                        data: {turbo_method: :delete, turbo_confirm: “Es-tu sûr(e) de vouloir supprimer ce commentaire?“}
+                      <%= link_to "Supprimer ce commentaire",
+                        review_path(review), class: "btn-delete-show",
+                        data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
                       %>
                     <% else %>
                       <%= hello %>
                     <% end %>
                 </div>
               <% else %>
-                <div class=“list-item card-review”>
-                  <span><i class=“fas fa-star”></i></span><p class=“review-content”><%= review.content %></p>
+                <div class="list-item card-review">
+                  <span><i class="fas fa-star"></i></span><p class="review-content"><%= review.content %></p>
                   <% if @user = current_user %>
-                      <%= link_to “Supprimer ce commentaire”,
-                        review_path(review), class: “btn-delete-show”,
-                        data: {turbo_method: :delete, turbo_confirm: “Es-tu sûr(e) de vouloir supprimer ce commentaire?“}
+                      <%= link_to "Supprimer ce commentaire",
+                        review_path(review), class: "btn-delete-show",
+                        data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
                       %>
                     <% else %>
                       <%= hello %>
