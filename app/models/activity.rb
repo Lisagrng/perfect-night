@@ -37,7 +37,7 @@ def self.filter_by_params(params)
   if params[:ville].present?
     activities = activities.where("city ILIKE ?", "%#{params[:ville]}%")
   end
-  if params[:Categorie].present?
+  if params[:categorie].present?
     activities = activities.where("category ILIKE ?", "%#{params[:Categorie]}%")
   end
 

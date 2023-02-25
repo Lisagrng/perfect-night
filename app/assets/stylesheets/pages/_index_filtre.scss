@@ -98,14 +98,15 @@
   }
   }
 
-.form-label {
-  color: #F94892;
-  font-family: 'Rubik Mono One', sans-serif;
-}
-
-.col-form-label{
-  color: #F94892;
-  font-family: 'Rubik Mono One', sans-serif;
+.container-filtre {
+  .form-label {
+    color: #F94892;
+    font-family: 'Rubik Mono One', sans-serif;
+  }
+  .col-form-label{
+    color: #F94892;
+    font-family: 'Rubik Mono One', sans-serif;
+  }
 }
 
   .category-wrapper {
@@ -145,112 +146,112 @@
   }
 
 
-  #activity_category_bar + label {
+  #activity_categorie_bar + label {
     color: #f992ad;
   }
 
-  #activity_category_bar:checked + label {
+  #activity_categorie_bar:checked + label {
     background-color: #f992ad;
     border-color: #f992ad;
   }
 
 
-  #activity_category_restaurant + label {
+  #activity_categorie_restaurant + label {
     color: #fbbcee;
   }
 
-  #activity_category_restaurant:checked + label {
+  #activity_categorie_restaurant:checked + label {
     background-color: #fbbcee;
     border-color: #fbbcee;
   }
 
 
-  #activity_category_patinoire + label {
+  #activity_categorie_patinoire + label {
     color: #fab4c8;
   }
 
-  #activity_category_patinoire:checked + label {
+  #activity_categorie_patinoire:checked + label {
     background-color: #fab4c8;
     border-color: #fab4c8;
   }
 
-  #activity_category_bowling + label {
+  #activity_categorie_bowling + label {
     color: #f78ecf;
   }
 
-  #activity_category_bowling:checked + label {
+  #activity_categorie_bowling:checked + label {
     background-color: #f78ecf;
     border-color: #f78ecf;
   }
 
-  #activity_category_piscine + label {
+  #activity_categorie_piscine + label {
     color: #cfb9f7;
   }
 
-  #activity_category_piscine:checked + label {
+  #activity_categorie_piscine:checked + label {
     background-color: #cfb9f7;
     border-color: #cfb9f7;
   }
 
-  #activity_category_escape_game + label {
+  #activity_categorie_escape_game + label {
     color: #c174f2;
   }
 
-  #activity_category_escape_game:checked + label {
+  #activity_categorie_escape_game:checked + label {
     background-color: #c174f2;
     border-color: #c174f2;
   }
 
-  #activity_category_quizz + label {
+  #activity_categorie_quizz + label {
     color: #a480f2;
   }
 
-  #activity_category_quizz:checked + label {
+  #activity_categorie_quizz:checked + label {
     background-color: #a480f2;
     border-color: #a480f2;
   }
 
-  #activity_category_parc_activites + label {
+  #activity_categorie_parc_activites + label {
     color: #d4b0f9;
   }
 
-  #activity_category_parc_activites:checked + label {
+  #activity_categorie_parc_activites:checked + label {
     background-color: #d4b0f9;
     border-color: #d4b0f9;
   }
 
-  #activity_category_karaoke + label {
+  #activity_categorie_karaoke + label {
     color: #c580ed;
   }
 
-  #activity_category_karaoke:checked + label {
+  #activity_categorie_karaoke:checked + label {
     background-color: #c580ed;
     border-color: #c580ed;
   }
 
-  #activity_category_club_de_tir + label {
+  #activity_categorie_club_de_tir + label {
     color: #ff9286;
   }
 
-  #activity_category_club_de_tir:checked + label {
+  #activity_categorie_club_de_tir:checked + label {
     background-color: #ff9286;
     border-color: #ff9286;
   }
 
-  #activity_category_laser_game + label {
+  #activity_categorie_laser_game + label {
     color: #ff92b1;
   }
 
-  #activity_category_laser_game:checked + label {
+  #activity_categorie_laser_game:checked + label {
     background-color: #ff92b1;
     border-color: #ff92b1;
   }
 
-  #activity_category_masssage + label {
+  #activity_categorie_massage + label {
     color: #a873e8;
   }
 
-  #activity_category_massage:checked + label {
+  #activity_categorie_massage:checked + label {
     background-color: #a873e8;
     border-color: #a873e8;
   }
