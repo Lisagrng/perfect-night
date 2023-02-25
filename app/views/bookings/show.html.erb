@@ -29,10 +29,14 @@
       </div>
 
         <br>
-      <div class="text-center">
-        <button class="button-booking"><%= link_to "Supprimer cette réservation", booking_path(@booking),
-        data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre ? 💤"} %></button>
-      </div>
+        <div class="text-center">
+            <button class="button-action"><%= link_to "Voir l'activité", activity_path(@activity) %></button>
+        </div>
+              <br>
+        <div class="text-center">
+            <button class="button-booking"><%= link_to "Supprimer cette réservation", booking_path(@booking),
+            data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûre ? 💤"} %></button>
+        </div>
     </div>
   </div>
 </div>
