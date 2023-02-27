@@ -168,7 +168,7 @@ activity = Activity.new(name: "SEVEN SQUARES", description: "Avec nos 7 activit�
                 plaisirs sans vous déplacer ! Venez en famille, entre amis et partagez un moment convivial. ", address:
                 "2 Rue Ferrer, 42000 Saint-Étienne", workshop: "false", max_number_persons: 200, opening_days:
                 [0, 1, 2, 3, 4, 5, 6], open_at: "10:00", close_at: "2:00", ville: "Saint-Etienne", categorie: "Parc
-                d'activités", program: "Venez profiter de nos 7 expériences inoubliables parmis lesquelles: l'Ile de
+                à loisirs", program: "Venez profiter de nos 7 expériences inoubliables parmis lesquelles: l'Ile de
                 Tortuga qui ravira les plus petits grâce à ces nombreux structures gonflables! Le trampoline Park dans
                 un espace de 800m2 proposant plus de 10 jeux différents! Seven Square c'est aussi le Clip'n Climb,
                 l'escalade àa portée de mains! Le Laser Game permettra aux plus téméraires d'entre vous de faire leurs
