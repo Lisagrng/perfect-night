@@ -25,7 +25,7 @@
                 <% end %>
 
             <%= simple_form_for @booking, url: activity_bookings_path(@activity)  do |f| %>
-              <%= f.input :number_of_persons, label:"Combien serez-vous ?", type:"text" %></span>
+              <span style="color: #FFFFF"><%= f.input :number_of_persons, label:"Combien serez-vous ?", type:"text" %></span>
               <small><%= f.button :submit, class:"btn-reviews", value:"Je réserve"%></small>
             <% end %>
     </div>
