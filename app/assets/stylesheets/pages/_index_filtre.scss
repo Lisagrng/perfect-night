@@ -138,7 +138,7 @@
     background-color: white;
     font-family: 'Kanit', sans-serif;
     line-height: 100%;
-    height: 65px;
+    height: 75px;
   }
 
   .category-selector:checked + label {
@@ -168,6 +168,11 @@
 
   #activity_categorie_patinoire + label {
     color: #fab4c8;
+    background-image: asset_url("botte-de-neige.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 33%;
   }
 
   #activity_categorie_patinoire:checked + label {
@@ -177,6 +182,11 @@
 
   #activity_categorie_bowling + label {
     color: #f78ecf;
+    background-image: asset_url("bowling.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 33%;
   }
 
   #activity_categorie_bowling:checked + label {
@@ -186,6 +196,11 @@
 
   #activity_categorie_piscine + label {
     color: #cfb9f7;
+    background-image: asset_url("piscine.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 33%;
   }
 
   #activity_categorie_piscine:checked + label {
@@ -194,16 +209,26 @@
   }
 
   #activity_categorie_escape_game + label {
-    color: #c174f2;
+    color: #f4989c;
+    background-image: asset_url("exit.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 33%;
   }
 
   #activity_categorie_escape_game:checked + label {
-    background-color: #c174f2;
-    border-color: #c174f2;
+    background-color: #f4989c;
+    border-color: #f4989c;
   }
 
   #activity_categorie_quizz + label {
     color: #a480f2;
+    background-image: asset_url("quiz.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 33%;
   }
 
   #activity_categorie_quizz:checked + label {
@@ -211,26 +236,41 @@
     border-color: #a480f2;
   }
 
-  #activity_categorie_parc_activites + label {
-    color: #d4b0f9;
+  #activity_categorie_parc_à_loisirs + label {
+    color: #fec89a;
+    background-image: asset_url("mode-de-vie.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 33%;
   }
 
-  #activity_categorie_parc_activites:checked + label {
-    background-color: #d4b0f9;
-    border-color: #d4b0f9;
+  #activity_categorie_parc_à_loisirs:checked + label {
+    background-color: #fec89a;
+    border-color: #fec89a;
   }
 
-  #activity_categorie_karaoke + label {
+  #activity_categorie_karaoké + label {
     color: #c580ed;
+    background-image: asset_url("karaoke.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 33%;
   }
 
-  #activity_categorie_karaoke:checked + label {
+  #activity_categorie_karaoké:checked + label {
     background-color: #c580ed;
     border-color: #c580ed;
   }
 
   #activity_categorie_club_de_tir + label {
     color: #ff9286;
+    background-image: asset_url("tir-a-larc.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 25%;
   }
 
   #activity_categorie_club_de_tir:checked + label {
@@ -240,6 +280,11 @@
 
   #activity_categorie_laser_game + label {
     color: #ff92b1;
+    background-image: asset_url("laser-tag.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 25%;
   }
 
   #activity_categorie_laser_game:checked + label {
@@ -248,10 +293,24 @@
   }
 
   #activity_categorie_massage + label {
-    color: #a873e8;
+    color: #ff5d8f;
+    background-image: asset_url("massage-corporel.png");
+    background-repeat: no-repeat;
+    background-position: 92%;
+    background-size: contain;
+    background-size: 33%;
   }
 
   #activity_categorie_massage:checked + label {
-    background-color: #a873e8;
-    border-color: #a873e8;
+    background-color: #ff5d8f;
+    border-color: #ff5d8f;
   }
+
+  // #lecture_category_gastronomie + label {
+  //   color: #62DDF5;
+  //   background-image: asset_url("icon-gas.png");
+  //   background-repeat: no-repeat;
+  //   background-position: 90%;
+  //   background-size: contain;
+  //   background-size: 20%;
+  // }
