@@ -1,10 +1,11 @@
-<div class= "container-bookings container-show">
+<div class= "container">
   <div class="logo">
   <a href="/bookings"> <i class="fa-solid fa-arrow-left"></i></a>
     <%= image_tag("logo.png")%>
   </div>
 
-      <h2><%= @booking.activity.name %> ⚡️</h2>
+      <h2>Ma réservation</h2>
+      <h3 class="text-center"><%= @booking.activity.name %> ⚡️</h3>
   <div class="body">
         <br>
           <div class= "image-show">
@@ -24,11 +25,10 @@
           <i class="fa-regular fa-calendar"><span><%= DateTime.parse(@activity.open_at).strftime("%H:%M") %> - <%=DateTime.parse(@activity.close_at).strftime("%H:%M") %></span></i>
         <% end %>
       </div>
-      <div class="show-address">
+      <hr>
+      <div class="show-price">
         <i class="fa-solid fa-receipt"></i><span><%= @price %></span>
       </div>
-
-        <br>
         <div class="text-center">
             <button class="button-action"><%= link_to "Voir l'activité", activity_path(@activity) %></button>
         </div>
@@ -40,3 +40,6 @@
     </div>
   </div>
 </div>
+    <br>
+    <br>
+    <br>

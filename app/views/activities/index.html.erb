@@ -1,8 +1,11 @@
 <% if user_signed_in? %>
   <div class="container">
-    <div class= "logo">
-      <%= image_tag("logo.png")%>
-    </div>
+  <div class= "logo">
+    <%= link_to :back do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+    <%= image_tag("logo.png")%>
+  </div>
       <% @random_activity  %>
       <%# <% if params[:activity].present? %>
       <%= link_to "Laisse-toi guider", activity_path(@random_activity), class: "button-activity" %>

@@ -21,6 +21,10 @@
         <i class="fa-regular fa-calendar"><span><%= DateTime.parse(@activity.open_at).strftime("%H:%M") %> - <%=DateTime.parse(@activity.close_at).strftime("%H:%M") %></span></i>
       <% end %>
     </div>
+    <hr>
+    <div class="show-price">
+      <i class="fa-solid fa-euro-sign"></i><span><%= @price %></span>
+    </div>
     <div class="show-description show-card">
       <h3>Description</h3>
       <p><%= @activity.description%></p>
@@ -142,4 +146,3 @@
     <br>
   </div>
 </div>
-

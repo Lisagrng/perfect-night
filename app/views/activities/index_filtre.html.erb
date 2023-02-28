@@ -1,17 +1,20 @@
 <% if user_signed_in? %>
   <div class="container-filtre">
-    <div class= "logo">
-      <%= image_tag("logo.png")%>
-    </div>
+  <div class= "logo">
+    <%= link_to :back do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+    <%= image_tag("logo.png")%>
+  </div>
     <br>
-    <h2> Guide nous </h2>
+    <h2> Guide-nous </h2>
 <br>
   <%= simple_form_for :activity, url: activities_path, method: "GET" do |f| %>
     <%= f.input :Nombre_de_personnes,
           required: false %>
     <%= f.input :ville,
           required: false %>
-    <%= f.input :categorie,
+    <%= f.input :catégorie,
           as: :radio_buttons,
           required: false,
             collection_wrapper_tag: 'div',
@@ -19,7 +22,7 @@
             item_wrapper_class: 'category-item',
             input_html: { class: 'category-selector' },
             collection: Activity::CATEGORIES  %>
-      <%= f.submit "C'est parti", class: "button-filtre" %>
+      <%= f.submit "C'est parti", class: "btn btn-reviews" %>
   <% end %>
   <br>
   </div>

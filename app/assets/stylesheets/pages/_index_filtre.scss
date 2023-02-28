@@ -20,6 +20,7 @@
   // background: radial-gradient(circle at right, #E8E8E8 10%, #96939B 70%), #000;
   padding: 20px;
   background-color: #000;
+  min-height: 150vh;
   }
 
   .logo img {
@@ -146,7 +147,7 @@
   }
 
 
-  #activity_categorie_bar + label {
+  #activity_catégorie_bar + label {
     color: #f992ad;
     background-image: asset_url("cocktails.png");
     background-repeat: no-repeat;
@@ -155,13 +156,13 @@
     background-size: 44%;
   }
 
-  #activity_categorie_bar:checked + label {
+  #activity_catégorie_bar:checked + label {
     background-color: #f992ad;
     border-color: #f992ad;
   }
 
 
-  #activity_categorie_restaurant + label {
+  #activity_catégorie_restaurant + label {
     color: #fbbcee;
     background-image: asset_url("cloche.png");
     background-repeat: no-repeat;
@@ -170,13 +171,13 @@
     background-size: 40%;
   }
 
-  #activity_categorie_restaurant:checked + label {
+  #activity_catégorie_restaurant:checked + label {
     background-color: #fbbcee;
     border-color: #fbbcee;
   }
 
 
-  #activity_categorie_patinoire + label {
+  #activity_catégorie_patinoire + label {
     color: #fab4c8;
     background-image: asset_url("botte-de-neige.png");
     background-repeat: no-repeat;
@@ -185,12 +186,12 @@
     background-size: 33%;
   }
 
-  #activity_categorie_patinoire:checked + label {
+  #activity_catégorie_patinoire:checked + label {
     background-color: #fab4c8;
     border-color: #fab4c8;
   }
 
-  #activity_categorie_bowling + label {
+  #activity_catégorie_bowling + label {
     color: #f78ecf;
     background-image: asset_url("bowling.png");
     background-repeat: no-repeat;
@@ -199,12 +200,12 @@
     background-size: 33%;
   }
 
-  #activity_categorie_bowling:checked + label {
+  #activity_catégorie_bowling:checked + label {
     background-color: #f78ecf;
     border-color: #f78ecf;
   }
 
-  #activity_categorie_piscine + label {
+  #activity_catégorie_piscine + label {
     color: #cfb9f7;
     background-image: asset_url("piscine.png");
     background-repeat: no-repeat;
@@ -213,12 +214,12 @@
     background-size: 33%;
   }
 
-  #activity_categorie_piscine:checked + label {
+  #activity_catégorie_piscine:checked + label {
     background-color: #cfb9f7;
     border-color: #cfb9f7;
   }
 
-  #activity_categorie_escape_game + label {
+  #activity_catégorie_escape_game + label {
     color: #f4989c;
     background-image: asset_url("exit.png");
     background-repeat: no-repeat;
@@ -227,12 +228,12 @@
     background-size: 50%;
   }
 
-  #activity_categorie_escape_game:checked + label {
+  #activity_catégorie_escape_game:checked + label {
     background-color: #f4989c;
     border-color: #f4989c;
   }
 
-  #activity_categorie_quizz + label {
+  #activity_catégorie_quizz + label {
     color: #a480f2;
     background-image: asset_url("speech-bubble.png");
     background-repeat: no-repeat;
@@ -241,12 +242,12 @@
     background-size: 45%;
   }
 
-  #activity_categorie_quizz:checked + label {
+  #activity_catégorie_quizz:checked + label {
     background-color: #a480f2;
     border-color: #a480f2;
   }
 
-  #activity_categorie_parc_à_loisirs + label {
+  #activity_catégorie_parc_à_loisirs + label {
     color: #fec89a;
     background-image: asset_url("mode-de-vie.png");
     background-repeat: no-repeat;
@@ -255,12 +256,12 @@
     background-size: 40%;
   }
 
-  #activity_categorie_parc_à_loisirs:checked + label {
+  #activity_catégorie_parc_à_loisirs:checked + label {
     background-color: #fec89a;
     border-color: #fec89a;
   }
 
-  #activity_categorie_karaoké + label {
+  #activity_catégorie_karaoké + label {
     color: #c580ed;
     background-image: asset_url("karaoke.png");
     background-repeat: no-repeat;
@@ -269,12 +270,12 @@
     background-size: 33%;
   }
 
-  #activity_categorie_karaoké:checked + label {
+  #activity_catégorie_karaoké:checked + label {
     background-color: #c580ed;
     border-color: #c580ed;
   }
 
-  #activity_categorie_club_de_tir + label {
+  #activity_catégorie_club_de_tir + label {
     color: #ff9286;
     background-image: asset_url("tir-a-larc.png");
     background-repeat: no-repeat;
@@ -283,12 +284,12 @@
     background-size: 33%;
   }
 
-  #activity_categorie_club_de_tir:checked + label {
+  #activity_catégorie_club_de_tir:checked + label {
     background-color: #ff9286;
     border-color: #ff9286;
   }
 
-  #activity_categorie_laser_game + label {
+  #activity_catégorie_laser_game + label {
     color: #ff92b1;
     background-image: asset_url("laser-gun.png");
     background-repeat: no-repeat;
@@ -297,12 +298,12 @@
     background-size: 50%;
   }
 
-  #activity_categorie_laser_game:checked + label {
+  #activity_catégorie_laser_game:checked + label {
     background-color: #ff92b1;
     border-color: #ff92b1;
   }
 
-  #activity_categorie_massage + label {
+  #activity_catégorie_massage + label {
     color: #ff5d8f;
     background-image: asset_url("massage-corporel.png");
     background-repeat: no-repeat;
@@ -311,7 +312,7 @@
     background-size: 45%;
   }
 
-  #activity_categorie_massage:checked + label {
+  #activity_catégorie_massage:checked + label {
     background-color: #ff5d8f;
     border-color: #ff5d8f;
   }

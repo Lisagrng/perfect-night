@@ -36,6 +36,12 @@ class ActivitiesController < ApplicationController
         info_window_html: render_to_string(partial: "info_window", locals: { activity: @activity }),
         marker_html: render_to_string(partial: "marker")
       }]
+
+    if @activity.price_cents.nil?
+      @price = "Réglement sur place"
+    else
+      @price = "#{@activity.price_cents.fdiv(100)}"
+    end
   end
 
   def new
