@@ -22,8 +22,15 @@ class BookingsController < ApplicationController
     else
       @booking.total_price = @activity.price_cents.fdiv(100) * @booking.number_of_persons
     end
-    @booking.save!
-    redirect_to booking_path(@booking)
+    # @booking.save!
+    # redirect_to booking_path(@booking)
+
+    if @booking.save
+      flash[:notice] = "Merci pour ta réservation ! L'établissement à hâte de t'accueillir "
+      redirect_to booking_path(@booking)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show

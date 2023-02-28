@@ -7,7 +7,7 @@
       <h2>Bientôt</h2>
         <p class="text-center"> Plus qu'une vérif' pour la <span style="color: #fcd29f"><strong>valider </strong></span></p>
         <br>
-          <h3> ⚡️ <%= @activity.name %></h3>
+          <h3><%= @activity.name %></h3>
             <br>
               <div class= "image-show">
                 <%= cl_image_tag @activity.photo.key%>
@@ -28,8 +28,5 @@
               <span style="color: #FFFFF"><%= f.input :number_of_persons, label:"Combien serez-vous ?", type:"text" %></span>
               <small><%= f.button :submit, class:"btn-reviews", value:"Je réserve"%></small>
             <% end %>
-            <br>
-            <br>
-            <br>
     </div>
   </div>

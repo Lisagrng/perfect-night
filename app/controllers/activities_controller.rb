@@ -19,7 +19,7 @@ class ActivitiesController < ApplicationController
     elsif params[:activity] && params[:activity][:max_number_persons].present?
       @random_activity = Activity.where(max_number_persons: params[:activity][:max_number_persons]).sample
     elsif params[:activity] && params[:activity][:categorie].present?
-      @random_activity = Activity.where(categorie: params[:activity][:categorie]).sample
+      @random_activity = Activity.where(catégorie: params[:activity][:catégorie]).sample
     end
   end
 
@@ -106,7 +106,7 @@ def filtre
   if params[:activity][:ville].present?
     @activities = @activities.where("ville like ?", "%#{params[:activity][:ville]}%")
   end
-  if params[:activity][:categorie].present?
-    @activities = @activities.where("categorie like ?", "%#{params[:activity][:categorie]}%")
+  if params[:activity][:catégorie].present?
+    @activities = @activities.where("categorie like ?", "%#{params[:activity][:catégorie]}%")
   end
 end
