@@ -7,6 +7,7 @@ h2 {
 .container-show {
   // background: radial-gradient(circle at left, #E8E8E8 10%, #96939B 70%), #000;
   background: black;
+  min-height: 100vh;
   h2 {
     margin-top: 10px;
   }
@@ -38,7 +39,6 @@ h3 {
   font-size: medium;
 }
 
-
 .show-address {
   display: flex;
   align-items: center;
@@ -50,12 +50,20 @@ h3 {
 .show-time {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   margin-top: 10px;
   span {
     color: #FC814A;
     font-weight: 300;
   }
+}
+
+.show-price{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  border-bottom: #838383;
 }
 .title-booking{
   font-weight: 200;
