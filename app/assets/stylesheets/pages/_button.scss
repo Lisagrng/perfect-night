@@ -26,13 +26,13 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   vertical-align: center;
   align-items: flex-end;
-    a{
-      text-decoration: none;
-      color: black;
-      font-size: 12px;
-      font-family: 'Rubik Mono One', sans-serif;
-      font-size: 12px;
-    }
+  a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 12px;
+  }
 }
 
 .button-action{
@@ -43,11 +43,12 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   vertical-align: center;
   align-items: flex-end;
-    a{
-      text-decoration: none;
-      color: white;
-      font-family: 'Rubik Mono One', sans-serif;
-      font-size: 12px;
+  padding: 10px;
+  a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 12px;
     }
 }
 
