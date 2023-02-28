@@ -138,7 +138,7 @@
     background-color: white;
     font-family: 'Kanit', sans-serif;
     line-height: 100%;
-    height: 75px;
+    height: 93px;
   }
 
   .category-selector:checked + label {
@@ -148,6 +148,11 @@
 
   #activity_categorie_bar + label {
     color: #f992ad;
+    background-image: asset_url("cocktails.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 44%;
   }
 
   #activity_categorie_bar:checked + label {
@@ -158,6 +163,11 @@
 
   #activity_categorie_restaurant + label {
     color: #fbbcee;
+    background-image: asset_url("cloche.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    background-size: 40%;
   }
 
   #activity_categorie_restaurant:checked + label {
@@ -214,7 +224,7 @@
     background-repeat: no-repeat;
     background-position: 90%;
     background-size: contain;
-    background-size: 33%;
+    background-size: 50%;
   }
 
   #activity_categorie_escape_game:checked + label {
@@ -224,11 +234,11 @@
 
   #activity_categorie_quizz + label {
     color: #a480f2;
-    background-image: asset_url("quiz.png");
+    background-image: asset_url("speech-bubble.png");
     background-repeat: no-repeat;
     background-position: 90%;
     background-size: contain;
-    background-size: 33%;
+    background-size: 45%;
   }
 
   #activity_categorie_quizz:checked + label {
@@ -242,7 +252,7 @@
     background-repeat: no-repeat;
     background-position: 90%;
     background-size: contain;
-    background-size: 33%;
+    background-size: 40%;
   }
 
   #activity_categorie_parc_à_loisirs:checked + label {
@@ -270,7 +280,7 @@
     background-repeat: no-repeat;
     background-position: 90%;
     background-size: contain;
-    background-size: 25%;
+    background-size: 33%;
   }
 
   #activity_categorie_club_de_tir:checked + label {
@@ -280,11 +290,11 @@
 
   #activity_categorie_laser_game + label {
     color: #ff92b1;
-    background-image: asset_url("laser-tag.png");
+    background-image: asset_url("laser-gun.png");
     background-repeat: no-repeat;
     background-position: 90%;
     background-size: contain;
-    background-size: 25%;
+    background-size: 50%;
   }
 
   #activity_categorie_laser_game:checked + label {
@@ -298,7 +308,7 @@
     background-repeat: no-repeat;
     background-position: 92%;
     background-size: contain;
-    background-size: 33%;
+    background-size: 45%;
   }
 
   #activity_categorie_massage:checked + label {
