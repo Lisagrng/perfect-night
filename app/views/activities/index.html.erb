@@ -29,6 +29,9 @@
                   <span class="card-color-black">-</span>
                   <%= DateTime.parse(activity.end_at).strftime("%H:%M") %>
                 </span>
+                <span class="card-color-grey">
+                  <%= activity.address %>
+                </span>
                 <!-- Prix converti -->
                 <span class="card-color-black button-price">
                   <%= activity.price_cents.fdiv(100) %> €
@@ -49,6 +52,9 @@
                   <%= DateTime.parse(activity.open_at).strftime("%H:%M") %>
                   <span class="card-color-black">-</span>
                   <%= DateTime.parse(activity.close_at).strftime("%H:%M")  %>
+                </span>
+                <span class="card-color-grey">
+                  <%= activity.address %>
                 </span>
 
                 <!-- Prix converti -->
