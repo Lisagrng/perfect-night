@@ -171,7 +171,7 @@ activity = Activity.new(name: "SEVEN SQUARES", description: "Avec nos 7 activit�
                 à loisirs", program: "Venez profiter de nos 7 expériences inoubliables parmis lesquelles: l'Ile de
                 Tortuga qui ravira les plus petits grâce à ces nombreux structures gonflables! Le trampoline Park dans
                 un espace de 800m2 proposant plus de 10 jeux différents! Seven Square c'est aussi le Clip'n Climb,
-                l'escalade àa portée de mains! Le Laser Game permettra aux plus téméraires d'entre vous de faire leurs
+                l'escalade à portée de mains! Le Laser Game permettra aux plus téméraires d'entre vous de faire leurs
                 preuves.. Les plus agiles aimeront certainement le Tag Active: un parcours d'obstacle en exclusivité
                 nationale! Cette infrastructure propose également du bowling et du billard! Il y en aura pour tout le
                 monde!")
@@ -252,7 +252,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://axwwgrkdco.cloudimg.io/v7/lefooding.com/medias/2021/07/11_40_49_484_bar_heure_du_singe_toulouse.jpeg?width=1280&optipress=3")
-activity = Activity.new(name: "L'HEURE DU SINGE'", description: "Venez déguster de merveilleux cocktails dans cet établissement très chaleureux.",
+activity = Activity.new(name: "L'HEURE DU SINGE", description: "Venez déguster de merveilleux cocktails dans cet établissement très chaleureux.",
                 address: "59 Rue Pierre-Paul Riquet, 31000 Toulouse",workshop: "false", max_number_persons: 60, opening_days:
                 [1, 2, 3, 4, 5], open_at: "19:00", close_at: "02:00", ville: "Toulouse", categorie: "Bar",
                 program: "Situé dans le quartier St Aubin à Toulouse, l'Heure du Singe vous propose des cocktails conviviaux,
@@ -266,7 +266,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://axwwgrkdco.cloudimg.io/v7/lefooding.com/medias/2021/07/11_40_49_484_bar_heure_du_singe_toulouse.jpeg?width=1280&optipress=3")
-activity = Activity.new(name: "LE PETIT VOISIN'", description: "Cocktails, bières et cuisine simple proposés dans un bar
+activity = Activity.new(name: "LE PETIT VOISIN", description: "Cocktails, bières et cuisine simple proposés dans un bar
                 à l'atmosphère détendue doté d'un baby-foot et d'une terrasse côté rue.",address: "37 Rue Peyrolières, 31000 Toulouse",
                 workshop: "false", max_number_persons: 60, opening_days:[1, 2, 3, 4, 5, 6], open_at: "07:30", close_at: "02:00", ville: "Toulouse", categorie: "Bar",
                 program: "Vous avez envie de rythmes géniaux, d’une bonne ambiance et d’un cadre moderne ? Chez le
@@ -277,21 +277,6 @@ activity = Activity.new(name: "LE PETIT VOISIN'", description: "Cocktails, bièr
                 Nous organisons régulièrement des événements musique live qui garantissent une soirée inoubliable.")
 
 activity.photo.attach(io: file, filename: "voisin.png", content_type: "image/png")
-activity.user = user
-activity.save!
-
-file = URI.open("https://uploads.lebonbon.fr/source/2020/july/44531/levrette-10_2_1200.jpg")
-activity = Activity.new(name: "LEVRETTE CAFE'", description: "Bar branché au mobilier dépareillé servant de la bière,
-                des tapas et des cocktails, avec une piste de danse et un photomaton.",address: "65 Jean Jaurès, 31000 Toulouse",
-                workshop: "false", max_number_persons: 60, opening_days:[1, 2, 3, 4, 5, 6], open_at: "17:00", close_at:
-                "02:00", ville: "Toulouse", categorie: "Bar",
-                program: "Son espace vous offre la possibilité de vous poser dans des petits salons, de profiter de la
-                terrasse ainsi que de pouvoir danser sur la piste de danse. Vous pouvez vous y retrouver entre amis,
-                collègues ou en famille en train de déguster nos produits de qualité dans un décor vintage et industriel.
-                Une street-food de saison et des alcools sélectionnées avec soin vous seront proposés le midi
-                comme le soir.")
-
-activity.photo.attach(io: file, filename: "levrette.png", content_type: "image/png")
 activity.user = user
 activity.save!
 
@@ -310,7 +295,7 @@ activity.photo.attach(io: file, filename: "levrette.png", content_type: "image/p
 activity.user = user
 activity.save!
 
-file = URI.open("https://uploads.lebonbon.fr/source/2020/july/44531/levrette-10_2_1200.jpg")
+file = URI.open("https://www.londontownpub.fr/uploads/images/home_slider/1586427823london20town20450x2045020gallery20image2011.jpg")
 activity = Activity.new(name: "THE LONDON TOWN", description: "Bières pression, collations de bar, fléchettes et sports
                 télévisés dans un pub de style britannique doté de tables côté rue.",address: "14 Rue des Prêtres, 31000
                 Toulouse", workshop: "false", max_number_persons: 60, opening_days:[0, 1, 2, 3, 4, 5, 6], open_at: "18:00",
@@ -324,7 +309,7 @@ activity = Activity.new(name: "THE LONDON TOWN", description: "Bières pression,
                 de la bonne musique et des jeux de société, vous comprendrez rapidement pourquoi la ville de Londres a a
                 résisté à l'épreuve du temps. ")
 
-activity.photo.attach(io: file, filename: "levrette.png", content_type: "image/png")
+activity.photo.attach(io: file, filename: "london.png", content_type: "image/png")
 activity.user = user
 activity.save!
 puts 'Finished!'

@@ -43,6 +43,18 @@
   font-size: small;
 }
 
+.navbar-booked {
+  background-color: #222222;
+  p {
+    text-align: center;
+    font-family: 'Rubik Mono One', sans-serif;
+    color: white;
+    padding: 2px;
+    margin: auto;
+    padding-bottom: 7px;
+  }
+}
+
 @media(max-width: 992px) {
   .footer {
     display: none;
