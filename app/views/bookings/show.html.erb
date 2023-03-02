@@ -1,6 +1,12 @@
 <div class= "container">
-  <div class="logo">
-  <a href="/bookings"> <i class="fa-solid fa-arrow-left"></i></a>
+  <div class= "logo">
+    <%= link_to bookings_path do %>
+      <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <% end %>
     <%= image_tag("logo.png")%>
   </div>
 

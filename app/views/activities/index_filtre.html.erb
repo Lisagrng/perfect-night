@@ -1,8 +1,12 @@
 <% if user_signed_in? %>
   <div class="container-filtre">
-  <div class= "logo">
+    <div class= "logo">
     <%= link_to :back do %>
-      <i class="fas fa-arrow-left"></i>
+      <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     <% end %>
     <%= image_tag("logo.png")%>
   </div>
