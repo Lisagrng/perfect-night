@@ -238,4 +238,93 @@ activity.photo.attach(io: file, filename: "massage.png", content_type: "image/pn
 activity.user = user
 activity.save!
 
+file = URI.open("https://www.google.com/maps/uv?pb=!1s0x12aebb65cea6aaef%3A0xa3dddc255ccaa52c!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOSg0SLsCH5MSl4JeHUVYi7OV-GCMZg-TOcOCk%3Dw260-h175-n-k-no!5sBar%20a%20Toulouse%20-%20Recherche%20Google!15sCgIgAQ&imagekey=!1e10!2sAF1QipN0BoJ9fL40VwrkLXZzTrQEMYb4bSNJvsLl5Wz2&hl=fr&sa=X&ved=2ahUKEwicgZa38L39AhVqVKQEHfVNAdcQ7ZgBKAB6BAgZEAI#")
+activity = Activity.new(name: "LE BAR BASQUE", description: "Ce bar aux murs de briques, doté d'une terasse, fait club
+                le soir avec des mix DJ et des soirées étudiantes", address: "7 Place Saint-Pierre, 31000 Toulouse",
+                workshop: "false", max_number_persons: 60, opening_days:
+                [1, 2, 3, 4, 5, 6], open_at: "11:30", close_at: "02:00", ville: "Toulouse", categorie: "Restaurant",
+                program: "Institution Toulousaine depuis 1992 Le Bar Basque vous accueille au coeur de la place
+                Saint-Pierre avec quatre espaces : la Kantina, bar/tapas, street-food et bamboche. Un patio avec vue sur
+                la Garonne, véritable lieu de vie pour tous les Toulousains.")
+
+activity.photo.attach(io: file, filename: "basque.png", content_type: "image/png")
+activity.user = user
+activity.save!
+
+file = URI.open("https://axwwgrkdco.cloudimg.io/v7/lefooding.com/medias/2021/07/11_40_49_484_bar_heure_du_singe_toulouse.jpeg?width=1280&optipress=3")
+activity = Activity.new(name: "L'HEURE DU SINGE'", description: "Venez déguster de merveilleux cocktails dans cet établissement très chaleureux.",
+                address: "59 Rue Pierre-Paul Riquet, 31000 Toulouse",workshop: "false", max_number_persons: 60, opening_days:
+                [1, 2, 3, 4, 5], open_at: "19:00", close_at: "02:00", ville: "Toulouse", categorie: "Bar",
+                program: "Situé dans le quartier St Aubin à Toulouse, l'Heure du Singe vous propose des cocktails conviviaux,
+                pointus et des associations étonnantes. Produits maison et de saison...
+                Le Singe ne recule devant aucune innovation: tout passe dans son shaker. Une sélection musicale à la fois
+                accessible, éclectique et recherchée. Dans une ambiance élégante et décontractée, nous essaierons de vous
+                transmettre notre passion pour le goût au travers de la fête et du partage...")
+
+activity.photo.attach(io: file, filename: "singe.png", content_type: "image/png")
+activity.user = user
+activity.save!
+
+file = URI.open("https://axwwgrkdco.cloudimg.io/v7/lefooding.com/medias/2021/07/11_40_49_484_bar_heure_du_singe_toulouse.jpeg?width=1280&optipress=3")
+activity = Activity.new(name: "LE PETIT VOISIN'", description: "Cocktails, bières et cuisine simple proposés dans un bar
+                à l'atmosphère détendue doté d'un baby-foot et d'une terrasse côté rue.",address: "37 Rue Peyrolières, 31000 Toulouse",
+                workshop: "false", max_number_persons: 60, opening_days:[1, 2, 3, 4, 5, 6], open_at: "07:30", close_at: "02:00", ville: "Toulouse", categorie: "Bar",
+                program: "Vous avez envie de rythmes géniaux, d’une bonne ambiance et d’un cadre moderne ? Chez le
+                « LE PETIT VOISIN », vous êtes alors à la bonne adresse. S’installer à notre bar avec un bon verre de
+                vin et vivre l’agitation de la nuit – l’ambiance chez nous est super et la nuit peut commencer. Notre
+                zone extérieure chauffée vous assure une atmosphère agréable et vous invite à rester plus longtemps.
+                Quel que soit le temps, nos salles climatisées vous garantissent à tout moment des températures agréables.
+                Nous organisons régulièrement des événements musique live qui garantissent une soirée inoubliable.")
+
+activity.photo.attach(io: file, filename: "voisin.png", content_type: "image/png")
+activity.user = user
+activity.save!
+
+file = URI.open("https://uploads.lebonbon.fr/source/2020/july/44531/levrette-10_2_1200.jpg")
+activity = Activity.new(name: "LEVRETTE CAFE'", description: "Bar branché au mobilier dépareillé servant de la bière,
+                des tapas et des cocktails, avec une piste de danse et un photomaton.",address: "65 Jean Jaurès, 31000 Toulouse",
+                workshop: "false", max_number_persons: 60, opening_days:[1, 2, 3, 4, 5, 6], open_at: "17:00", close_at:
+                "02:00", ville: "Toulouse", categorie: "Bar",
+                program: "Son espace vous offre la possibilité de vous poser dans des petits salons, de profiter de la
+                terrasse ainsi que de pouvoir danser sur la piste de danse. Vous pouvez vous y retrouver entre amis,
+                collègues ou en famille en train de déguster nos produits de qualité dans un décor vintage et industriel.
+                Une street-food de saison et des alcools sélectionnées avec soin vous seront proposés le midi
+                comme le soir.")
+
+activity.photo.attach(io: file, filename: "levrette.png", content_type: "image/png")
+activity.user = user
+activity.save!
+
+file = URI.open("https://uploads.lebonbon.fr/source/2020/july/44531/levrette-10_2_1200.jpg")
+activity = Activity.new(name: "LEVRETTE CAFE", description: "Bar branché au mobilier dépareillé servant de la bière,
+                des tapas et des cocktails, avec une piste de danse et un photomaton.",address: "65 Jean Jaurès, 31000 Toulouse",
+                workshop: "false", max_number_persons: 60, opening_days:[1, 2, 3, 4, 5, 6], open_at: "17:00", close_at:
+                "02:00", ville: "Toulouse", categorie: "Bar",
+                program: "Son espace vous offre la possibilité de vous poser dans des petits salons, de profiter de la
+                terrasse ainsi que de pouvoir danser sur la piste de danse. Vous pouvez vous y retrouver entre amis,
+                collègues ou en famille en train de déguster nos produits de qualité dans un décor vintage et industriel.
+                Une street-food de saison et des alcools sélectionnées avec soin vous seront proposés le midi
+                comme le soir.")
+
+activity.photo.attach(io: file, filename: "levrette.png", content_type: "image/png")
+activity.user = user
+activity.save!
+
+file = URI.open("https://uploads.lebonbon.fr/source/2020/july/44531/levrette-10_2_1200.jpg")
+activity = Activity.new(name: "THE LONDON TOWN", description: "Bières pression, collations de bar, fléchettes et sports
+                télévisés dans un pub de style britannique doté de tables côté rue.",address: "14 Rue des Prêtres, 31000
+                Toulouse", workshop: "false", max_number_persons: 60, opening_days:[0, 1, 2, 3, 4, 5, 6], open_at: "18:00",
+                close_at:"02:00", ville: "Toulouse", categorie: "Bar",
+                program: "La clientèle mixte, la musique entraînante et la bonne ambiance en font l'un des pubs les plus
+                populaires de la ville, aidé en grande partie par les bières anglaises de qualité supérieure que nous
+                importons de notre propre brasserie à Bedford. Nous proposons également une large gamme de cidres,
+                de boissons non alcoolisées chaudes et froides, de cocktails et de spiritueux. Nous avons vraiment
+                quelque chose pour tout le monde, et avec une équipe internationale accueillante, une variété d'activités
+                amusantes telles que des soirées quiz, des matchs de première ligue, des compétitions de fléchettes,
+                de la bonne musique et des jeux de société, vous comprendrez rapidement pourquoi la ville de Londres a a
+                résisté à l'épreuve du temps. ")
+
+activity.photo.attach(io: file, filename: "levrette.png", content_type: "image/png")
+activity.user = user
+activity.save!
 puts 'Finished!'
