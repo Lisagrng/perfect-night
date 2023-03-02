@@ -23,11 +23,6 @@
     vertical-align: bottom;
     filter: grayscale(100%);
   }
-  a {
-    font-size: 4vw;
-    text-decoration: none;
-    color: black;
-  }
   span.card-color-black {
     color: black;
   }
@@ -39,6 +34,12 @@
     font-size: 3vw;
     font-weight: 500;
   }
+}
+
+a {
+  font-size: 4vw;
+  text-decoration: none;
+  color: black;
 }
 
 
