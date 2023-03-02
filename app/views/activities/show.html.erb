@@ -1,7 +1,11 @@
 <div class= "container container-show">
   <div class= "logo">
     <%= link_to :back do %>
-      <i class="fas fa-arrow-left"></i>
+      <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     <% end %>
     <%= image_tag("logo.png")%>
   </div>
@@ -94,7 +98,7 @@
                   <% if review.booking.user == current_user %>
                     <%= link_to "Supprimer ce commentaire",
                       review_path(review), class: "btn-delete-show",
-                      data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
+                      data: {class: "turbo-confirm", turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
                     %>
                   <% end %>
                 </div>

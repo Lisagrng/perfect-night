@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
       flash[:notice] = "Avis publié ! "
       redirect_to activity_path(@activity)
     else
+      flash[:notice] = "Aïe ton avis n'a pas marché, n'oublie pas de noter et mettre un avis assez long!"
       redirect_to activity_path(@activity), status: :unprocessable_entity
     end
   end
@@ -32,6 +33,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:rating, :content, )
+    params.require(:review).permit(:rating, :content)
   end
 end

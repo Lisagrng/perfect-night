@@ -1,6 +1,14 @@
 .alert {
   position: fixed;
-  bottom: 16px;
   right: 16px;
-  z-index: 1000;
+  /* z-index: 2000; */
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  height: fit-content;
+  overflow-y: auto;
+}
+
+.turbo_confirm {
+  background-color: bisque;
 }

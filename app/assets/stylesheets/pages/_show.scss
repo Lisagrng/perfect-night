@@ -130,7 +130,9 @@ h3 {
 }
 
 .logo {
-  text-align-last: justify;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 30px;
   a {
     text-decoration: none;
     font-weight: 500;
