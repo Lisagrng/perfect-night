@@ -2,7 +2,7 @@
   <div class="navbar-phone navbar-show" style="display:inline-block">
   <% if Booking.where(user: current_user, activity: @activity).any? %>
   <div class="navbar-phone navbar-booked">
-    <p>VOUS AVEZ DÉJÀ RÉSERVÉ</p>
+    <p>RÉSERVATION EN COURS.. </p>
     </div>
   <% end %>
     <%= link_to "JE VEUX FAIRE CETTE ACTIVITÉ", new_activity_booking_path(@activity) %>
