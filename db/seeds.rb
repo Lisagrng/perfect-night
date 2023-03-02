@@ -171,7 +171,7 @@ activity = Activity.new(name: "SEVEN SQUARES", description: "Avec nos 7 activit�
                 à loisirs", program: "Venez profiter de nos 7 expériences inoubliables parmis lesquelles: l'Ile de
                 Tortuga qui ravira les plus petits grâce à ces nombreux structures gonflables! Le trampoline Park dans
                 un espace de 800m2 proposant plus de 10 jeux différents! Seven Square c'est aussi le Clip'n Climb,
-                l'escalade àa portée de mains! Le Laser Game permettra aux plus téméraires d'entre vous de faire leurs
+                l'escalade à portée de mains! Le Laser Game permettra aux plus téméraires d'entre vous de faire leurs
                 preuves.. Les plus agiles aimeront certainement le Tag Active: un parcours d'obstacle en exclusivité
                 nationale! Cette infrastructure propose également du bowling et du billard! Il y en aura pour tout le
                 monde!")
