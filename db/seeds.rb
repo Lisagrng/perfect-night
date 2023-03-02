@@ -281,7 +281,7 @@ activity.user = user
 activity.save!
 
 file = URI.open("https://uploads.lebonbon.fr/source/2020/july/44531/levrette-10_2_1200.jpg")
-activity = Activity.new(name: "LEVRETTE CAFE", description: "Bar branché au mobilier dépareillé servant de la bière,
+activity = Activity.new(name: "LEVRETTE CAFÉ", description: "Bar branché au mobilier dépareillé servant de la bière,
                 des tapas et des cocktails, avec une piste de danse et un photomaton.",address: "65 Jean Jaurès, 31000 Toulouse",
                 workshop: "false", max_number_persons: 60, opening_days:[1, 2, 3, 4, 5, 6], open_at: "17:00", close_at:
                 "02:00", ville: "Toulouse", categorie: "Bar",
