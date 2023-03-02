@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
       redirect_to activity_path(@activity)
     else
       flash[:notice] = "Aïe ton avis n'a pas marché, n'oublie pas de noter et mettre un avis assez long!"
-      redirect_to activity_path(@activity, anchor: "review"), status: :unprocessable_entity
+      redirect_to activity_path(@activity), status: :unprocessable_entity
     end
   end
 

@@ -98,7 +98,7 @@
                   <% if review.booking.user == current_user %>
                     <%= link_to "Supprimer ce commentaire",
                       review_path(review), class: "btn-delete-show",
-                      data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
+                      data: {class: "turbo-confirm", turbo_method: :delete, turbo_confirm: "Es-tu sûr(e) de vouloir supprimer ce commentaire?"}
                     %>
                   <% end %>
                 </div>
