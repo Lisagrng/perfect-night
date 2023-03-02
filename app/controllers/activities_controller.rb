@@ -27,6 +27,7 @@ class ActivitiesController < ApplicationController
     @review = Review.new
     @user = current_user
     @booking = Booking.where(user: current_user, activity: @activity).first
+    @has_already_booked = Booking.where(user: current_user, activity: @activity).any?
     @reviews = Review.includes(:booking).where(booking: { activity: @activity })
     @is_reviewed = @reviews.any?
     @marker =

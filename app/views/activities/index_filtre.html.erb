@@ -13,13 +13,14 @@
     <br>
     <h2> Guide-nous </h2>
 <br>
+
   <%= simple_form_for :activity, url: activities_path, method: "GET" do |f| %>
     <%= f.input :Nombre_de_personnes,
           required: false %>
     <%= f.input :ville,
           required: false %>
     <%= f.input :catégorie,
-          as: :check_boxes,
+          as: :radio_buttons,
           required: false,
             collection_wrapper_tag: 'div',
             collection_wrapper_class: 'category-wrapper',
