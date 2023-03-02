@@ -1,6 +1,12 @@
 <% if @activity && current_page?(activity_path(@activity)) %>
   <div class="navbar-phone navbar-show" style="display:inline-block">
-<%= link_to "JE VEUX FAIRE CETTE ACTIVITÉ", new_activity_booking_path(@activity) %></div>
+  <% if Booking.where(user: current_user, activity: @activity).any? %>
+  <div class="navbar-phone navbar-show" style="display:none">
+    <%= link_to "VOUS AVEZ DÉJÀ RÉSERVÉ", new_activity_booking_path(@activity), disabled: true %>
+    </div>
+  <% end %>
+    <%= link_to "JE VEUX FAIRE CETTE ACTIVITÉ", new_activity_booking_path(@activity) %>
+  </div>
 <% else %>
   <div class="navbar-phone">
       <div class="navbar-icons">
@@ -17,5 +23,5 @@
         <i class="fa-solid fa-user"></i>
         <% end %>
       </div>
-  </div>
+  </div
 <% end %>

@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
     # redirect_to booking_path(@booking)
 
     if @booking.save
-      flash[:notice] = "Merci pour ta réservation ! L'établissement à hâte de t'accueillir "
+      flash[:notice] = "Merci pour ta réservation ! L'établissement a hâte de t'accueillir "
       redirect_to booking_path(@booking)
     else
       render :new, status: :unprocessable_entity

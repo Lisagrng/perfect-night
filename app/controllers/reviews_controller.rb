@@ -12,11 +12,13 @@ class ReviewsController < ApplicationController
     # @review.activity = @activity
     @review.booking = @booking
     if @review.save
-      flash[:notice] = "Avis publié ! "
+      flash[:notice] = "Avis publié !"
       redirect_to activity_path(@activity)
     else
       flash[:notice] = "Aïe ton avis n'a pas marché, n'oublie pas de noter et mettre un avis assez long!"
-      redirect_to activity_path(@activity), status: :unprocessable_entity
+      # redirect_to activity_path(@activity), status: :unprocessable_entity
+
+      render 'activities/show', status: :unprocessable_entity
     end
   end
 
