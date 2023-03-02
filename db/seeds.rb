@@ -295,22 +295,7 @@ activity.photo.attach(io: file, filename: "levrette.png", content_type: "image/p
 activity.user = user
 activity.save!
 
-file = URI.open("https://uploads.lebonbon.fr/source/2020/july/44531/levrette-10_2_1200.jpg")
-activity = Activity.new(name: "LEVRETTE CAFE", description: "Bar branché au mobilier dépareillé servant de la bière,
-                des tapas et des cocktails, avec une piste de danse et un photomaton.",address: "65 Jean Jaurès, 31000 Toulouse",
-                workshop: "false", max_number_persons: 60, opening_days:[1, 2, 3, 4, 5, 6], open_at: "17:00", close_at:
-                "02:00", ville: "Toulouse", categorie: "Bar",
-                program: "Son espace vous offre la possibilité de vous poser dans des petits salons, de profiter de la
-                terrasse ainsi que de pouvoir danser sur la piste de danse. Vous pouvez vous y retrouver entre amis,
-                collègues ou en famille en train de déguster nos produits de qualité dans un décor vintage et industriel.
-                Une street-food de saison et des alcools sélectionnées avec soin vous seront proposés le midi
-                comme le soir.")
-
-activity.photo.attach(io: file, filename: "levrette.png", content_type: "image/png")
-activity.user = user
-activity.save!
-
-file = URI.open("https://uploads.lebonbon.fr/source/2020/july/44531/levrette-10_2_1200.jpg")
+file = URI.open("https://www.londontownpub.fr/uploads/images/home_slider/1586427823london20town20450x2045020gallery20image2011.jpg")
 activity = Activity.new(name: "THE LONDON TOWN", description: "Bières pression, collations de bar, fléchettes et sports
                 télévisés dans un pub de style britannique doté de tables côté rue.",address: "14 Rue des Prêtres, 31000
                 Toulouse", workshop: "false", max_number_persons: 60, opening_days:[0, 1, 2, 3, 4, 5, 6], open_at: "18:00",
@@ -324,7 +309,7 @@ activity = Activity.new(name: "THE LONDON TOWN", description: "Bières pression,
                 de la bonne musique et des jeux de société, vous comprendrez rapidement pourquoi la ville de Londres a a
                 résisté à l'épreuve du temps. ")
 
-activity.photo.attach(io: file, filename: "levrette.png", content_type: "image/png")
+activity.photo.attach(io: file, filename: "london.png", content_type: "image/png")
 activity.user = user
 activity.save!
 puts 'Finished!'
