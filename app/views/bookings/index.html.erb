@@ -15,7 +15,7 @@
       <p class="text-center"> Découvres ici toutes tes <span style="color: #fcd29f"><strong>réservations</strong></span></p>
     <br>
       <% @my_bookings.each do |booking| %>
-        <h3> ⚡️ <%= booking.activity.name %></h3>
+        <h3 class="text-center"> ⚡️ <%= booking.activity.name %></h3>
         <br>
           <div class= "image-show">
               <%= cl_image_tag booking.activity.photo.key%>
@@ -30,6 +30,7 @@
             <div class="text-center">
               <button class="button-booking"><%= link_to "Laisser un avis", activity_path(booking.activity, anchor:"activity-review") %></button>
             </div>
+            <hr>
         <br>
       <% end %>
   </div>

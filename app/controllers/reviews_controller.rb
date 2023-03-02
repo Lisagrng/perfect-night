@@ -12,12 +12,11 @@ class ReviewsController < ApplicationController
     # @review.activity = @activity
     @review.booking = @booking
     if @review.save
-      flash[:notice] = "Avis publié !"
+      flash[:notice] = "Ton avis publié! Merci 🥂"
       redirect_to activity_path(@activity)
     else
       flash[:notice] = "Aïe ton avis n'a pas marché, n'oublie pas de noter et mettre un avis assez long!"
       # redirect_to activity_path(@activity), status: :unprocessable_entity
-
       render 'activities/show', status: :unprocessable_entity
     end
   end
@@ -26,6 +25,7 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @review.destroy
     redirect_to activity_path(@review.booking.activity), status: :see_other
+    flash[:notice] = "Ton avis a bien été supprimé.. 🗑"
   end
 
   private
