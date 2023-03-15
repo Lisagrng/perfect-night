@@ -246,7 +246,7 @@
     border-color: #a480f2;
   }
 
-  #activity_catégorie_parc_à_loisirs + label {
+  #activity_catégorie_parc_loisirs + label {
     color: #fec89a;
     background-image: asset_url("mode-de-vie.png");
     background-repeat: no-repeat;
@@ -255,7 +255,7 @@
     background-size: 40%;
   }
 
-  #activity_catégorie_parc_à_loisirs:checked + label {
+  #activity_catégorie_parc_loisirs:checked + label {
     background-color: #fec89a;
     border-color: #fec89a;
   }

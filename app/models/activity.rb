@@ -7,7 +7,7 @@ class Activity < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   # enum opening_days: { dimanche: 0, lundi: 1, mardi: 2, mercredi: 3, jeudi: 4, vendredi: 5, samedi: 6 }
 
-  CATEGORIES = ["Bar", "Restaurant", "Patinoire", "Bowling", "Piscine", "Escape Game", "Quizz", "Parc à loisirs", "Karaoké", "Club de Tir", "Laser Game", "Massage"]
+  CATEGORIES = ["Bar", "Restaurant", "Patinoire", "Bowling", "Piscine", "Escape Game", "Quizz", "Parc Loisirs", "Karaoké", "Club de Tir", "Laser Game", "Massage"]
 
   def self.display_days(day)
     case day

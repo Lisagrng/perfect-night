@@ -32,7 +32,7 @@ gem "geocoder"
 # gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
+# gem "kredis"bundle 
 gem "cocoapods" do pod 'SimpleRoulette', '~> 1.2' end
 gem 'carthage_cache', '~> 0.9.1' do github "fummicc1/SimpleRoulette" end
 
