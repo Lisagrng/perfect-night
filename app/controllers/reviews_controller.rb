@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     # @review.activity = @activity
     @review.booking = @booking
     if @review.save
-      flash[:notice] = "Ton avis publié! Merci 🥂"
+      flash[:notice] = "Ton avis est publié! Merci 🥂"
       redirect_to activity_path(@activity)
     else
       flash[:notice] = "Aïe ton avis n'a pas marché, n'oublie pas de noter et mettre un avis assez long!"
